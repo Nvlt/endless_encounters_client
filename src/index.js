@@ -1,16 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import App from './components/App/App';
+import UserProvder from './contexts/UserContext';
 
 ReactDOM.render(
-<<<<<<< HEAD
-
-  <App />
-  ,
-=======
-  <App />,
->>>>>>> scott-branch
+  <UserProvder>
+    <App />
+  </UserProvder>,
   document.getElementById('root')
 );
