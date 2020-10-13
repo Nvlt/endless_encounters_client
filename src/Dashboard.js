@@ -7,8 +7,9 @@ export default function Dashboard() {
 
   return (
 
-    <main className="flex flex-col center flex-1 width-full">
-      <div className="flex-1 flex flex-col border center p-2 mt-4 justify-stretch pos-fixed height-40 overflow-scroll">
+    <main className="flex flex-col center width-full grid-1-1">
+      <div className="flex-1 span-1-1 flex flex-col border center p-2 mt-4 m-1
+      rounded-lightest justify-stretch pos-fixed height-40 overflow-scroll">
         <p className="flex-1">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
           totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
@@ -66,7 +67,20 @@ export default function Dashboard() {
 
       </div>
 
+      <div className="border span-1-2 flex-1 flex flex-row max-width-80 width-full">
 
+        <div className="flex flex-row flex-1 width-half">
+          <button className="flex-1">Shop</button>
+          <button className="flex-1">Tavern</button>
+          <button className="flex-1">Explore</button>
+        </div>
+        <div className="flex flex-row flex-1 width-half">
+          <button className="flex-1">inventory</button>
+          <button className="flex-1">Gear</button>
+          <button className="flex-1">Spells</button>
+          <button className="flex-1">Abilities</button>
+        </div>
+      </div>
     </main>
   )
 }
