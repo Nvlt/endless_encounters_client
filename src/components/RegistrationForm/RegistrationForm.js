@@ -1,9 +1,6 @@
 import React from 'react'
 
-
-
 export default function Registration() {
-
   return (
     <main className="flex flex-col center flex-1 width-full">
       <div className="flex-1 flex  center p-2 mt-4 justify-stretch">
