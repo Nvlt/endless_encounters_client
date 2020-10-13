@@ -4,7 +4,7 @@ import React from 'react';
 export default function Gear() {
 
   return (
-    <div className="gear border bg-snow center flex flex-2 rounded-lightest
+    <div className="gear border bg-snow center min-w-4r flex flex-2 rounded-lightest
     flex-col shrink-none max-width-80 m-2 max-height-40
 overflow-scroll p-1-2">
       <div className="flex-1 flex flex-col rounded-light sq-5r-5r border m-10px p-1-2">

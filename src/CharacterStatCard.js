@@ -6,7 +6,7 @@ export default function CharStatCard() {
 
 
   return (
-    <div className='char-stat-cont flex-1 rounded-lighter flex-shrink
+    <div className='char-stat-cont flex-2 rounded-lighter flex-shrink
      align-self-left border height-fit max-height-40 width-fit text-left p-1-2 m-1' >
       <h3 className="flex-1">Dr. Magenstein</h3>
       <h4 className="flex-1 mx-1">Mage</h4>

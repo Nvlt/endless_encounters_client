@@ -14,7 +14,6 @@
   background-color: snow;
 }
 
-
 .bg-dark-cream {
   background-color: #b1aeadc2;
 }
@@ -153,6 +152,7 @@
 }
 
 .center {
+  align-content: center;
   text-align: center;
   align-self: center;
   align-items: center;
@@ -225,7 +225,7 @@
 }
 
 .max-width-80 {
-  max-width: 60%;
+  max-width: 80%;
 }
 
 .max-width-18 {
@@ -246,6 +246,10 @@
 
 .width-20px {
   width: 4rem;
+}
+
+.min-w-4r {
+  min-width: 4rem;
 }
 
 .width-full {
@@ -324,7 +328,6 @@ body {
   grid-column: span 1 / span 1;
   grid-row: span 2 / span 2;
 }
-
 
 .hover-inv:hover {
   box-shadow: .1rem .1rem .4rem gold;

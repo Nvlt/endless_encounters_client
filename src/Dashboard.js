@@ -81,7 +81,7 @@ export default function Dashboard() {
           <button className="flex-1">Abilities</button>
         </div>
       </div>
-      <div className="flex flex-row width-full mx-2">
+      <div className="flex flex-1 flex-row-wrap width-full max-width-80 mx-2">
         <CharStatCard />
         <Inventory />
         <Gear />
