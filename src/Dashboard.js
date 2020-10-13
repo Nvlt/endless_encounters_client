@@ -1,5 +1,7 @@
 import React from 'react';
 import CharStatCard from './CharacterStatCard';
+import Inventory from './Inventory';
+import Gear from './Gear';
 
 
 
@@ -66,7 +68,7 @@ export default function Dashboard() {
           consequatur,
            vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
       </div>
-      <div className="flex-1 flex flex-col-wrap max-width-80 width-full">
+      <div className="flex-1 flex flex-row-wrap max-width-80 width-full">
         <div className="flex flex-row flex-1">
           <button className="flex-1">Shop</button>
           <button className="flex-1">Tavern</button>
@@ -79,11 +81,11 @@ export default function Dashboard() {
           <button className="flex-1">Abilities</button>
         </div>
       </div>
-      <CharStatCard />
-      <div className="inventory border flex flex-1 flex-row-wrap">
-
+      <div className="flex flex-row width-full mx-2">
+        <CharStatCard />
+        <Inventory />
+        <Gear />
       </div>
-
     </main>
   )
 }

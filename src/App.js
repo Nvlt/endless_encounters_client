@@ -13,10 +13,9 @@ function App() {
       <header className="App-header center width-full">
         <Header />
       </header>
-      {/* <Home />
+      <Home />
       <Registration />
-      <Login /> */}
-
+      <Login />
       <Dashboard />
     </div>
   );
