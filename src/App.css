@@ -1,38 +1,179 @@
-.App {
-  text-align: center;
+.border {
+  border: .2em solid black;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.border-none {
+  border: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.border-b {
+  border-bottom: .1rem slategray solid;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.outline-none {
+  outline: none;
+}
+
+.boxshadow {
+  box-shadow: .2rem .2rem .4rem slategray;
+}
+
+.boxshadow-light {
+  box-shadow: .1rem .1rem .2rem slategray;
+}
+
+.rounded-full {
+  border-radius: 100%;
+}
+
+.rounded-heavy {
+  border-radius: 75%;
+}
+
+.rounded-half {
+  border-radius: 50%;
+}
+
+.rounded-light {
+  border-radius: 25%;
+}
+
+.rounded-lighter {
+  border-radius: 10%;
+}
+
+.flex {
   display: flex;
-  flex-direction: column;
+}
+
+.flex-row-wrap {
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+
+.flex-col {
+  flex-flow: column;
+  flex-wrap: nowrap;
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-2 {
+  flex: 2;
+}
+
+.flex-shrink {
+  flex-shrink: 1;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.justify-stretch {
+  justify-items: stretch;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.font-nerd {
+  font-family: "nerdland";
+}
+
+.font-lg {
+  font-size: large;
+}
+
+.font-xl {
+  font-size: x-large;
+}
+
+.font-xxl {
+  font-size: 3rem;
+}
+
+@font-face {
+  font-family: "nerdland";
+  src: url("./assets/fonts/NederlandFantasy.ttf")
+}
+
+.center {
+  text-align: center;
+  align-self: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.font-mono {
+  font-family: monospace;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.p-1 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 2rem;
+}
+
+.m-1 {
+  margin: 1rem;
+}
+
+.m-2 {
+  margin: 2rem;
+}
+
+.mt-4 {
+  margin-top: 4rem;
+}
+
+.mx-2 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.max-w-2 {
+  max-width: 2rem;
+}
+
+.max-w-4 {
+  max-width: 4rem;
+}
+
+.max-w-8 {
+  max-width: 6rem;
+}
+
+.max-width-80 {
+  max-width: 80%;
+}
+
+.width-full {
+  width: 100%;
+}
+
+.height-full {
+  height: 100vh;
+}
+
+.pos-fixed {
+  position: fixed;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+}
+
+.height-40 {
+  height: 40%;
+}
+
+.overflow-scroll {
+  overflow-y: auto;
 }
