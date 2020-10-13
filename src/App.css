@@ -237,7 +237,9 @@ body {
   height: 100vh;
 }
 
-
+.align-self-left {
+  align-self: left;
+}
 
 .overflow-scroll {
   overflow-y: auto;
