@@ -7,9 +7,9 @@ export default function Dashboard() {
 
   return (
 
-    <main className="flex flex-col center width-full grid-1-1">
-      <div className="flex-1 span-1-1 flex flex-col border center p-2 mt-4 m-1
-      rounded-lightest justify-stretch pos-fixed height-40 overflow-scroll">
+    <main className="flex flex-col center width-full ">
+      <div className="flex-1 flex flex-col border center p-2 mt-4 m-1
+      rounded-lightest justify-stretch max-height-40 overflow-scroll">
         <p className="flex-1">
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
           totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
@@ -64,10 +64,8 @@ export default function Dashboard() {
           Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
           consequatur,
            vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-
       </div>
-
-      <div className="border span-1-2 flex-1 flex flex-row max-width-80 width-full">
+      <div className="border flex-1 flex flex-row max-width-80 width-full">
 
         <div className="flex flex-row flex-1 width-half">
           <button className="flex-1">Shop</button>
@@ -81,6 +79,7 @@ export default function Dashboard() {
           <button className="flex-1">Abilities</button>
         </div>
       </div>
+
     </main>
   )
 }

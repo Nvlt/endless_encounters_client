@@ -174,8 +174,25 @@
   height: 100vh;
 }
 
+.max-height-40 {
+  max-height: 40vh;
+}
+
+
 .pos-fixed {
   position: fixed;
+}
+
+.pos-sticky {
+  position: sticky;
+}
+
+.pos-rel {
+  position: relative;
+}
+
+.pos-bottom {
+  position: bottom;
 }
 
 body {
@@ -183,9 +200,7 @@ body {
   height: 100vh;
 }
 
-.height-40 {
-  height: 40%;
-}
+
 
 .overflow-scroll {
   overflow-y: auto;
