@@ -1,10 +1,30 @@
 import React from 'react';
+
+let gear = {
+  helm: {},
+  shoulders: {},
+  chest: {},
+  gloves: {},
+  legs: {},
+  feet: {},
+  main: {},
+  off: {}
+}
+
 import ReactTooltip from "react-tooltip";
+
 
 export default function Gear() {
 
   return (
     <div className="gear border bg-snow center min-w-4r flex flex-2 rounded-lightest
+    flex-col shrink-none max-width-80 mx-2 max-height-40
+    overflow-scroll p-1">
+
+      <div className="flex-1 flex flex-col rounded-light width-full rainbow-text border m-10px p-1-2">
+        <div className="flex-2">Helm</div>
+        <h3 className="flex-1 font-handy font-lg">Merlin's Hat</h3>
+
     flex-col shrink-none max-width-80 mx-2 max-height-40 overflow-scroll p-1">
       <ReactTooltip id="head" place="top" effect="solid" />
       <ReactTooltip id="shoulder" place="top" effect="solid" />
@@ -19,6 +39,7 @@ export default function Gear() {
         <h3 className="flex-1 font-handy hover-gear font-lg"
           data-event="click" clickable="true" data-tip="+2 To Will" data-for="head">
           Merlin's Hat</h3>
+
       </div>
       <div className="flex-1 flex flex-col  center rounded-light width-full   m-10px p-1-2">
         <div className="flex-1 border-b width-fit px-1">Shoulders</div>
