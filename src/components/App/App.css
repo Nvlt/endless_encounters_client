@@ -6,6 +6,18 @@
   background-color: #E4DFDB;
 }
 
+.bg-timber {
+  background-color: #f6f0eaf6;
+}
+
+.bg-snow {
+  background-color: snow;
+}
+
+.bg-dark-cream {
+  background-color: #b1aeadc2;
+}
+
 .bg-verd {
   background-color: #49A9A6;
 }
@@ -51,7 +63,7 @@
 }
 
 .rounded-light {
-  border-radius: 25%;
+  border-radius: 15%;
 }
 
 .rounded-lighter {
@@ -81,6 +93,11 @@
   flex-wrap: nowrap;
 }
 
+.flex-col-wrap {
+  flex-flow: column;
+  flex-wrap: wrap;
+}
+
 .flex-1 {
   flex: 1;
 }
@@ -91,6 +108,10 @@
 
 .flex-shrink {
   flex-shrink: 1;
+}
+
+.shrink-none {
+  flex-shrink: none;
 }
 
 .flex-grow {
@@ -127,10 +148,11 @@
 
 @font-face {
   font-family: "nerdland";
-  src: url("./assets/fonts/NederlandFantasy.ttf")
+  src: url("../../assets/fonts/NederlandFantasy.ttf")
 }
 
 .center {
+  align-content: center;
   text-align: center;
   align-self: center;
   align-items: center;
@@ -140,6 +162,13 @@
   font-family: monospace;
 }
 
+.p-1-2 {
+  padding: .5rem;
+}
+
+.p-1-4 {
+  padding: .02rem;
+}
 
 .p-1 {
   padding: 1rem;
@@ -147,6 +176,14 @@
 
 .p-2 {
   padding: 2rem;
+}
+
+.m-1px {
+  margin: 1px;
+}
+
+.m-10px {
+  margin: 2px;
 }
 
 .m-1 {
@@ -183,8 +220,20 @@
   max-width: 6rem;
 }
 
+.w-120px {
+  width: 20rem;
+}
+
 .max-width-80 {
   max-width: 80%;
+}
+
+.max-width-18 {
+  max-width: 18%;
+}
+
+.width-80 {
+  width: 80%;
 }
 
 .width-half {
@@ -193,6 +242,14 @@
 
 .width-10px {
   width: 10px;
+}
+
+.width-20px {
+  width: 4rem;
+}
+
+.min-w-4r {
+  min-width: 4rem;
 }
 
 .width-full {
@@ -207,6 +264,10 @@
   height: 5px;
 }
 
+.height-20px {
+  height: 4rem;
+}
+
 .height-full {
   height: 100vh;
 }
@@ -215,6 +276,10 @@
   max-height: 40vh;
 }
 
+.sq-5r-5r {
+  width: 5rem;
+  height: 5rem;
+}
 
 .pos-fixed {
   position: fixed;
@@ -237,15 +302,20 @@ body {
   height: 100vh;
 }
 
-
+.align-self-left {
+  align-self: left;
+}
 
 .overflow-scroll {
   overflow-y: auto;
 }
 
+.overflow-x-scroll {
+  overflow-x: auto;
+}
+
 .grid-1-1 {
   grid-auto-flow: row;
-
   grid-auto-flow: column;
 }
 
@@ -257,4 +327,11 @@ body {
 .span-1-2 {
   grid-column: span 1 / span 1;
   grid-row: span 2 / span 2;
+}
+
+.hover-inv:hover {
+  box-shadow: .1rem .1rem .4rem gold;
+  transition: ease-in, 0.3s;
+  transform: scale(1.1);
+  transition-delay: 0.01s;
 }

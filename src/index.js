@@ -2,11 +2,14 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/App/App';
-import UserProvder from './contexts/UserContext';
+import { UserProvider } from './contexts/UserContext';
+import { BrowserRouter } from 'react-router-dom';
 
 ReactDOM.render(
-  <UserProvder>
-    <App />
-  </UserProvder>,
+  <BrowserRouter>
+    <UserProvider>
+      <App />
+    </UserProvider>
+  </BrowserRouter>,
   document.getElementById('root')
 );

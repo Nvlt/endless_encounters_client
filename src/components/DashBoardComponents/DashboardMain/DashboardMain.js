@@ -1,4 +1,7 @@
 import React from 'react';
+import CharStatCard from '../CharacterStatCard/CharacterStatCard';
+import Inventory from '../Inventory/Inventory';
+import Gear from '../Gear/Gear';
 
 
 
@@ -65,59 +68,24 @@ export default function Dashboard() {
           consequatur,
            vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
       </div>
-      <div className="flex-1 flex flex-row max-width-80 width-full">
-        <div className="flex flex-row flex-1 width-half">
+      <div className="flex-1 flex flex-row-wrap max-width-80 width-full">
+        <div className="flex flex-row flex-1">
           <button className="flex-1">Shop</button>
           <button className="flex-1">Tavern</button>
           <button className="flex-1">Explore</button>
         </div>
-        <div className="flex flex-row flex-1 max-height-20 width-half">
-          <button className="flex-1">inventory</button>
+        <div className="flex flex-row flex-1 max-height-20">
+          <button className="flex-1">Inventory</button>
           <button className="flex-1">Gear</button>
           <button className="flex-1">Spells</button>
           <button className="flex-1">Abilities</button>
         </div>
       </div>
-      <div className='char-stat-cont flex-1 border max-height-40 width-fit text-left'>
-        <h3 className="flex-1 mx-1">Dr. Magenstein</h3>
-        <h4 className="flex-1 mx-1">Mage</h4>
-        <h5 className="flex-1 mx-1">Strength: 10</h5>
-        <h5 className="flex-1 mx-1">Stamina:10</h5>
-        <div id="hp-cont" name="hp-cont" className="hp-cont mx-1 flex flex-1 flex-row center">
-          <p className="flex-1">HP</p>
-          <div className="border flex-1 bg-red height-5px width-10px" />
-          <div className="border flex-1 bg-red height-5px width-10px" />
-          <div className="border flex-1 bg-red height-5px width-10px" />
-          <div className="border flex-1 bg-red height-5px width-10px" />
-          <div className="border flex-1 bg-red height-5px width-10px" />
-          <div className="border flex-1 bg-red height-5px width-10px" />
-          <div className="border flex-1 bg-timberwolf height-5px width-10px" />
-          <div className="border flex-1 bg-timberwolf height-5px width-10px" />
-        </div>
-        <div id="ap-cont" name="ap-cont" className="ap-cont mx-1 flex flex-1 flex-row center">
-          <p className="flex-1">AP</p>
-          <div className="border flex-1 bg-verd height-5px width-10px" />
-          <div className="border flex-1 bg-verd height-5px width-10px" />
-          <div className="border flex-1 bg-verd height-5px width-10px" />
-          <div className="border flex-1 bg-verd height-5px width-10px" />
-          <div className="border flex-1 bg-verd height-5px width-10px" />
-          <div className="border flex-1 bg-verd height-5px width-10px" />
-          <div className="border flex-1 bg-verd height-5px width-10px" />
-          <div className="border flex-1 bg-verd height-5px width-10px" />
-        </div>
-        <div id="mana-cont" name="mana-cont" className="mana-cont mx-1 flex flex-1 flex-row center">
-          <p className="flex-1">MP</p>
-          <div className="border flex-1 bg-liberty height-5px width-10px" />
-          <div className="border flex-1 bg-liberty height-5px width-10px" />
-          <div className="border flex-1 bg-liberty height-5px width-10px" />
-          <div className="border flex-1 bg-liberty height-5px width-10px" />
-          <div className="border flex-1 bg-liberty height-5px width-10px" />
-          <div className="border flex-1 bg-liberty height-5px width-10px" />
-          <div className="border flex-1 bg-liberty height-5px width-10px" />
-          <div className="border flex-1 bg-liberty height-5px width-10px" />
-        </div>
+      <div className="flex flex-1 flex-row-wrap width-full max-width-80 mx-2">
+        <CharStatCard />
+        <Inventory />
+        <Gear />
       </div>
-
     </main>
   )
 }

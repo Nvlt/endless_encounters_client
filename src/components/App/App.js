@@ -1,11 +1,11 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import Home from '../HomeMain/HomeMain';
-import Header from '../../Header';
-import Registration from '../RegistrationForm/RegistrationForm';
-import Login from '../LoginForm/LoginForm';
-import Dashboard from '../DashboardMain/DashboardMain';
+import Home from '../../routes/Home/Home';
+import Header from '../Header/Header';
+import Register from '../../routes/Register/Register';
+import Login from '../../routes/Login/Login';
+import Dashboard from '../../routes/Dashboard/Dashboard';
+import { Route, Switch } from 'react-router-dom';
 
 function App() {
   return (
@@ -13,12 +13,21 @@ function App() {
       <header className="App-header center width-full">
         <Header />
       </header>
-      <Switch>
-        {/* <Home />
-        <Registration />
-        <Login /> */}
 
-        <Dashboard />
+      <Switch>
+        <Route
+          exact
+          path='/'
+          component={Home} />
+        <Route
+          path='/register'
+          component={Register} />
+        <Route 
+          path='/login'
+          component={Login} />
+        <Route
+          path='/main'
+          component={Dashboard} />
       </Switch>
     </div>
   );
