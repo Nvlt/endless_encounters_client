@@ -62,7 +62,6 @@ export default function Gear() {
           data-event="click" clickable="true" data-tip="Can see in the dark up to 10 yds." data-for="off">
           Lantern</h3>
       </div>
-
     </div>
   )
 }
