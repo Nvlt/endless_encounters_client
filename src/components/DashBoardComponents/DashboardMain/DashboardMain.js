@@ -27,7 +27,7 @@ export default class Dashboard extends React.Component {
   render() {
     return (
       <main className="flex flex-col center width-full">
-        <div className="flex-1 flex flex-col border center p-2 mt-4 m-1
+        <div className="flex-1 flex flex-col border text-left p-2 mt-4 m-1
       rounded-lightest justify-stretch max-height-40 overflow-scroll">
           <p className="flex-1">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
@@ -97,7 +97,7 @@ export default class Dashboard extends React.Component {
             <button value='abilities' onClick={this.handleDisplayChange} className="flex-1">Abilities</button>
           </div>
         </div>
-        <div className="flex flex-1 flex-row-wrap width-full max-width-80 mx-2">
+        <div className="flex flex-1 flex-row-wrap center width-full max-width-80 mx-2">
           <CharStatCard />
           {this.state.display==='inventory'&&<Inventory />}
           {this.state.display==='gear'&&<Gear />}
