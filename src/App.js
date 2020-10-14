@@ -1,5 +1,4 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Home from './Home';
 import Header from './Header';
@@ -13,10 +12,9 @@ function App() {
       <header className="App-header center width-full">
         <Header />
       </header>
-      {/* <Home />
+      <Home />
       <Registration />
-      <Login /> */}
-
+      <Login />
       <Dashboard />
     </div>
   );
