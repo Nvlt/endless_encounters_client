@@ -6,6 +6,8 @@ import Register from '../../routes/Register/Register';
 import Login from '../../routes/Login/Login';
 import Dashboard from '../../routes/Dashboard/Dashboard';
 import { Route, Switch } from 'react-router-dom';
+import PrivateRoute from '../../routes/routehelpers/PrivateRoute/PrivateRoute';
+import PublicRoute from '../../routes/routehelpers/PublicRoute/PublicRoute';
 
 function App() {
   return (
@@ -19,13 +21,13 @@ function App() {
           exact
           path='/'
           component={Home} />
-        <Route
+        <PublicRoute
           path='/register'
           component={Register} />
-        <Route 
+        <PublicRoute 
           path='/login'
           component={Login} />
-        <Route
+        <PrivateRoute
           path='/main'
           component={Dashboard} />
       </Switch>
