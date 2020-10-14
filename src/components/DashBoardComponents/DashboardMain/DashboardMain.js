@@ -1,7 +1,7 @@
 import React from 'react';
-import CharStatCard from './CharacterStatCard';
-import Inventory from './Inventory';
-import Gear from './Gear';
+import CharStatCard from '../CharacterStatCard/CharacterStatCard';
+import Inventory from '../Inventory/Inventory';
+import Gear from '../Gear/Gear';
 
 
 
