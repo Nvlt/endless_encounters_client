@@ -5,7 +5,7 @@ import Header from '../Header/Header';
 import Register from '../../routes/Register/Register';
 import Login from '../../routes/Login/Login';
 import Dashboard from '../../routes/Dashboard/Dashboard';
-import { Route, Switch } from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import PrivateRoute from '../../routes/routehelpers/PrivateRoute/PrivateRoute';
 import PublicRoute from '../../routes/routehelpers/PublicRoute/PublicRoute';
 
@@ -24,10 +24,10 @@ function App() {
         <PublicRoute
           path='/register'
           component={Register} />
-        <PublicRoute 
+        <PublicRoute
           path='/login'
           component={Login} />
-        <PrivateRoute
+        <PublicRoute
           path='/main'
           component={Dashboard} />
       </Switch>

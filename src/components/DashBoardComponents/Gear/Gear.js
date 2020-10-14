@@ -1,17 +1,17 @@
 import React from 'react';
-
-let gear = {
-  helm: {},
-  shoulders: {},
-  chest: {},
-  gloves: {},
-  legs: {},
-  feet: {},
-  main: {},
-  off: {}
-}
-
 import ReactTooltip from "react-tooltip";
+// let gear={
+//   helm: {},
+//   shoulders: {},
+//   chest: {},
+//   gloves: {},
+//   legs: {},
+//   feet: {},
+//   main: {},
+//   off: {}
+// }
+
+
 
 
 export default function Gear() {
@@ -21,11 +21,6 @@ export default function Gear() {
     flex-col shrink-none max-width-80 mx-2 max-height-40
     overflow-scroll p-1">
 
-      <div className="flex-1 flex flex-col rounded-light width-full rainbow-text border m-10px p-1-2">
-        <div className="flex-2">Helm</div>
-        <h3 className="flex-1 font-handy font-lg">Merlin's Hat</h3>
-
-    flex-col shrink-none max-width-80 mx-2 max-height-40 overflow-scroll p-1">
       <ReactTooltip id="head" place="top" effect="solid" />
       <ReactTooltip id="shoulder" place="top" effect="solid" />
       <ReactTooltip id="chest" place="top" effect="solid" />
@@ -34,6 +29,7 @@ export default function Gear() {
       <ReactTooltip id="feet" place="top" effect="solid" />
       <ReactTooltip id="main" place="top" effect="solid" />
       <ReactTooltip id="off" place="top" effect="solid" />
+
       <div className="flex-1 flex flex-col center rounded-light width-full   m-10px p-1-2">
         <div className="flex-2 border-b width-fit px-1">Helm</div>
         <h3 className="flex-1 font-handy hover-gear font-lg"
@@ -84,5 +80,6 @@ export default function Gear() {
           Lantern</h3>
       </div>
     </div>
+
   )
 }
