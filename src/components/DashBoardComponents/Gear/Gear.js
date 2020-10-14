@@ -1,12 +1,22 @@
 import React from 'react';
 
+let gear = {
+  helm: {},
+  shoulders: {},
+  chest: {},
+  gloves: {},
+  legs: {},
+  feet: {},
+  main: {},
+  off: {}
+}
 
 export default function Gear() {
 
   return (
     <div className="gear border bg-snow center min-w-4r flex flex-2 rounded-lightest
     flex-col shrink-none max-width-80 mx-2 max-height-40
-overflow-scroll p-1">
+    overflow-scroll p-1">
 
       <div className="flex-1 flex flex-col rounded-light width-full rainbow-text border m-10px p-1-2">
         <div className="flex-2">Helm</div>

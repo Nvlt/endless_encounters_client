@@ -6,8 +6,8 @@ export default function Spells() {
 
   return (
     <div className="gear border bg-snow center width-fit flex flex-2 rounded-lightest
-  flex-col shrink-none max-width-80 m-2 max-height-40
- p-1">
+    flex-col shrink-none max-width-80 m-2 max-height-40
+    p-1">
       <div className="flex-1 flex flex-col hover-spell width-full mx-4">
         <h2 className="text-red font-handy" data-tip data-for="fireball">Fireball</h2>
         <ReactTooltip id="fireball" place="top" effect="float">
