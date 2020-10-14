@@ -1,11 +1,42 @@
 import React from 'react';
+import UserContext from '../../contexts/UserContext';
+import AuthApiService from '../../services/auth-api-service';
 
-export default function Login() {
+export default class Login extends React.Component {
+  static contextType = UserContext;
+  state = { error: null };
+
+  handleSubmit = (e) => {
+    e.preventDefault();
+    const { username, userpass } = e.target;
+    this.setState({ error: null });
+
+    AuthApiService.postLogin({
+      username: username.value,
+      password: userpass.value
+    })
+      .then(res => {
+        username.value = '';
+        userpass.value = '';
+        this.context.processLogin(res.authToken);
+      })
+      .catch(res => {
+        this.setState({ error: res.error });
+      })
+  }
+
+  render() {
     return (
       <main className="flex flex-col center flex-1 width-full">
-        <div className="flex-1 flex  center p-2 mt-4 justify-stretch">
 
-          <form className="boxshadow rounded-lighter flex-1 flex-grow flex flex-col center  m-2">
+        {
+        this.state.error &&
+          <div className='error'>{this.state.error}</div>
+        }
+
+        <div className="flex-1 flex  center p-2 mt-4 justify-stretch">
+          
+          <form className="boxshadow rounded-lighter flex-1 flex-grow flex flex-col center  m-2" onSubmit={this.handleSubmit}>
 
             <div className="flex flex-row flex-1 mx-2 max-width-80 font-lg">
               <label htmlFor="username" className="flex-1">User Name</label>
@@ -20,11 +51,12 @@ export default function Login() {
             </div>
 
             <div className="flex-1 flex flex-col justify-around">
-              <button className="flex-1 m-1 boxshadow-light border-none rounded-lighter">Login</button>
+              <button className="flex-1 m-1 boxshadow-light border-none rounded-lighter" type="submit">Login</button>
               <button className="flex-2 m-1 boxshadow-light border-none rounded-lighter">Login With Facebook</button>
             </div>
           </form>
         </div>
       </main>
     )
+  }
 }
