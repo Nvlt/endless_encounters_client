@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import UserContext from '../../contexts/UserContext'
 import AuthApiService from '../../services/auth-api-service';
 
@@ -61,6 +62,9 @@ export default class Registration extends React.Component {
               <button className="flex-1 m-1 boxshadow-light border-none rounded-lighter">Login</button>
               <button className="flex-2 m-1 boxshadow-light border-none rounded-lighter">Login With Facebook</button>
             </div>
+              <Link to='/login'>
+                <a>Already have an account?</a>
+              </Link>
           </form>
         </div>
       </main>

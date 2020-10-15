@@ -1,0 +1,17 @@
+.nav{
+    display: flex;
+    justify-content: space-evenly;
+    border: solid .1em black;
+    font-family: 'Nelship';
+    font-weight: bold;
+    padding: 5px;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+@font-face {
+    font-family: "Nelship";
+    src: url("../../assets/fonts/Nelship.ttf")
+  }

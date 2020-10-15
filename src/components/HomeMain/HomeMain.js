@@ -8,11 +8,10 @@ export default function Home() {
   return (
     <main className="flex flex-col center flex-1 justify-stretch">
       <h1 className="font-xxl flex-1 font-nerd center flex-grow text-pop-up-bottom">Endless Encounters</h1>
-      <h3 className="p-2 font-lg">A place for those who seek to find a way to leave their world behind.</h3>
+      <h3 className="p-2 font-lg">A place for those seeking a way to leave their world behind.</h3>
       <div className="flex-row">
-        <Link to='/main'><button className="flex-1 font-mono m-2 max-w-8">Start</button></Link>
-        <Link to='/register'><button className="flex-1 font-mono m-2 max-w-8">Register</button></Link>
-        <Link to='/about'><button className="flex-1 font-mono m-2 max-w-8">How To</button></Link>
+        <Link to='/main'><a className="flex-1 font-mono m-2 max-w-8">Start</a></Link>
+        <Link to='/register'><a className="flex-1 font-mono m-2 max-w-8">Register</a></Link>
       </div>
       <p className="m-2">Lorem ipsum dolor sit amet,
       consectetur adipiscing elit,

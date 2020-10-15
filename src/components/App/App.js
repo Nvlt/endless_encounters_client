@@ -11,8 +11,8 @@ import PublicRoute from '../../routes/routehelpers/PublicRoute/PublicRoute';
 
 function App() {
   return (
-    <div className="App center font-mono width-full">
-      <header className="App-header center width-full">
+    <div>
+      <header>
         <Header />
       </header>
 
