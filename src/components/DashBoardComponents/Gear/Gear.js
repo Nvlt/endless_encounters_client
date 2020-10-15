@@ -1,36 +1,70 @@
 import React from 'react';
-import ReactTooltip from "react-tooltip";
-// let gear={
-//   helm: {},
-//   shoulders: {},
-//   chest: {},
-//   gloves: {},
-//   legs: {},
-//   feet: {},
-//   main: {},
-//   off: {}
-// }
-
-
+import GearItem from '../GearItem/GearItem';
 
 
 export default function Gear() {
-
+  //Assuming character gear was passed in as a prop
+  let gear={
+    helm: {
+      name: "Merlin's Hat",
+      desc: "+2 To Will"
+    },
+    shoulders: {
+      name: "Tom Brady's Shoulderpads",
+      desc: "+2 to STAM"
+    },
+    chest: {
+      name: "Robe of Winter Night",
+      desc: "+5 to Frost And Shadow Damage"
+    },
+    gloves: {
+      name: "Hulk Hands",
+      desc: "-1 to CHA"
+    },
+    legs: {
+      name: "Hot Pants",
+      desc: "+5 Fire Damage Resistance"
+    },
+    feet: {
+      name: "Boots of Haste",
+      desc: "+5 to Initiative rolls"
+    },
+    main: {
+      name: "Elder Wand",
+      desc: "All Spells will hit"
+    },
+    off: {
+      name: "Lantern",
+      desc: "Can see in the dark up to 10 yds"
+    }
+  }
+  function displayGear(gearItem) {
+    return <GearItem gear={gear[gearItem]} slot={gearItem}/>
+  }
   return (
     <div className="gear border bg-snow center min-w-4r flex flex-2 rounded-lightest
     flex-col shrink-none max-width-80 mx-2 max-height-40
     overflow-scroll p-1">
+      
+      {displayGear('helm')}
+      {displayGear('shoulders')}
+      {displayGear('chest')}
+      {displayGear('gloves')}
+      {displayGear('legs')}
+      {displayGear('feet')}
+      {displayGear('main')}
+      {displayGear('off')}
 
-      <ReactTooltip id="head" place="top" effect="solid" />
+      {/* <ReactTooltip id="head" place="top" effect="solid" />
       <ReactTooltip id="shoulder" place="top" effect="solid" />
       <ReactTooltip id="chest" place="top" effect="solid" />
       <ReactTooltip id="gloves" place="top" effect="solid" />
       <ReactTooltip id="legs" place="top" effect="solid" />
       <ReactTooltip id="feet" place="top" effect="solid" />
       <ReactTooltip id="main" place="top" effect="solid" />
-      <ReactTooltip id="off" place="top" effect="solid" />
+      <ReactTooltip id="off" place="top" effect="solid" /> */}
 
-      <div className="flex-1 flex flex-col center rounded-light width-full   m-10px p-1-2">
+      {/* <div className="flex-1 flex flex-col center rounded-light width-full   m-10px p-1-2">
         <div className="flex-2 border-b width-fit px-1">Helm</div>
         <h3 className="flex-1 font-handy hover-gear font-lg"
           data-event="click" clickable="true" data-tip="+2 To Will" data-for="head">
@@ -78,7 +112,7 @@ export default function Gear() {
         <h3 className="flex-1 font-handy hover-gear font-lg"
           data-event="click" clickable="true" data-tip="Can see in the dark up to 10 yds." data-for="off">
           Lantern</h3>
-      </div>
+      </div> */}
     </div>
 
   )
