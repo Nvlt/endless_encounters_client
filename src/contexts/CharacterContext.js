@@ -71,7 +71,7 @@ export class CharacterProvider extends React.Component {
 
   render() {
     const value = {
-      chararacter: this.state.character,
+      character: this.state.character,
       error: this.state.error,
       setError: this.setError,
       clearError: this.clearError,

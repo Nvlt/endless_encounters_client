@@ -1,86 +1,83 @@
 import React from 'react'
+import CharacterContext from '../../../contexts/CharacterContext';
 import InventoryItem from '../InventoryItem/InventoryItem'
 
-const itemDefaults=[
-  {
-    name: 'Sword of Justin',
-    rarity: 'epic',
-    desc: 'Does a thing',
-    img: require("../../../assets/images/loyalty.png")
-  },
-  {
-    name: 'Buckler',
-    rarity: 'common',
-    desc: 'Does a thing',
-    img: require("../../../assets/images/loyalty.png")
-  },
-  {
-    name: 'Slicer',
-    rarity: 'uncommon',
-    desc: 'Does a thing',
-    img: require("../../../assets/images/loyalty.png")
-  },
-  {
-    name: 'Worn Gloves',
-    rarity: 'common',
-    desc: 'Does a thing',
-    img: require("../../../assets/images/loyalty.png")
-  },
-  {
-    name: 'Pelt',
-    rarity: 'common',
-    desc: 'Does a thing',
-    img: require("../../../assets/images/loyalty.png")
-  },
-  {
-    name: 'Rotten Meat',
-    rarity: 'rare',
-    desc: 'Does a thing',
-    img: require("../../../assets/images/loyalty.png")
-  },
-  {
-    name: 'Swift Boots',
-    rarity: 'uncommon',
-    desc: 'Does a thing',
-    img: require("../../../assets/images/loyalty.png")},
-  {
-    name: 'Scroll of Healing',
-    rarity: 'common',
-    desc: 'Does a thing',
-    img: require("../../../assets/images/loyalty.png")
-  },
-  {
-    name: 'Rock',
-    rarity: 'common',
-    desc: 'Does a thing',
-    img: require("../../../assets/images/loyalty.png")
-  },
-  {
-    name: 'The Wipeout',
-    rarity: 'legendary',
-    desc: 'Does a thing',
-    img: require("../../../assets/images/loyalty.png")
-  },
-  {
-    name: 'Cheese',
-    rarity: 'common',
-    desc: 'Does a thing',
-    img: require("../../../assets/images/loyalty.png")
-  },
-  {
-    name: 'Speed Potion',
-    rarity: 'uncommon',
-    desc: 'Does a thing',
-    img: require("../../../assets/images/loyalty.png")
-  }
-]
+// const itemDefaults=[
+//   {
+//     name: 'Sword of Justin',
+//     rarity: 'epic',
+//     desc: 'Does a thing',
+//     img: require("../../../assets/images/loyalty.png")
+//   },
+//   {
+//     name: 'Buckler',
+//     rarity: 'common',
+//     desc: 'Does a thing',
+//     img: require("../../../assets/images/loyalty.png")
+//   },
+//   {
+//     name: 'Slicer',
+//     rarity: 'uncommon',
+//     desc: 'Does a thing',
+//     img: require("../../../assets/images/loyalty.png")
+//   },
+//   {
+//     name: 'Worn Gloves',
+//     rarity: 'common',
+//     desc: 'Does a thing',
+//     img: require("../../../assets/images/loyalty.png")
+//   },
+//   {
+//     name: 'Pelt',
+//     rarity: 'common',
+//     desc: 'Does a thing',
+//     img: require("../../../assets/images/loyalty.png")
+//   },
+//   {
+//     name: 'Rotten Meat',
+//     rarity: 'rare',
+//     desc: 'Does a thing',
+//     img: require("../../../assets/images/loyalty.png")
+//   },
+//   {
+//     name: 'Swift Boots',
+//     rarity: 'uncommon',
+//     desc: 'Does a thing',
+//     img: require("../../../assets/images/loyalty.png")},
+//   {
+//     name: 'Scroll of Healing',
+//     rarity: 'common',
+//     desc: 'Does a thing',
+//     img: require("../../../assets/images/loyalty.png")
+//   },
+//   {
+//     name: 'Rock',
+//     rarity: 'common',
+//     desc: 'Does a thing',
+//     img: require("../../../assets/images/loyalty.png")
+//   },
+//   {
+//     name: 'The Wipeout',
+//     rarity: 'legendary',
+//     desc: 'Does a thing',
+//     img: require("../../../assets/images/loyalty.png")
+//   },
+//   {
+//     name: 'Cheese',
+//     rarity: 'common',
+//     desc: 'Does a thing',
+//     img: require("../../../assets/images/loyalty.png")
+//   },
+//   {
+//     name: 'Speed Potion',
+//     rarity: 'uncommon',
+//     desc: 'Does a thing',
+//     img: require("../../../assets/images/loyalty.png")
+//   }
+// ]
 
-export default function Inventory({items=itemDefaults}) {
-  function fetchInventory() {
-    fetch('https://jsonplaceholder.typicode.com/todos/1')
-      .then(res => res.json())
-      .then(json => console.log(json));
-  }
+export default function Inventory({items=[]}) {
+
   function listItems() {
     //fetch inventory here with id
     const inventoryList=items.map((item, index) => {

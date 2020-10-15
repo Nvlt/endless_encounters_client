@@ -1,46 +1,45 @@
 import React from 'react';
 import SpellItem from '../SpellItem/SpellItem';
 
-export default function Spells() {
-  const spellList = [
-    {
-      id: 'fireball',
-      name: 'Fireball',
-      desc: 'Hurl a fiery ball at your target.  2 D 6 + INT Modifier'
-    },
-    {
-      id: 'incinerate',
-      name: 'Incinerate',
-      desc: "Set your target on fire.  1 D 4 for 4 Turns."
-    },
-    {
-      id: 'conjure-water',
-      name: 'Conjure Water',
-      desc: "Conjure 1 Fresh Water to drink.  Replenish 1 D 4 MP."
-    },
-    {
-      id: 'polymorph',
-      name: 'Polymorph',
-      desc: "Turn 1 Enemy to a harmless sheep for 5 turns.  Only 1 target can be polymorphed at a time."
-    },
-    {
-      id: 'magic-missile',
-      name: 'Magic Missile',
-      desc: "Shoot a barrage of arcane missiles at your target.  1 D 4 DMG 1 D 6 Times."
-    },
-    {
-      id: 'telekinesis',
-      name: 'Telekinesis',
-      desc: "You can move an object weighing up to 5 lbs up to 3 yards."
-    }
-  ]
+export default function Spells({ spells=[] }) {
+  // const spellList = [
+  //   {
+  //     id: 'fireball',
+  //     name: 'Fireball',
+  //     desc: 'Hurl a fiery ball at your target.  2 D 6 + INT Modifier'
+  //   },
+  //   {
+  //     id: 'incinerate',
+  //     name: 'Incinerate',
+  //     desc: "Set your target on fire.  1 D 4 for 4 Turns."
+  //   },
+  //   {
+  //     id: 'conjure-water',
+  //     name: 'Conjure Water',
+  //     desc: "Conjure 1 Fresh Water to drink.  Replenish 1 D 4 MP."
+  //   },
+  //   {
+  //     id: 'polymorph',
+  //     name: 'Polymorph',
+  //     desc: "Turn 1 Enemy to a harmless sheep for 5 turns.  Only 1 target can be polymorphed at a time."
+  //   },
+  //   {
+  //     id: 'magic-missile',
+  //     name: 'Magic Missile',
+  //     desc: "Shoot a barrage of arcane missiles at your target.  1 D 4 DMG 1 D 6 Times."
+  //   },
+  //   {
+  //     id: 'telekinesis',
+  //     name: 'Telekinesis',
+  //     desc: "You can move an object weighing up to 5 lbs up to 3 yards."
+  //   }
+  // ]
 
   function generateSpellList() {
-    return spellList.map((spell, index) => {
+    return spells.map((spell, index) => {
       return <SpellItem spell={spell} key={index}/>
     })
   }
-
   return (
     <div className=" border bg-snow center min-w-4r flex flex-2 rounded-lightest
     flex-col shrink-none max-width-80 mx-2 max-height-40 overflow-scroll p-1">

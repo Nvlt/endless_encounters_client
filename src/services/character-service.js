@@ -28,5 +28,53 @@ const CharacterService = {
           ? res.json().then(e => Promise.reject(e))
           : res.json();
       });
-  }
+  },
+  getInventory() {
+    return fetch(`${config.API_ENDPOINT}/character/inventory`, {
+      headers: {
+        'authorization': `bearer ${TokenService.getAuthToken()}`
+      }
+    })
+      .then(res => {
+        return (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json();
+      });
+  },
+  getGear() {
+    return fetch(`${config.API_ENDPOINT}/character/gear`, {
+      headers: {
+        'authorization': `bearer ${TokenService.getAuthToken()}`
+      }
+    })
+      .then(res => {
+        return (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json();
+      });
+  },
+  getAbilities() {
+    return fetch(`${config.API_ENDPOINT}/character/abilities`, {
+      headers: {
+        'authorization': `bearer ${TokenService.getAuthToken()}`
+      }
+    })
+      .then(res => {
+        return (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json();
+      });
+  },
+  getSpells() {
+    return fetch(`${config.API_ENDPOINT}/character/spells`, {
+      headers: {
+        'authorization': `bearer ${TokenService.getAuthToken()}`
+      }
+    })
+      .then(res => {
+        return (!res.ok)
+          ? res.json().then(e => Promise.reject(e))
+          : res.json();
+      });
+  },
 }
