@@ -7,34 +7,42 @@ export default function Gear() {
   let gear={
     helm: {
       name: "Merlin's Hat",
+      rarity: "rare",
       desc: "+2 To Will"
     },
     shoulders: {
       name: "Tom Brady's Shoulderpads",
+      rarity: "epic",
       desc: "+2 to STAM"
     },
     chest: {
       name: "Robe of Winter Night",
+      rarity: "rare",
       desc: "+5 to Frost And Shadow Damage"
     },
     gloves: {
       name: "Hulk Hands",
+      rarity: "legendary",
       desc: "-1 to CHA"
     },
     legs: {
       name: "Hot Pants",
+      rarity: "rare",
       desc: "+5 Fire Damage Resistance"
     },
     feet: {
       name: "Boots of Haste",
+      rarity: "uncommon",
       desc: "+5 to Initiative rolls"
     },
     main: {
       name: "Elder Wand",
+      rarity: "uncommon",
       desc: "All Spells will hit"
     },
     off: {
       name: "Lantern",
+      rarity: "common",
       desc: "Can see in the dark up to 10 yds"
     }
   }

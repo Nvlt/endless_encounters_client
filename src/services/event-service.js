@@ -1,9 +1,9 @@
 import config from '../config';
 import TokenService from './token-service';
 
-const CharacterService = {
-  getCharacter() {
-    return fetch(`${config.API_ENDPOINT}/character`, {
+const EventService = {
+  getEvent() {
+    return fetch(`${config.API_ENDPOINT}/event`, {
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`
       }
@@ -14,14 +14,14 @@ const CharacterService = {
           : res.json();
       });
   },
-  postCharacter(character) {
-    return fetch(`${config.API_ENDPOINT}/character`, {
+  postEvent(ev) {
+    return fetch(`${config.API_ENDPOINT}/event`, {
       method: 'POST',
       headers: {
         Authorization: `bearer ${TokenService.getAuthToken()}`,
         'content-type': 'application/json'
       },
-      body: JSON.stringify(character)
+      body: JSON.stringify(ev)
     })
       .then(res => {
         return (!res.ok)
@@ -29,4 +29,5 @@ const CharacterService = {
           : res.json();
       });
   }
+  
 }
