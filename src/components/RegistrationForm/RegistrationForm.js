@@ -1,7 +1,7 @@
 import React from 'react'
 import UserContext from '../../contexts/UserContext'
 import AuthApiService from '../../services/auth-api-service';
-
+import "./RegistrationForm.css"
 export default class Registration extends React.Component {
   static contextType=UserContext;
   state={error: null}

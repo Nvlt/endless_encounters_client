@@ -117,7 +117,7 @@
 
 .hover-gear:hover{
   text-shadow: .3rem .2rem .4rem rgba(252, 212, 79, 0.699);
-  transition: ease-in, 0.5s;
+  transition: ease, 0.5s;
   transform: scale(1.5);
   transition-delay: 0.01s;
   margin: 0;

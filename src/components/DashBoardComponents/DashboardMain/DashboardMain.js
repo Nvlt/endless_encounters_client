@@ -4,7 +4,7 @@ import Inventory from '../Inventory/Inventory';
 import Gear from '../Gear/Gear';
 import Spells from '../Spells/Spells';
 import Abilities from '../Abilities/Abilities';
-import '../../../App.css'
+import './DashboardMain.css'
 
 
 

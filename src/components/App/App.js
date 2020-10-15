@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+
 import Home from '../../routes/Home/Home';
 import Header from '../Header/Header';
 import Register from '../../routes/Register/Register';

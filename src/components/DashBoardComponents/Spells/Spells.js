@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactTooltip from "react-tooltip";
-
+import "./Spells.css"
 export default function Spells() {
 
 

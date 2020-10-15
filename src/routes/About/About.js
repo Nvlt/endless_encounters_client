@@ -1,7 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
-
+import "../../App.css"
 export default class About extends React.Component {
   state={showing: ''}
   handleExpand=(ev) => {
