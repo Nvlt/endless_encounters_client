@@ -1,0 +1,44 @@
+.main{
+    display: flex;
+    flex-direction: column;
+}
+
+.intro{
+    text-align: center;
+    margin: 15px;
+    padding: 5px;
+}
+
+.subHead{
+    font-family: 'Nelship';
+    text-align: center;
+    margin-top: 15px;
+}
+
+.mainNav{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    font-weight: bold;
+    font-size: 1.5em;
+    padding: 5px;
+    color: #48A9A6;
+}
+
+.mainLink{
+    text-decoration: none;
+}
+
+.mainLink:visited {
+    color: #48A9A6;
+}
+
+.mainLink:hover {
+    color: #FEC369;
+}
+
+@font-face {
+    font-family: "Nelship";
+    src: url("../../assets/fonts/Nelship.ttf")
+}
+

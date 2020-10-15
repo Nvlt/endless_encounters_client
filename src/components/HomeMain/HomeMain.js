@@ -1,19 +1,20 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
+import './HomeMain.css';
 
 export default function Home() {
 
 
 
   return (
-    <main className="flex flex-col center flex-1 justify-stretch">
+    <main className='main'>
       <h1 className="font-xxl flex-1 font-nerd center flex-grow text-pop-up-bottom">Endless Encounters</h1>
-      <h3 className="p-2 font-lg">A place for those seeking a way to leave their world behind.</h3>
-      <div className="flex-row">
-        <Link to='/main'><a className="flex-1 font-mono m-2 max-w-8">Start</a></Link>
-        <Link to='/register'><a className="flex-1 font-mono m-2 max-w-8">Register</a></Link>
-      </div>
-      <p className="m-2">Lorem ipsum dolor sit amet,
+      <h3 className='subHead'>A place for those seeking a way to leave their world behind.</h3>
+      <nav className='mainNav'>
+        <Link className='mainLink' to='/main'>Start</Link>
+        <Link className='mainLink' to='/register'>Register</Link>
+      </nav>
+      <p className='intro'>Lorem ipsum dolor sit amet,
       consectetur adipiscing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
       Ut enim ad minim veniam,

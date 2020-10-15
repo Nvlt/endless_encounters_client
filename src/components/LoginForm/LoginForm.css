@@ -1,0 +1,43 @@
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+.form{
+  padding: 10px;
+  border-radius: 3px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.row{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: .5em;
+}
+.row > input{
+padding: .5em;
+}
+
+.row > label {
+  padding-bottom: 10px;
+}
+
+.form  button {
+  display: block;
+  width: 50%;
+  margin: 15px auto;
+  padding: 10px;
+  font-weight: 700;
+  background-color: #48A9A6;
+  border-radius: 8px;
+  cursor: grab;
+}
+
+.form button:hover {
+  background-color: #FEC369;
+  box-shadow: 0 0 10px 2px #595358;
+}

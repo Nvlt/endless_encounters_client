@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
+import './Character.css'
 
 
 export default function CharStatCard() {
@@ -17,7 +18,7 @@ export default function CharStatCard() {
       <ReactTooltip id="char-hp" place="top" effect="solid" />
       <ReactTooltip id="char-ap" place="top" effect="solid" />
       <ReactTooltip id="char-mp" place="top" effect="solid" />
-      <h3 className="flex-1 center border-b" >Dr. Magenstein</h3>
+      <h3 className="name">Dr. Magenstein</h3>
       <img
         className="flex-1 width-half center mx-2 dance" data-event="click" clickable="true"
         data-for="char-stats" data-tip={charData}

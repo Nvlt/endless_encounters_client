@@ -1,0 +1,39 @@
+.scrollBox{
+    display: flex;
+    flex-direction: column;
+    border: .2em solid black;
+    text-align: left;
+    padding: 2rem;
+    margin: 1rem;
+    max-height: 40vh;
+    overflow-y: auto;
+    border-radius: 8px;
+}
+
+.btnsNav{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    justify-content: center;
+}
+
+.dashBtn{
+    min-width: 75px;
+    height: 30px;
+    margin: .5rem;
+    border-radius: 5px;
+    font-weight: 700;
+    background-color: #48A9A6;
+    cursor: grab;
+}
+.dashBtn:hover {
+    background-color: #FEC369;
+    box-shadow: 0 0 10px 2px #595358;
+}
+
+.charAssets{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+}

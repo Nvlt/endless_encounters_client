@@ -1,0 +1,11 @@
+.name{
+    font-family: 'Nelship';
+    font-size: 1.5em;
+    border-bottom:  .1rem slategray solid;
+}
+
+
+@font-face {
+    font-family: "Straw";
+    src: url("../../../assets/fonts/Nelship.ttf")
+  }
