@@ -1,0 +1,57 @@
+                                /* basic border */
+
+.border {
+  border: .2em solid black;
+}
+
+
+                                /* remove a border */
+
+.border-none {
+  border: none;
+}
+
+
+                              /* border only bottom */
+
+ .border-b {
+  border-bottom: .1rem slategray solid;
+}
+
+
+                            /* remove an outline */
+.outline-none {
+  outline: none;
+}
+
+
+                            /* border radius' */
+
+
+/* this will make a circle
+if width and height are close in size */
+.rounded-full {
+  border-radius: 100%;
+}
+/* this will make a circle
+if width and height are close in size */
+.rounded-heavy {
+  border-radius: 75%;
+}
+/* this will make a circle
+if width and height are close in size */
+.rounded-half {
+  border-radius: 50%;
+}
+/* this works well for larger elements */
+.rounded-light {
+  border-radius: 15%;
+}
+/* this works well for larger elements */
+.rounded-lighter {
+  border-radius: 10%;
+}
+/* most common  */
+.rounded-lightest {
+  border-radius: 1.8%;
+}

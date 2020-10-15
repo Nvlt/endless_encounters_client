@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactTooltip from "react-tooltip";
-
+import './Abilities.css'
 export default function Abilities() {
 
   return (

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
-
+import './CharStatCard.css'
 
 export default function CharStatCard() {
 
@@ -21,7 +21,7 @@ export default function CharStatCard() {
       <img
         className="flex-1 width-half center mx-2 dance" data-event="click" clickable="true"
         data-for="char-stats" data-tip={charData}
-        src={require("../../../assets/images/77-774812_open-mage-hat-png.png")}
+        src={require("../../../assets/images/wizard-hat.png")}
         alt="a floppy mage hat" />
       <div id="hp-cont" name="hp-cont" data-event="click" clickable="true" data-tip="Hit Points: 6/8"
         data-for="char-hp"

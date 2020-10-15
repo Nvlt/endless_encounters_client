@@ -96,7 +96,6 @@ export default class About extends React.Component {
                 data-for="Buying/Selling">something to highlight</div>more text here</div>}
           </div>
 
-
           <div className="Combat inline text-left ">
             <h3 id="Combat" onClick={this.handleExpand} className="font-handy center cursor-pointer">Combat</h3>
             {this.state.showing==="Combat"&&<div className="font-lg inline m-0">
@@ -106,7 +105,6 @@ export default class About extends React.Component {
                 data-tip="Brief explain"
                 data-for="Combat">something to highlight</div>more text here</div>}
           </div>
-
 
           <div className="Progression inline text-left ">
             <h3 id="Progression" onClick={this.handleExpand} className="font-handy center cursor-pointer">Progression</h3>
@@ -127,7 +125,6 @@ export default class About extends React.Component {
                 data-tip="Brief explain"
                 data-for="Looting">something to highlight</div>more text here</div>}
           </div>
-
           <div className="Items inline text-left ">
             <h3 id="Items" onClick={this.handleExpand} className="font-handy center cursor-pointer">Items</h3>
             {this.state.showing==="Items"&&<div className="font-lg inline m-0">
@@ -137,7 +134,6 @@ export default class About extends React.Component {
                 data-tip="Brief explain"
                 data-for="Items">something to highlight</div>more text here</div>}
           </div>
-
         </div>
       </main>
 

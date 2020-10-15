@@ -3,21 +3,21 @@ import UserContext from '../../contexts/UserContext'
 import AuthApiService from '../../services/auth-api-service';
 
 export default class Registration extends React.Component {
-  static contextType = UserContext;
-  state = { error: null }
+  static contextType=UserContext;
+  state={error: null}
 
-  handleRegister = (e) => {
+  handleRegister=(e) => {
     e.preventDefault();
-    const { useremail, username, userpass } = e.target;
+    const {useremail, username, userpass}=e.target;
     AuthApiService.postUser({
       email: useremail.value,
       username: username.value,
       password: userpass.value
     })
       .then(newUser => {
-        useremail.value = '';
-        username.value = '';
-        userpass.value = '';
+        useremail.value='';
+        username.value='';
+        userpass.value='';
         console.log('User created')
       })
       .catch(res => {
@@ -30,7 +30,7 @@ export default class Registration extends React.Component {
       <main className="flex flex-col center flex-1 width-full">
 
         {
-          this.state.error &&
+          this.state.error&&
           <div className='error'>{this.state.error}</div>
         }
 

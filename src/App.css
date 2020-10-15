@@ -154,7 +154,7 @@
 .font-xl {
   font-size: x-large;
 }
-.font-xxl {
+.font-3r {
   font-size: 3rem;
 }
 .text-justify{
@@ -260,7 +260,7 @@
   margin: 1px;
 }
 
-.m-10px {
+.m-2px {
   margin: 2px;
 }
 .m-0{
@@ -335,7 +335,7 @@
   width: 10px;
 }
 
-.width-20px {
+.width-4 {
   width: 4rem;
 }
 
@@ -355,7 +355,7 @@
   height: 5px;
 }
 
-.height-20px {
+.height-4 {
   height: 4rem;
 }
 
