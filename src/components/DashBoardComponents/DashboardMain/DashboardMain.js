@@ -5,18 +5,26 @@ import Gear from '../Gear/Gear';
 import Spells from '../Spells/Spells';
 import Abilities from '../Abilities/Abilities';
 import './Dash.css'
+import EventContext from '../../../contexts/EventContext';
+
+
 
 
 
 export default class Dashboard extends React.Component {
+  static defaultProps = {
+    character: {}
+  }
+
   constructor(props) {
     super(props)
-    const state={
-      display: 'gear',
-
+    const state = {
+      display: 'gear'
     }
     this.state=state;
   }
+  static contextType = EventContext;
+  
 
   handleDisplayChange=(ev) => {
     ev.preventDefault();
@@ -83,6 +91,7 @@ export default class Dashboard extends React.Component {
             consequatur,
            vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
         </div>
+
         <div className="btnsNav">
             <button className='dashBtn'>Shop</button>
             <button className='dashBtn'>Tavern</button>
