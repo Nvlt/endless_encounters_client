@@ -1,0 +1,23 @@
+.bar {
+  border: 2px solid black;
+  width: 150px;
+  border-radius: 1em;
+  overflow: hidden;
+}
+
+.hp {
+  background-color: red;
+}
+
+.mp {
+  background-color: blue;
+}
+
+.ap {
+  background-color: green;
+}
+
+.bar-segment{
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}

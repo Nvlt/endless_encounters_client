@@ -1,108 +1,68 @@
-                      /* fonts, borders, and colors */
-                      /* fonts, borders, and colors */
-                      /* fonts, borders, and colors */
-                      /* fonts, borders, and colors */
-.font-lg {
-  font-size: large;
-}
-.border-none {
-  border: none;
-}
-.border-b {
-  border-bottom: .1rem slategray solid;
-}
-.rounded-lighter {
-  border-radius: 10%;
-}
-.boxshadow {
-  box-shadow: .2rem .2rem .4rem slategray;
-}
-.boxshadow-light {
-  box-shadow: .1rem .1rem .2rem slategray;
-}
+input[type=text], input[type=password], input[type=email] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical;
+  }
+  
+  .mainBody{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    min-width: 300px;
+    border-radius: 3px;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  .row{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: .5em;
+  }
+  .row > input{
+  padding: .5em;
+  }
+  
+  .row > label {
+    padding-bottom: 10px;
+  }
+  
+  .form  button {
+    display: block;
+    width: 50%;
+    margin: 15px auto;
+    padding: 10px;
+    font-weight: 700;
+    background-color: #48A9A6;
+    border-radius: 8px;
+    cursor: grab;
+  }
 
-                                                          /* alignment and positioning */
-                                                          /* alignment and positioning */
-                                                          /* alignment and positioning */
-                                                          /* alignment and positioning */
-.center {
-  align-content: center;
-  text-align: center;
-  align-self: center;
-  align-items: center;
-}
-.justify-stretch {
-  justify-items: stretch;
-}
-.justify-around {
-  justify-content: space-around;
-}
+  .accountRte{
+      text-align: center;
+      margin-top: 2rem;
+  }
+  
+  .form button:hover {
+    background-color: #FEC369;
+    box-shadow: 0 0 10px 2px #595358;
+  }
+  
+  @media all and (min-width: 600px){
+    .form{
+      display: flex;
+      flex-direction: column;
+      margin-top: 2rem;
+      min-width: 600px;
+    }
+  }
 
-
-                                      /* flex */
-                                      /* flex */
-                                      /* flex */
-                                      /* flex */
-.flex {
-  display: flex;
-}
-.flex-col {
-  flex-flow: column;
-  flex-wrap: nowrap;
-}
-.flex-row {
-  flex-flow: row;
-  flex-wrap: nowrap;
-}
-.flex-row-wrap {
-  flex-flow: row;
-  flex-wrap: wrap;
-}
-.flex-1 {
-  flex: 1;
-}
-.flex-grow {
-  flex-grow: 1;
-}
-
-
-                                                        /* width and height */
-                                                        /* width and height */
-                                                        /* width and height */
-                                                        /* width and height */
-
-.width-full {
-  width: 100%;
-}
-.max-width-80 {
-  max-width: 80%;
-}
-
-
-                              /* margin andd padding */
-                              /* margin andd padding */
-                              /* margin andd padding */
-                              /* margin andd padding */
-.p-2 {
-  padding: 2rem;
-}
-.mx-1 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-.m-2 {
-  margin: 2rem;
-}
-.mx-2 {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-.mt-4 {
-  margin-top: 4rem;
-}
-
-
-                                                      /* transitions and animations */
-                                                      /* transitions and animations */
-                                                      /* transitions and animations */
-                                                      /* transitions and animations */

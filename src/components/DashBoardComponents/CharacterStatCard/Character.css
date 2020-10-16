@@ -1,0 +1,76 @@
+
+.statBody{
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    text-align: center;
+    border: .2em solid black;
+    padding: .5rem;
+    margin: auto;
+}
+
+.name{
+    font-family: 'Nelship';
+    font-size: 1.5em;
+    border-bottom:  .1rem slategray solid;
+}
+
+.charIcon{
+    margin: auto;
+    width: 50%;
+    height: auto;
+    max-width: 250px;
+    padding-bottom: 15px;
+}
+
+.statBar{
+    display: flex;
+    flex: 1;
+}
+
+.mStat{
+    border: .2em solid black;
+    flex: 1;
+    background-color: #4357AC;
+    height: 5px;
+    width: 10px;
+    flex-shrink: 1;
+}
+
+.aStat{
+    border: .2em solid black;
+    flex: 1;
+    background-color: #49A9A6;
+    height: 5px;
+    width: 10px;
+    flex-shrink: 1;
+}
+
+.hStat{
+    border: .2em solid black;
+    flex: 1;
+    background-color: #C1666B;
+    height: 5px;
+    width: 10px;
+    flex-shrink: 1;
+}
+
+.emptyStat{
+    border: .2em solid black;
+    flex: 1;
+    background-color: #E4DFDB;
+    height: 5px;
+    width: 10px;
+    flex-shrink: 1;
+}
+
+@font-face {
+    font-family: "Straw";
+    src: url("../../../assets/fonts/Nelship.ttf")
+}
+
+@media all and (min-width: 600px){
+    .statBody{
+        margin: 1rem;
+    }
+}
