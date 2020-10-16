@@ -2,6 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './HomeMain.css';
 import ReactTooltip from 'react-tooltip';
+import '../../components/App/App.css'
 export default function Home() {
 
 

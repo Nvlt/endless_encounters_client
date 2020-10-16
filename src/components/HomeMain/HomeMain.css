@@ -10,7 +10,6 @@
     margin-top: 30px;
     max-width: 280px;
     margin: 10px auto;
-
 }
 
 .mainNav{
@@ -39,8 +38,3 @@
     font-family: "Nelship";
     src: url("../../assets/fonts/Nelship.ttf")
 }
-
-.my-2{
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
