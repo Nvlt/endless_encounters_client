@@ -14,9 +14,9 @@ function App() {
 
   const location = useLocation()
   const trans = useTransition(location, location => location.pathname, {
-    from: { position: 'fixed', opacity: 0 },
-    enter: { opacity: 1 },
-    leave: { opacity: 0 },
+    from: { opacity: 0 },
+    enter: { position: 'flex', opacity: 1 },
+    leave: { position: 'absolute', opacity: 0 },
     })
 
   return trans.map(({ item: location, props, key }) => (
