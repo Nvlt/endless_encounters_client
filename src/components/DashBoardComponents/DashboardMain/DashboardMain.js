@@ -103,7 +103,7 @@ export default class Dashboard extends React.Component {
           </div>
         </div>
         <div className="flex flex-1 flex-row-wrap center width-full max-width-80 mx-2">
-          <CharStatCard />
+          <CharStatCard stats={this.props.character.stats}/>
           {this.state.display==='inventory'&&<Inventory items={this.props.character.inventory}/>}
           {this.state.display==='gear'&&<Gear gear={this.props.character.gear}/>}
           {this.state.display==='spells'&&<Spells spells={this.props.character.spells}/>}

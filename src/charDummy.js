@@ -2,6 +2,8 @@ const character = {
   stats: {
     hp: 25,
     hpMax: 31,
+    mp: 7,
+    mpMax: 21,
     str: 10,
     int: 10,
     dex: 10,
