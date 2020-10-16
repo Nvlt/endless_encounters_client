@@ -28,7 +28,7 @@ export default class Login extends React.Component {
 
   render() {
     return (
-      <main>
+      <main className='mainBody'>
 
         {
         this.state.error &&

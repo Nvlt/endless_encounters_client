@@ -6,7 +6,17 @@ input[type=text], input[type=password] {
   box-sizing: border-box;
   resize: vertical;
 }
+
+.mainBody{
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  width: 100%;
+}
+
 .form{
+  display: flex;
+  flex-direction: column;
   padding: 10px;
   border-radius: 3px;
   max-width: 500px;
