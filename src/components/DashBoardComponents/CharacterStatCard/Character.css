@@ -68,3 +68,9 @@
     font-family: "Straw";
     src: url("../../../assets/fonts/Nelship.ttf")
 }
+
+@media all and (min-width: 600px){
+    .statBody{
+        margin: 1rem;
+    }
+}

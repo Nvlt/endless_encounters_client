@@ -36,3 +36,9 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+@media all and (min-width: 600px){
+    .scrollBox{
+        margin: 1rem;
+    }
+}
