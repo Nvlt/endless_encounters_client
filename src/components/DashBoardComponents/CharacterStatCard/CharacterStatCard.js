@@ -27,40 +27,40 @@ export default function CharStatCard() {
         data-for="char-hp"
         className="statBar">
         <p className="statType">HP</p>
-        <div className="border flex-1 bg-red height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-red height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-red height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-red height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-red height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-red height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-timberwolf height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-timberwolf height-5px width-10px flex-shrink" />
+        <div className="hStat"/>
+        <div className="hStat"/>
+        <div className="hStat"/>
+        <div className="hStat"/>
+        <div className="hStat"/>
+        <div className="hStat"/>
+        <div className="emptyStat" />
+        <div className="emptyStat" />
       </div>
       <div id="ap-cont" name="ap-cont" data-event="click" clickable="true"
         data-tip="Action Points: 8/8" data-for="char-ap"
         className="statBar">
-        <p className="flex-1 flex-shrink1">AP</p>
-        <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
+        <p className="statType">AP</p>
+        <div className="aStat" />
+        <div className="aStat" />
+        <div className="aStat" />
+        <div className="aStat" />
+        <div className="aStat" />
+        <div className="aStat" />
+        <div className="aStat" />
+        <div className="aStat" />
       </div>
       <div id="mana-cont" name="mana-cont" data-event="click" clickable="true"
         data-tip="Mana Points: 8/8" data-for="char-mp"
         className="statBar">
         <p className="statType">MP</p>
-        <div className="border flex-1 bg-liberty height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-liberty height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-liberty height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-liberty height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-liberty height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-liberty height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-liberty height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-liberty height-5px width-10px flex-shrink" />
+        <div className="mStat"/>
+        <div className="mStat"/>
+        <div className="mStat"/>
+        <div className="mStat"/>
+        <div className="mStat"/>
+        <div className="mStat"/>
+        <div className="mStat"/>
+        <div className="mStat"/>
       </div>
     </div>)
 }
