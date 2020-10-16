@@ -1,8 +1,9 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './HomeMain.css';
-import ReactTooltip from 'react-tooltip';
+
 import '../../components/App/App.css'
+import UserContext from '../../contexts/UserContext';
 export default function Home() {
 
 
@@ -13,7 +14,7 @@ export default function Home() {
       <h3 className='subHead'>A place for those seeking a way to leave their world behind... </h3>
       <nav className='mainNav'>
         <Link className='mainLink' to='/main'>Start</Link>
-        <Link className='mainLink' to='/register'>Register</Link>
+        {/* <Link className='mainLink' to='/register'>Register</Link> */}
       </nav>
       <p className='intro'>Lorem ipsum dolor sit amet,
       consectetur adipiscing elit,
