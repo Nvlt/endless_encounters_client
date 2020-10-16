@@ -4,7 +4,7 @@ import Inventory from '../Inventory/Inventory';
 import Gear from '../Gear/Gear';
 import Spells from '../Spells/Spells';
 import Abilities from '../Abilities/Abilities';
-import '../../../App.css'
+import './DashboardMain.css'
 
 
 
@@ -95,7 +95,7 @@ export default class Dashboard extends React.Component {
             <button className="flex-1">Tavern</button>
             <button className="flex-1">Explore</button>
           </div>
-          <div className="flex flex-row flex-1 max-height-20">
+          <div className="flex flex-row flex-1">
             <button value='inventory' onClick={this.handleDisplayChange} className="flex-1">Inventory</button>
             <button value='gear' onClick={this.handleDisplayChange} className="flex-1">Gear</button>
             <button value='spells' onClick={this.handleDisplayChange} className="flex-1">Spells</button>

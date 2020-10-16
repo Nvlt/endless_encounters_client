@@ -1,0 +1,108 @@
+                      /* fonts, borders, and colors */
+                      /* fonts, borders, and colors */
+                      /* fonts, borders, and colors */
+                      /* fonts, borders, and colors */
+.font-lg {
+  font-size: large;
+}
+.border-none {
+  border: none;
+}
+.border-b {
+  border-bottom: .1rem slategray solid;
+}
+.rounded-lighter {
+  border-radius: 10%;
+}
+.boxshadow {
+  box-shadow: .2rem .2rem .4rem slategray;
+}
+.boxshadow-light {
+  box-shadow: .1rem .1rem .2rem slategray;
+}
+
+                                                          /* alignment and positioning */
+                                                          /* alignment and positioning */
+                                                          /* alignment and positioning */
+                                                          /* alignment and positioning */
+.center {
+  align-content: center;
+  text-align: center;
+  align-self: center;
+  align-items: center;
+}
+.justify-stretch {
+  justify-items: stretch;
+}
+.justify-around {
+  justify-content: space-around;
+}
+
+
+                                      /* flex */
+                                      /* flex */
+                                      /* flex */
+                                      /* flex */
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-flow: column;
+  flex-wrap: nowrap;
+}
+.flex-row {
+  flex-flow: row;
+  flex-wrap: nowrap;
+}
+.flex-row-wrap {
+  flex-flow: row;
+  flex-wrap: wrap;
+}
+.flex-1 {
+  flex: 1;
+}
+.flex-grow {
+  flex-grow: 1;
+}
+
+
+                                                        /* width and height */
+                                                        /* width and height */
+                                                        /* width and height */
+                                                        /* width and height */
+
+.width-full {
+  width: 100%;
+}
+.max-width-80 {
+  max-width: 80%;
+}
+
+
+                              /* margin andd padding */
+                              /* margin andd padding */
+                              /* margin andd padding */
+                              /* margin andd padding */
+.p-2 {
+  padding: 2rem;
+}
+.mx-1 {
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+.m-2 {
+  margin: 2rem;
+}
+.mx-2 {
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.mt-4 {
+  margin-top: 4rem;
+}
+
+
+                                                      /* transitions and animations */
+                                                      /* transitions and animations */
+                                                      /* transitions and animations */
+                                                      /* transitions and animations */

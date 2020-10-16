@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
-
+import './CharStatCard.css'
 
 export default function CharStatCard() {
 
@@ -11,17 +11,17 @@ export default function CharStatCard() {
   `
 
   return (
-    <div className='char-stat-cont flex-2 rounded-lighter center flex-shrink
-     align-self-left border height-fit max-height-40 width-fit text-left p-1-2 m-1' >
+    <div className='char-stat-cont flex-2 rounded-lighter center flex  flex-col flex-grow
+     align-self-left border height-fit width-fit text-left p-1-2 m-1 justify-stretch' >
       <ReactTooltip id="char-stats" place="top" effect="solid" />
       <ReactTooltip id="char-hp" place="top" effect="solid" />
       <ReactTooltip id="char-ap" place="top" effect="solid" />
       <ReactTooltip id="char-mp" place="top" effect="solid" />
-      <h3 className="flex-1 center border-b" >Dr. Magenstein</h3>
+      <h3 className="flex-1 center border-b flex-grow" >Dr. Magenstein</h3>
       <img
-        className="flex-1 width-half center mx-2 dance" data-event="click" clickable="true"
+        className="flex-2 width-half center mx-2 dance flex-grow" data-event="click" clickable="true"
         data-for="char-stats" data-tip={charData}
-        src={require("../../../assets/images/77-774812_open-mage-hat-png.png")}
+        src={require("../../../assets/images/wizard-hat.png")}
         alt="a floppy mage hat" />
       <div id="hp-cont" name="hp-cont" data-event="click" clickable="true" data-tip="Hit Points: 6/8"
         data-for="char-hp"

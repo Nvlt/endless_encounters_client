@@ -77,7 +77,9 @@
 .rounded-lightest {
   border-radius: 1.8%;
 }
-
+.cursor-pointer:hover{
+  cursor: pointer;
+}
 .flex {
   display: flex;
 }
@@ -128,6 +130,15 @@
 .justify-around {
   justify-content: space-around;
 }
+.font-3xs{
+  font-size: xx-small;
+}
+.font-xxs{
+  font-size: x-small;
+}
+.font-xs{
+  font-size: smaller;
+}
 .font-sm{
   font-size: small;
 }
@@ -143,8 +154,11 @@
 .font-xl {
   font-size: x-large;
 }
-.font-xxl {
+.font-3r {
   font-size: 3rem;
+}
+.text-justify{
+  text-align: justify;
 }
 .text-left {
   text-align: left;
@@ -160,6 +174,21 @@
 }
 .text-purple{
   color: blueviolet;
+}
+.text-transparent{
+  color: transparent;
+}
+.text-dec-none{
+  text-decoration: none;
+}
+.list-style-none{
+  list-style: none;
+}
+.font-bold{
+  font-weight: bold;
+}
+.text-shadow{
+  text-shadow: .1rem 5rem .1rem grey;
 }
 @font-face {
   font-family: "nerdland";
@@ -186,6 +215,15 @@
 }
 .tracking-tight{
   letter-spacing: .1rem;
+}
+.tracking-wide{
+  letter-spacing: .25rem;
+}
+.tracking-wider{
+  letter-spacing: .5rem;
+}
+.tracking-widest{
+  letter-spacing: .75rem;
 }
 
 .p-1-2 {
@@ -222,10 +260,12 @@
   margin: 1px;
 }
 
-.m-10px {
+.m-2px {
   margin: 2px;
 }
-
+.m-0{
+  margin: 0;
+}
 .m-1 {
   margin: 1rem;
 }
@@ -236,6 +276,11 @@
 
 .mt-4 {
   margin-top: 4rem;
+}
+
+.mx-1-2 {
+  margin-left: .5rem;
+  margin-right: .5rem;
 }
 
 .mx-1 {
@@ -290,7 +335,7 @@
   width: 10px;
 }
 
-.width-20px {
+.width-4 {
   width: 4rem;
 }
 
@@ -310,7 +355,7 @@
   height: 5px;
 }
 
-.height-20px {
+.height-4 {
   height: 4rem;
 }
 
@@ -321,7 +366,9 @@
 .max-height-40 {
   max-height: 40vh;
 }
-
+.inline{
+  display: inline-block;
+}
 .sq-5r-5r {
   width: 8rem;
   height: 8rem;
@@ -360,7 +407,6 @@ body {
   overflow-x: auto;
 }
 
-
 .overflow-show{
   overflow: visible;
 }
@@ -385,7 +431,6 @@ body {
   transform: scale(1.1);
   transition-delay: 0.01s;
 }
-
 
 .hover-spell:hover{
   text-shadow: .3rem .2rem .4rem lightyellow;
@@ -460,6 +505,7 @@ body {
 		transform: rotate(0deg);
 	}
 }
+
 @keyframes dance {
   0%{
     transform:
@@ -509,23 +555,22 @@ rotate(2deg);
   100%{ color:rebeccapurple}
 }
 @keyframes hover {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0) skewX(0deg) skewY(0deg);
+  0%,  50%,  100% {
+    transform:
+    translateY(0)
+    skewX(0deg)
+    skewY(0deg);
   }
-
-40%{
+  25%{
+    transform:
+    skewX(2deg)
+    translateY(-10%)
+  }
+  75% {
   transform:
-  skewX(5deg)
-
-  translateY(-4%)
-}
-
-60% {
-transform:
-skewX(-5deg)
-
-translateY(-2%)
-}
+  skewX(-2deg)
+  translateY(-5%)
+  }
 }
 @-webkit-keyframes text-pop-up-top {
   0% {
@@ -611,6 +656,14 @@ translateY(-2%)
   animation: infinite 3s dance;
 }
 
+.hover{
+  animation: infinite 5s hover alternate;
+}
+.rainbow-bg{
+ background-clip: text;
+  color: transparent;
+  animation: infinite 5s rainbow alternate;
+}
 .z-ind-front{
   z-index: 10;
 }
