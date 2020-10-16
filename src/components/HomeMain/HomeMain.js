@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <main className='main'>
-      <h1 className="font-xxl flex-1 font-nerd center flex-grow text-pop-up-bottom">Endless Encounters</h1>
+      <h1 className="font-xxl flex-1 font-nerd center flex-grow text-pop-up-bottom my-2">Endless Encounters</h1>
       <h3 className='subHead'>A place for those seeking a way to leave their world behind... </h3>
       <nav className='mainNav'>
         <Link className='mainLink' to='/main'>Start</Link>
