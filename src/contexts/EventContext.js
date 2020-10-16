@@ -14,7 +14,11 @@ export default EventContext;
 export class EventContext extends React.Component {
   constructor(props) {
     super(props)
-    const state = {quest: {}, error: null}
+    const state = {
+      quest: {},
+      mob: {},
+      error: null
+    }
 
     this.state = state;
   }

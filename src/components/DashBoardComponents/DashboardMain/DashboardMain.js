@@ -4,6 +4,7 @@ import Inventory from '../Inventory/Inventory';
 import Gear from '../Gear/Gear';
 import Spells from '../Spells/Spells';
 import Abilities from '../Abilities/Abilities';
+import EventContext from '../../../contexts/EventContext';
 import './DashboardMain.css'
 
 
@@ -20,7 +21,7 @@ export default class Dashboard extends React.Component {
     }
     this.state=state;
   }
-
+  static contextType = EventContext;
   
 
   handleDisplayChange=(ev) => {

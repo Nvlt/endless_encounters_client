@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
+import ApBar from '../Bar/ApBar';
 import Bar from '../Bar/Bar';
 import './CharStatCard.css'
 
@@ -35,15 +36,15 @@ export default function CharStatCard({stats={}}) {
       
       <Bar bar={'hp'} curr={stats.hp} max={stats.hpMax} text={'Health'}/>
       <Bar bar={'mp'} curr={stats.mp} max={stats.mpMax} text={'Mana'}/>
-
-      <div id="ap-cont" name="ap-cont" data-event="click" clickable="true"
+      <ApBar curr={2} max={5}/>
+      {/* <div id="ap-cont" name="ap-cont" data-event="click" clickable="true"
         data-tip="Action Points: 8/8" data-for="char-ap"
         className="ap-cont mx-1 flex-shrink flex flex-1 flex-row center">
         <p className="flex-1 flex-shrink1">AP</p>
         <div className="flex border bg-timberwolf height-5px width-80">
-          
+        
         </div>
-        {/* <p className="flex-1 flex-shrink1">AP</p>
+        <p className="flex-1 flex-shrink1">AP</p>
         <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
         <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
         <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
@@ -51,7 +52,7 @@ export default function CharStatCard({stats={}}) {
         <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
         <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
         <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" /> */}
-      </div>
+        <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
+      </div> */}
     </div>)
 }

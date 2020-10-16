@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
+import './Bar.css';
 
 export default function Bar({bar='hp', curr=0, max=0, text='Health'}) {
   return (
@@ -9,8 +10,8 @@ export default function Bar({bar='hp', curr=0, max=0, text='Health'}) {
       data-for="char-hp"
       className={bar+"-cont mx-1 flex-shrink flex flex-1 flex-row center"}>
         <p className="flex-1 flex-shrink1">{bar}</p>
-        <div className="border bg-timberwolf height-5px width-80" >
-          <div className="bg-red height-5px" style={{width: (curr/max*100)+'%'}}/>  
+        <div className="bg-timberwolf height-5px bar" >
+          <div className={"height-5px "+bar} style={{width: (curr/max*100)+'%'}}/>  
         </div>
       </div>
     </>
