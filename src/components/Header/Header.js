@@ -2,54 +2,48 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import UserContext from '../../contexts/UserContext';
 import TokenService from '../../services/token-service';
+import './Header.css'
 
 export default class Header extends Component {
   static contextType = UserContext;
 
   renderLogout = () => {
-    return <div className="flex-1">
+    return <div >
       <Link
         onClick={this.context.processLogout}
-        to='/login'>
-        <button>Logout</button>
-      </Link>
+        to='/login'>Logout</Link>
     </div>
   }
 
   renderLogin = () => {
     return <>
-      <div className="flex-1">
-        <Link to='/login'>
-          <button>Login</button>
-        </Link>
+      <div >
+        <Link className='headerLink' to='/login'>Login</Link>
       </div>
-      <div className="flex-1">
-        <Link to='/register'>
-          <button>Register</button>
-        </Link>
+      <div >
+        <Link className='headerLink' to='/register'>Register</Link>
       </div>
     </>
   }
   render () {
     return (
-      <nav className="border flex flex-row-wrap flex-1 width-full">
-        <div className="flex-1">{TokenService.hasAuthToken()
+      <nav className='headerNav'>
+        <div >{TokenService.hasAuthToken()
           ? this.context.user.username
-          : 'Not Logged in'}
+          : null}
         </div>
 
+        <div >
+          <Link className='headerLink' to='/'>Home</Link>
+        </div>
 
-        <div className="flex-1">
-          <Link to='/'>
-            <button>Home</button>
-          </Link>
+        <div >
+          <Link className='headerLink' to='/main'>Dash</Link>
         </div>
         
         
-        <div className="flex-1">
-          <Link to='/about'>
-            <button>About</button>
-          </Link>
+        <div >
+          <Link className='headerLink' to='/about'>About</Link>
         </div>
         
         
