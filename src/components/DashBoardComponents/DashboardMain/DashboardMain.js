@@ -4,19 +4,25 @@ import Inventory from '../Inventory/Inventory';
 import Gear from '../Gear/Gear';
 import Spells from '../Spells/Spells';
 import Abilities from '../Abilities/Abilities';
+import EventContext from '../../../contexts/EventContext';
 import './DashboardMain.css'
 
 
 
 export default class Dashboard extends React.Component {
+  static defaultProps = {
+    character: {}
+  }
+
   constructor(props) {
     super(props)
-    const state={
-      display: 'gear',
-
+    const state = {
+      display: 'gear'
     }
     this.state=state;
   }
+  static contextType = EventContext;
+  
 
   handleDisplayChange=(ev) => {
     ev.preventDefault();
@@ -98,11 +104,11 @@ export default class Dashboard extends React.Component {
           </div>
         </div>
         <div className="flex flex-1 flex-row-wrap center width-full max-width-80 mx-2">
-          <CharStatCard />
-          {this.state.display==='inventory'&&<Inventory />}
-          {this.state.display==='gear'&&<Gear />}
-          {this.state.display==='spells'&&<Spells />}
-          {this.state.display==='abilities'&&<Abilities />}
+          <CharStatCard stats={this.props.character.stats}/>
+          {this.state.display==='inventory'&&<Inventory items={this.props.character.inventory}/>}
+          {this.state.display==='gear'&&<Gear gear={this.props.character.gear}/>}
+          {this.state.display==='spells'&&<Spells spells={this.props.character.spells}/>}
+          {this.state.display==='abilities'&&<Abilities abilities={this.props.character.abilities}/>}
         </div>
       </main>
     )
