@@ -1,6 +1,11 @@
 import React from 'react';
+<<<<<<< HEAD
 import SpellItem from '../SpellItem/SpellItem';
 
+=======
+import ReactTooltip from "react-tooltip";
+import './Abilities.css'
+>>>>>>> adab30a6938690fc833f245009de234cfc545f22
 export default function Abilities() {
 
   let abilityList = [

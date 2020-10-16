@@ -1,0 +1,31 @@
+                            /* most sizes use rem or em b/c it scales automatically */
+                            /* 1-2 and 1-4 are readd as half and quarter */
+
+.p-1-2 {
+  padding: .5rem;
+}
+
+.p-1-4 {
+  padding: .25rem;
+}
+
+.p-1 {
+  padding: 1rem;
+}
+.p-2 {
+  padding: 2rem;
+}
+                              /* padding along x axis only */
+.px-1 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.px-2 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.px-4 {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}

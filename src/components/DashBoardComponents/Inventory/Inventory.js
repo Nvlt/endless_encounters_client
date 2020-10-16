@@ -1,5 +1,6 @@
 import React from 'react'
 import InventoryItem from '../InventoryItem/InventoryItem'
+<<<<<<< HEAD
 
 const itemDefaults=[
   {name: 'Sword of Justin', rarity: 'rare', desc: 'Does a thing', img:"../../../assets/images/loyalty.png"},
@@ -15,6 +16,23 @@ const itemDefaults=[
   {name: 'Cheese', rarity: 'common', desc: 'Does a thing', img:"../../../assets/images/loyalty.png"},
   {name: 'Speed Potion', rarity: 'uncommon', desc: 'Does a thing', img:"../../../assets/images/loyalty.png"}
 ]
+=======
+import "./Inventory.css";
+// const itemDefaults=[
+//   {name: 'Sword of Justin', rarity: 'rare', desc: 'Does a thing'},
+//   {name: 'Buckler', rarity: 'common', desc: 'Does a thing'},
+//   {name: 'Slicer', rarity: 'uncommon', desc: 'Does a thing'},
+//   {name: 'Worn Gloves', rarity: 'common', desc: 'Does a thing'},
+//   {name: 'Pelt', rarity: 'common', desc: 'Does a thing'},
+//   {name: 'Rotten Meat', rarity: 'common', desc: 'Does a thing'},
+//   {name: 'Swift Boots', rarity: 'uncommon', desc: 'Does a thing'},
+//   {name: 'Scroll of Healing', rarity: 'common', desc: 'Does a thing'},
+//   {name: 'Rock', rarity: 'common', desc: 'Does a thing'},
+//   {name: 'The Wipeout', rarity: 'rare', desc: 'Does a thing'},
+//   {name: 'Cheese', rarity: 'common', desc: 'Does a thing'},
+//   {name: 'Speed Potion', rarity: 'uncommon', desc: 'Does a thing'}
+// ]
+>>>>>>> adab30a6938690fc833f245009de234cfc545f22
 
 export default function Inventory({items=itemDefaults}) {
   function fetchInventory() {
@@ -42,6 +60,7 @@ export default function Inventory({items=itemDefaults}) {
 // export default function Inventory() {
 
 
+<<<<<<< HEAD
 //   return (
 //     <div className="inventory border bg-snow center min-w-4r flex flex-2 rounded-lightest
 //     flex-col-wrap shrink-none max-width-80 mx-2 max-height-40 overflow-scroll p-1">
@@ -72,3 +91,30 @@ export default function Inventory({items=itemDefaults}) {
 //       <div className=" bg-timber rounded-light hover-inv width-20px height-20px m-1px shrink-none"></div>
 //     </div>)
 // }
+=======
+  return (
+    <div className="inventory border bg-snow center min-w-4r flex flex-2 rounded-lightest
+    flex-row-wrap max-width-80 mx-2 max-height-40 overflow-scroll py-5 justify-around">
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p"></div>
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p "></div>
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p "></div>
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p "></div>
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p "></div>
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p"></div>
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p "></div>
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p "></div>
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p "></div>
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p "></div>
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p"></div>
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p "></div>
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p "></div>
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p "></div>
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p "></div>
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p"></div>
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p "></div>
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p "></div>
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p "></div>
+      <div className=" bg-timber rounded-light hover-inv width-4 height-4 m-5p "></div>
+    </div>)
+}
+>>>>>>> adab30a6938690fc833f245009de234cfc545f22

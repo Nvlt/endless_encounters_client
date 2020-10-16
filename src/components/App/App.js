@@ -1,5 +1,5 @@
 import React from 'react';
-import './App.css';
+
 import Home from '../../routes/Home/Home';
 import Header from '../Header/Header';
 import Register from '../../routes/Register/Register';
@@ -8,6 +8,7 @@ import Dashboard from '../../routes/Dashboard/Dashboard';
 import {Route, Switch} from 'react-router-dom';
 import PrivateRoute from '../../routes/routehelpers/PrivateRoute/PrivateRoute';
 import PublicRoute from '../../routes/routehelpers/PublicRoute/PublicRoute';
+import About from '../../routes/About/About';
 
 function App() {
   return (
@@ -27,6 +28,9 @@ function App() {
         <PublicRoute
           path='/login'
           component={Login} />
+        <PublicRoute
+          path='/about'
+          component={About} />
         <PublicRoute
           path='/main'
           component={Dashboard} />
