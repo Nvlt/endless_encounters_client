@@ -1,6 +1,6 @@
 import React from 'react';
 
-const EventContext = React.createContext({
+const EventContext=React.createContext({
   quest: {},
   mob: {},
   error: null,
@@ -11,34 +11,34 @@ const EventContext = React.createContext({
 
 export default EventContext;
 
-export class EventContext extends React.Component {
+export class EventContextProvider extends React.Component {
   constructor(props) {
     super(props)
-    const state = {
+    const state={
       quest: {},
       mob: {},
       error: null
     }
 
-    this.state = state;
+    this.state=state;
   }
 
-  setError = (error) => {
+  setError=(error) => {
     console.error(error);
     this.setState({error});
   }
-  clearError = () => {
+  clearError=() => {
     this.setState({error: null});
   }
 
-  setEvent = (quest) => {
+  setEvent=(quest) => {
     this.setState({quest});
   }
 
-  setMob = (mob) => {
+  setMob=(mob) => {
     this.setState({mob});
   }
-  
+
   //Fetch event if none
   //Fetch mob related to event
   //Event may come with special action eg. damage player, free loot, lose money, etc
@@ -46,7 +46,7 @@ export class EventContext extends React.Component {
   //Use mob for combat/stat manipulation
 
   render() {
-    const value = {
+    const value={
       quest: this.state.quest,
       error: this.state.error,
       setError: this.setError,
