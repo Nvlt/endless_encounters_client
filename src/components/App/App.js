@@ -14,10 +14,10 @@ function App() {
 
   const location = useLocation()
   const trans = useTransition(location, location => location.pathname, {
-    from: { opacity: 0 },
+    from: { position: 'absolute', opacity: 0 },
     enter: { opacity: 1 },
     leave: { opacity: 0 },
-  })
+    })
 
   return trans.map(({ item: location, props, key }) => (
     <animated.div key={key} style={props}>
