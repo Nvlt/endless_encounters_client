@@ -10,7 +10,6 @@ input[type=text], input[type=password] {
 .mainBody{
   display: flex;
   flex-direction: column;
-  min-width: 320px;
   width: 100%;
 }
 
@@ -18,6 +17,7 @@ input[type=text], input[type=password] {
   display: flex;
   flex-direction: column;
   padding: 10px;
+  min-width: 300px;
   border-radius: 3px;
   max-width: 500px;
   margin: 0 auto;
@@ -50,4 +50,13 @@ padding: .5em;
 .form button:hover {
   background-color: #FEC369;
   box-shadow: 0 0 10px 2px #595358;
+}
+
+@media all and (min-width: 600px){
+  .form{
+    display: flex;
+    flex-direction: column;
+    margin-top: 2rem;
+    min-width: 600px;
+  }
 }
