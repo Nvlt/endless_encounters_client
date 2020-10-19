@@ -1,9 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
 import './HomeMain.css';
-
 import '../../components/App/App.css'
 import UserContext from '../../contexts/UserContext';
+import SoundPlayCheck from '../SoundWidgets/SoundPlayCheck';
+
+
+
 export default function Home() {
 
 
@@ -16,6 +19,7 @@ export default function Home() {
         <Link className='mainLink' to='/main'>Start</Link>
         {/* <Link className='mainLink' to='/register'>Register</Link> */}
       </nav>
+      <SoundPlayCheck />
       <p className='intro'>Lorem ipsum dolor sit amet,
       consectetur adipiscing elit,
       sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

@@ -12,19 +12,19 @@ import EventContext from '../../../contexts/EventContext';
 
 
 export default class Dashboard extends React.Component {
-  static defaultProps = {
+  static defaultProps={
     character: {}
   }
 
   constructor(props) {
     super(props)
-    const state = {
+    const state={
       display: 'gear'
     }
     this.state=state;
   }
-  static contextType = EventContext;
-  
+  static contextType=EventContext;
+
 
   handleDisplayChange=(ev) => {
     ev.preventDefault();
@@ -93,13 +93,13 @@ export default class Dashboard extends React.Component {
         </div>
 
         <div className="btnsNav">
-            <button className='dashBtn'>Shop</button>
-            <button className='dashBtn'>Tavern</button>
-            <button className='dashBtn'>Explore</button>
-            <button className='dashBtn' value='inventory' onClick={this.handleDisplayChange}>Inventory</button>
-            <button className='dashBtn' value='gear' onClick={this.handleDisplayChange}>Gear</button>
-            <button className='dashBtn' value='spells' onClick={this.handleDisplayChange}>Spells</button>
-            <button className='dashBtn' value='abilities' onClick={this.handleDisplayChange}>Abilities</button>
+          <button className='dashBtn'>Shop</button>
+          <button className='dashBtn'>Tavern</button>
+          <button className='dashBtn'>Explore</button>
+          <button className='dashBtn' value='inventory' onClick={this.handleDisplayChange}>Inventory</button>
+          <button className='dashBtn' value='gear' onClick={this.handleDisplayChange}>Gear</button>
+          <button className='dashBtn' value='spells' onClick={this.handleDisplayChange}>Spells</button>
+          <button className='dashBtn' value='abilities' onClick={this.handleDisplayChange}>Abilities</button>
         </div>
         <div className="charAssets">
           <CharStatCard />
