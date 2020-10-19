@@ -10,6 +10,7 @@
     margin-top: 30px;
     max-width: 280px;
     margin: 10px auto;
+    padding: 2rem;
 }
 
 .mainNav{
@@ -38,3 +39,6 @@
     font-family: "Nelship";
     src: url("../../assets/fonts/Nelship.ttf")
 }
+.hover{
+    animation: infinite 5s hover alternate;
+  }

@@ -6,6 +6,7 @@ import Spells from '../Spells/Spells';
 import Abilities from '../Abilities/Abilities';
 import './Dash.css'
 import EventContext from '../../../contexts/EventContext';
+import SwitchTabSound from '../../SoundWidgets/SwitchTabSound';
 
 
 
@@ -28,13 +29,23 @@ export default class Dashboard extends React.Component {
 
   handleDisplayChange=(ev) => {
     ev.preventDefault();
+
     this.setState({display: ev.target.value})
   }
 
-
+  renderTabButttons() {
+    const tabs=[
+      {name: 'Inventory', tabName: 'inventory', func: this.handleDisplayChange},
+      {name: 'Gear', tabName: 'gear', func: this.handleDisplayChange},
+      {name: 'Spells', tabName: 'spells', func: this.handleDisplayChange},
+      {name: 'Abilities', tabName: 'abilities', func: this.handleDisplayChange}
+    ]
+    return tabs.map(tab => <SwitchTabSound props={tab} />)
+  }
   render() {
+
     return (
-      <main>
+      <main className="p-2">
         <div className="scrollBox">
           <p>
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
@@ -96,18 +107,21 @@ export default class Dashboard extends React.Component {
           <button className='dashBtn'>Shop</button>
           <button className='dashBtn'>Tavern</button>
           <button className='dashBtn'>Explore</button>
-          <button className='dashBtn' value='inventory' onClick={this.handleDisplayChange}>Inventory</button>
-          <button className='dashBtn' value='gear' onClick={this.handleDisplayChange}>Gear</button>
-          <button className='dashBtn' value='spells' onClick={this.handleDisplayChange}>Spells</button>
-          <button className='dashBtn' value='abilities' onClick={this.handleDisplayChange}>Abilities</button>
+          {/* <button className='dashBtn' value='inventory' onClick={(ev) => this.handleDisplayChange(ev)}>Inventory</button>
+          <button className='dashBtn' value='gear' onClick={(ev) => this.handleDisplayChange(ev)}>Gear</button>
+          <button className='dashBtn' value='spells' onClick={(ev) => this.handleDisplayChange(ev)}>Spells</button>
+          <button className='dashBtn' value='abilities' onClick={(ev) => this.handleDisplayChange(ev)}>Abilities</button> */}
+          {this.renderTabButttons()}
         </div>
         <div className="charAssets">
           <CharStatCard />
+
           {this.state.display==='inventory'&&<Inventory />}
           {this.state.display==='gear'&&<Gear />}
           {this.state.display==='spells'&&<Spells />}
           {this.state.display==='abilities'&&<Abilities />}
         </div>
+
       </main>
     )
   }

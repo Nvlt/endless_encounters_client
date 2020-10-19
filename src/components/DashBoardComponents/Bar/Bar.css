@@ -5,12 +5,12 @@
   overflow: hidden;
 }
 
-.hp {
-  background-color: red;
+.HP {
+  background-color: #C1666B;
 }
 
-.mp {
-  background-color: blue;
+.MP {
+  background-color: #4357AC;
 }
 
 .ap {

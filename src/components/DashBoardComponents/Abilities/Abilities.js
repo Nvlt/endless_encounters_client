@@ -1,8 +1,8 @@
 import React from 'react';
 import './Abilities.css'
 import SpellItem from '../SpellItem/SpellItem';
-
-export default function Abilities({ abilities=[] }) {
+import ReactTooltip from 'react-tooltip';
+export default function Abilities({abilities=[]}) {
 
 
   function generateAbilityList() {
@@ -13,10 +13,10 @@ export default function Abilities({ abilities=[] }) {
 
   return (
     <div className=" border bg-snow center min-w-4r flex flex-2 rounded-lightest
-    flex-col shrink-none max-width-80 mx-2 max-height-40 overflow-scroll p-1">
-      {generateAbilityList()}
+    flex-col shrink-none max-width-80 mx-2 max-height-40 p-1">
+      {/* {generateAbilityList()} */}
 
-      {/* <ReactTooltip id="fireball" place="top" effect="solid" getContent={(dataTip) => `${dataTip}`} />
+      <ReactTooltip id="fireball" place="top" effect="solid" getContent={(dataTip) => `${dataTip}`} />
       <ReactTooltip id="incinerate" place="top" effect="solid" getContent={(dataTip) => `${dataTip}`} />
       <ReactTooltip id="conjure-water" place="top" effect="solid" getContent={(dataTip) => `${dataTip}`} />
       <ReactTooltip id="polymorph" place="top" effect="solid" getContent={(dataTip) => `${dataTip}`} />
@@ -39,6 +39,6 @@ export default function Abilities({ abilities=[] }) {
       </div>
       <div className="flex-1 flex flex-col hover-abi width-full mx-1">
         <h2 className="font-handy" data-tip="Attempt to flatter your target." data-for="telekinesis">Flatter</h2>
-      </div> */}
+      </div>
     </div>)
 }

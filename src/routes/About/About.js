@@ -16,8 +16,8 @@ export default class About extends React.Component {
     return (
 
       <main className="flex flex-col center flex-1 justify-stretch ">
-        <h1 className="font-xxl flex-1 font-nerd center flex-grow tracking-wide">Endless Encounters</h1>
-        <h3 className="p-2 font-lg">A place for those who seek to find a way to leave their world behind.</h3>
+        <h1 className="font-xxl flex-1 font-nerd center flex-grow tracking-wide hover">Endless Encounters</h1>
+        <h3 className="p-2 font-lg font-nels">A place for those who seek to find a way to leave their world behind.</h3>
 
 
 

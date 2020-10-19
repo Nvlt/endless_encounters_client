@@ -28,16 +28,15 @@ export default function CharStatCard({stats={}}) {
 
       <div className='char-stat-cont flex-2 rounded-lighter center flex  flex-col flex-grow
      align-self-left border height-fit width-fit text-left p-1-2 m-1 justify-stretch' >
-        <ReactTooltip id="char-stats" place="top" effect="solid" />
-        <ReactTooltip id="char-mp" place="top" effect="solid" />
+        <ReactTooltip id="bar-cont" place="top" effect="solid" />
 
         <h3 className="name">Dr. Magenstein</h3>
         <img
-          className="charIcon" data-event="click" clickable="true"
+          className="charIcon dance" data-event="click" clickable="true"
           data-for="char-stats" data-tip={charData}
           src={require("../../../assets/images/wizard-hat.png")}
           alt="a floppy mage hat" />
-
+        {/*
         <div id="hp-cont" name="hp-cont" data-event="click" clickable="true" data-tip="Hit Points: 6/8"
           data-for="char-hp"
           className="statBar">
@@ -76,11 +75,11 @@ export default function CharStatCard({stats={}}) {
           <div className="mStat" />
           <div className="mStat" />
           <div className="mStat" />
-        </div>
+        </div> */}
 
 
-        <Bar bar={'hp'} curr={stats.hp} max={stats.hpMax} text={'Health'} />
-        <Bar bar={'mp'} curr={stats.mp} max={stats.mpMax} text={'Mana'} />
+        <Bar bar={'HP'} curr={stats.hp} max={stats.hpMax} text={'Health'} />
+        <Bar bar={'MP'} curr={stats.mp} max={stats.mpMax} text={'Mana'} />
         <ApBar curr={2} max={5} />
         {/* <div id="ap-cont" name="ap-cont" data-event="click" clickable="true"
         data-tip="Action Points: 8/8" data-for="char-ap"

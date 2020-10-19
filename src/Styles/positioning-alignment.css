@@ -30,6 +30,10 @@
   justify-content: space-around;
 }
 
+.placeself-bottom{
+  place-self: bottom;
+}
+
                           /* text alignments */
 .text-left {
   text-align: left;

@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link} from 'react-router-dom';
 import UserContext from '../../contexts/UserContext';
 import TokenService from '../../services/token-service';
 import './Header.css'
+import SoundPlayCheck from '../SoundWidgets/SoundPlayCheck';
 
 export default class Header extends Component {
-  static contextType = UserContext;
+  static contextType=UserContext;
 
-  renderLogout = () => {
+  renderLogout=() => {
     return <div >
       <Link
         onClick={this.context.processLogout}
@@ -15,7 +16,7 @@ export default class Header extends Component {
     </div>
   }
 
-  renderLogin = () => {
+  renderLogin=() => {
     return <>
       <div >
         <Link className='headerLink' to='/login'>Login</Link>
@@ -25,12 +26,12 @@ export default class Header extends Component {
       </div>
     </>
   }
-  render () {
+  render() {
     return (
       <nav className='headerNav'>
         <div >{TokenService.hasAuthToken()
           ? this.context.user.username
-          : null}
+          :null}
         </div>
 
         <div >
@@ -40,18 +41,18 @@ export default class Header extends Component {
         <div >
           <Link className='headerLink' to='/main'>Dash</Link>
         </div>
-        
-        
+
+
         <div >
           <Link className='headerLink' to='/about'>About</Link>
         </div>
-        
-        
+        <div>  <SoundPlayCheck /></div>
+
         {TokenService.hasAuthToken()
           ? this.renderLogout()
-          : this.renderLogin()}
-        
+          :this.renderLogin()}
+
       </nav>
     )
-}
+  }
 }

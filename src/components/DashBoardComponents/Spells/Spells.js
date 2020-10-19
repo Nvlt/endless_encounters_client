@@ -1,21 +1,21 @@
 import React from 'react';
 import SpellItem from '../SpellItem/SpellItem';
 import './Spells.css';
-
-export default function Spells({ spells=[] }) {
+import ReactTooltip from 'react-tooltip';
+export default function Spells({spells=[]}) {
 
   function generateSpellList() {
     return spells.map((spell, index) => {
-      return <SpellItem spell={spell} key={index}/>
+      return <SpellItem spell={spell} key={index} />
     })
   }
   return (
     <div className=" border bg-snow center min-w-4r flex flex-2 rounded-lightest
-    flex-col shrink-none max-width-80 mx-2 max-height-40 overflow-scroll p-1">
-      {generateSpellList()}
+    flex-col shrink-none max-width-80 mx-2 max-height-40 p-1">
+      {/* {generateSpellList()} */}
 
 
-      {/* <ReactTooltip id="fireball" place="top" effect="solid" getContent={(dataTip) => `${dataTip}`} />
+      <ReactTooltip id="fireball" place="top" effect="solid" getContent={(dataTip) => `${dataTip}`} />
       <ReactTooltip id="incinerate" place="top" effect="solid" getContent={(dataTip) => `${dataTip}`} />
       <ReactTooltip id="conjure-water" place="top" effect="solid" getContent={(dataTip) => `${dataTip}`} />
       <ReactTooltip id="polymorph" place="top" effect="solid" getContent={(dataTip) => `${dataTip}`} />
@@ -43,6 +43,6 @@ export default function Spells({ spells=[] }) {
       </div>
       <div className="flex-1 flex flex-col hover-spell width-full mx-1">
         <h2 className="text-purple font-handy" data-tip="You can move an object weighing up to 5 lbs up to 3 yards." data-for="telekinesis">Telekinesis</h2>
-      </div> */}
+      </div>
     </div>)
 }

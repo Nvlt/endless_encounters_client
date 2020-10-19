@@ -204,6 +204,13 @@
 .font-handy{
   font-family: "handy";
 }
+@font-face {
+  font-family: "Nelship";
+  src: url("./assets/fonts/Nelship.ttf")
+}
+.font-nels{
+  font-family: "Nelship";
+}
 .center {
   align-content: center;
   text-align: center;

@@ -43,7 +43,9 @@
 .width-10px {
   width: 10px;
 }
-
+.width-20px {
+  width: 20px;
+}
 .width-4 {
   width: 4rem;
 }
@@ -61,7 +63,12 @@
 .height-5px {
   height: 5px;
 }
-
+.height-10px {
+  height: 10px;
+}
+.height-20px {
+  height: 20px;
+}
 .height-4 {
   height: 4rem;
 }
