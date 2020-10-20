@@ -27,7 +27,7 @@ export default function CharStatCard({stats={}}) {
     <div className='statBody'>
 
       <div className='char-stat-cont flex-2 rounded-lighter center flex  flex-col flex-grow
-     align-self-left border height-fit width-fit text-left p-1-2 m-1 justify-stretch' >
+      align-self-left border height-fit width-fit text-left p-1-2 m-1 justify-stretch' >
         <ReactTooltip id="bar-cont" place="top" effect="solid" />
 
         <h3 className="name">Dr. Magenstein</h3>

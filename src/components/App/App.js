@@ -10,6 +10,7 @@ import PublicRoute from '../../routes/routehelpers/PublicRoute/PublicRoute';
 import {useTransition, animated} from 'react-spring'
 import About from '../../routes/About/About';
 import './App.css';
+import CreateCharacter from '../CreateCharacter/CreateCharacter';
 
 
 function App() {
@@ -41,6 +42,9 @@ function App() {
         <PrivateRoute
           path='/main'
           component={Dashboard} />
+        <PrivateRoute
+          path='/create'
+        component={CreateCharacter} />
         <Route
           exact
           path='/'

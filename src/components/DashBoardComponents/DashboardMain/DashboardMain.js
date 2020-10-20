@@ -1,4 +1,5 @@
 import React from 'react';
+import Viewport from '../../Viewport/Viewport';
 import CharStatCard from '../CharacterStatCard/CharacterStatCard';
 import Inventory from '../Inventory/Inventory';
 import Gear from '../Gear/Gear';
@@ -20,12 +21,34 @@ export default class Dashboard extends React.Component {
   constructor(props) {
     super(props)
     const state={
-      display: 'gear'
+      display: 'gear',
+      view: 'explore'
     }
     this.state=state;
   }
   static contextType=EventContext;
 
+  handleShop = (e) => {
+    e.preventDefault();
+
+    this.setState({view: 'shop'});
+  }
+
+  handleTavern = (e) => {
+    e.preventDefault();
+
+    this.setState({view: 'tavern'});
+  }
+
+  handleExplore = (e) => {
+    e.preventDefault();
+    if (Math.random() > 0.2) {
+      this.setState({view: 'explore'});
+    }
+    else {
+      this.setState({view: 'combat'});
+    }    
+  }
 
   handleDisplayChange=(ev) => {
     ev.preventDefault();
@@ -40,73 +63,17 @@ export default class Dashboard extends React.Component {
       {name: 'Spells', tabName: 'spells', func: this.handleDisplayChange},
       {name: 'Abilities', tabName: 'abilities', func: this.handleDisplayChange}
     ]
-    return tabs.map(tab => <SwitchTabSound props={tab} />)
+    return tabs.map((tab, index)=> <SwitchTabSound props={tab} key={index}/>)
   }
   render() {
-
     return (
       <main className="p-2">
-        <div className="scrollBox">
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-          architecto beatae vitae dicta sunt explicabo.</p>
-          <p>
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-          sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-          <p>
-            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-            adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
-          magnam aliquam quaerat voluptatem.</p>
-          <p>
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-          nisi ut aliquid ex ea commodi consequatur?</p>
-          <p>
-            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
-            consequatur,
-           vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-          architecto beatae vitae dicta sunt explicabo.</p>
-          <p>
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-          sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-          <p>
-            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-            adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
-          magnam aliquam quaerat voluptatem.</p>
-          <p>
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-          nisi ut aliquid ex ea commodi consequatur?</p>
-          <p>
-            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
-            consequatur,
-           vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-          <p>
-            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
-          architecto beatae vitae dicta sunt explicabo.</p>
-          <p>
-            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
-          sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-          <p>
-            Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur,
-            adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore
-          magnam aliquam quaerat voluptatem.</p>
-          <p>
-            Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-          nisi ut aliquid ex ea commodi consequatur?</p>
-          <p>
-            Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
-            consequatur,
-           vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
-        </div>
+        <Viewport view={this.state.view}/>
 
         <div className="btnsNav">
-          <button className='dashBtn'>Shop</button>
-          <button className='dashBtn'>Tavern</button>
-          <button className='dashBtn'>Explore</button>
+          <button className='dashBtn' onClick={this.handleShop}>Shop</button>
+          <button className='dashBtn' onClick={this.handleTavern}>Tavern</button>
+          <button className='dashBtn' onClick={this.handleExplore}>Explore</button>
           {/* <button className='dashBtn' value='inventory' onClick={(ev) => this.handleDisplayChange(ev)}>Inventory</button>
           <button className='dashBtn' value='gear' onClick={(ev) => this.handleDisplayChange(ev)}>Gear</button>
           <button className='dashBtn' value='spells' onClick={(ev) => this.handleDisplayChange(ev)}>Spells</button>
