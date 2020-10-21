@@ -1,18 +1,23 @@
 
-.statBody{
+.outterCard{
     display: flex;
     flex-direction: column;
     border-radius: 8px;
-    text-align: center;
     border: .2em solid black;
-    padding: .5rem;
-    margin: auto;
+    padding: 15px;
+    text-align: center;
 }
 
-/* char-stat-cont flex-2 rounded-lighter center flex  flex-col flex-grow
-     align-self-left border height-fit width-fit text-left p-1-2 m-1 justify-stretch */
-.cardBody{
+.innerCard{
+  /* display: flex; */
   position: absolute;
+  border: black .2em solid;
+  border-radius: 15px;
+  /* min-width: 200px; */
+  align-self: center;
+  justify-content: stretch;
+  flex-wrap: nowrap;
+  margin: .5px;
 }
 
 .name{

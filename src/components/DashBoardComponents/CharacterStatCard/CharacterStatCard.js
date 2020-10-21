@@ -30,10 +30,9 @@ export default function CharStatCard({stats={}}) {
 
   return (
 
-    <div onClick={() => set(state => !state)} className='statBody'>
+    <div onClick={() => set(state => !state)} className='outterCard'>
 
-      <animated.div style={{opacity: opacity.interpolate(o => 1 -o), transform}} className='cardBody flex-2 rounded-lighter center flex  flex-col flex-grow
-     align-self-left border height-fit width-fit text-left p-1-2 m-1 justify-stretch' >
+      <animated.div style={{opacity: opacity.interpolate(o => 1 -o), transform}} className='innerCard' >
         <ReactTooltip id="bar-cont" place="top" effect="solid" />
 
         <h3 className="name">Dr. Magenstein</h3>
@@ -49,11 +48,10 @@ export default function CharStatCard({stats={}}) {
         <ApBar curr={2} max={5} />
 
       </animated.div>
-      <animated.div style={{ opacity, transform: transform.interpolate(t => `${t} rotateY(180deg)`) }} className='char-stat-cont flex-2 rounded-lighter center flex  flex-col flex-grow
-     align-self-left border height-fit width-fit text-left p-1-2 m-1 justify-stretch' >
+      <animated.div style={{ opacity, transform: transform.interpolate(t => `${t} rotateY(180deg)`) }}>
         <ReactTooltip id="bar-cont" place="top" effect="solid" />
 
-        <h3 className="name">BACK</h3>
+        <h3 className="name">BACK </h3>
         <img
           className="charIcon dance" data-event="click" clickable="true"
           data-for="char-stats" data-tip={charData}
