@@ -9,6 +9,12 @@
     margin: auto;
 }
 
+/* char-stat-cont flex-2 rounded-lighter center flex  flex-col flex-grow
+     align-self-left border height-fit width-fit text-left p-1-2 m-1 justify-stretch */
+.cardBody{
+  position: absolute;
+}
+
 .name{
     font-family: 'Nelship';
     font-size: 1.5em;

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import CharStatCard from '../CharacterStatCard/CharacterStatCard';
 import Inventory from '../Inventory/Inventory';
 import Gear from '../Gear/Gear';
@@ -7,9 +7,6 @@ import Abilities from '../Abilities/Abilities';
 import './Dash.css'
 import EventContext from '../../../contexts/EventContext';
 import SwitchTabSound from '../../SoundWidgets/SwitchTabSound';
-
-
-
 
 
 export default class Dashboard extends React.Component {
@@ -40,10 +37,9 @@ export default class Dashboard extends React.Component {
       {name: 'Spells', tabName: 'spells', func: this.handleDisplayChange},
       {name: 'Abilities', tabName: 'abilities', func: this.handleDisplayChange}
     ]
-    return tabs.map(tab => <SwitchTabSound props={tab} />)
+    return tabs.map(tab => (<SwitchTabSound props={tab}/>))
   }
   render() {
-
     return (
       <main className="p-2">
         <div className="scrollBox">
