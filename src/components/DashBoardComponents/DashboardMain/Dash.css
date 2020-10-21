@@ -37,6 +37,11 @@
     flex-wrap: wrap;
 }
 
+.transition-container > div {
+    position: absolute;
+    will-change: transform, opacity;
+  }
+
 @media all and (min-width: 600px){
     .scrollBox{
         margin: 1rem;

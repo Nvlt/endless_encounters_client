@@ -8,21 +8,35 @@ import Abilities from '../Abilities/Abilities';
 import './Dash.css'
 import EventContext from '../../../contexts/EventContext';
 import SwitchTabSound from '../../SoundWidgets/SwitchTabSound';
+import { Transition, animated } from 'react-spring/renderprops';
 
+//Using indexes
+const pages = [
+  style => (<animated.div style={{...style}}><Inventory /></animated.div>),
+  style => (<animated.div style={{...style}}><Gear /></animated.div>),
+  style => (<animated.div style={{...style}}><Spells /></animated.div>),
+  style => (<animated.div style={{...style}}><Abilities /></animated.div>),
+]
 
-
+//Using display state
+const tabs = {
+  inventory: style => (<animated.div style={{...style}}><Inventory /></animated.div>),
+  gear: style => (<animated.div style={{...style}}><Gear /></animated.div>),
+  spells: style => (<animated.div style={{...style}}><Spells /></animated.div>),
+  abilities: style => (<animated.div style={{...style}}><Abilities /></animated.div>),
+}
 
 
 export default class Dashboard extends React.Component {
   static defaultProps={
-    character: {}
+    character: {},
   }
 
   constructor(props) {
     super(props)
     const state={
       display: 'gear',
-      view: 'explore'
+      view: 'explore',
     }
     this.state=state;
   }
@@ -52,8 +66,11 @@ export default class Dashboard extends React.Component {
 
   handleDisplayChange=(ev) => {
     ev.preventDefault();
-
-    this.setState({display: ev.target.value})
+    let newIndex= ev.target.value === 'inventory' ? 0 :
+    ev.target.value === 'gear' ? 1 :
+    ev.target.value === 'spells' ? 2
+    : 3
+    this.setState({display: ev.target.value, index: newIndex})
   }
 
   renderTabButttons() {
@@ -82,11 +99,18 @@ export default class Dashboard extends React.Component {
         </div>
         <div className="charAssets">
           <CharStatCard />
-
-          {this.state.display==='inventory'&&<Inventory />}
-          {this.state.display==='gear'&&<Gear />}
-          {this.state.display==='spells'&&<Spells />}
-          {this.state.display==='abilities'&&<Abilities />}
+          <div className='transition-container'>
+            <Transition
+            reset
+            unique
+            items={this.state.display}
+            from={{opacity: 0, transform: `perspective(600px) translate3d(0%, 0, 0) rotateY(${0}deg)`}}
+            enter={{opacity: 1, transform: `perspective(600px) translate3d(0%, 0, 0) rotateY(${0}deg)`}}
+            leave={{opacity: 0, transform: `perspective(600px) translate3d(-50%, 0, 0) rotateY(${-90}deg)`}}
+            >
+              {display => tabs[display]}
+            </Transition>
+          </div>
         </div>
 
       </main>

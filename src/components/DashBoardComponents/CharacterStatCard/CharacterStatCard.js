@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
-import './Character.css'
 import ApBar from '../Bar/ApBar';
 import Bar from '../Bar/Bar';
+import {useSpring, animated} from 'react-spring';
+import './Character.css'
 
 
 

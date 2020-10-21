@@ -11,6 +11,7 @@ import {useTransition, animated} from 'react-spring'
 import About from '../../routes/About/About';
 import './App.css';
 import CreateCharacter from '../CreateCharacter/CreateCharacter';
+import LevelUp from '../LevelUp/LevelUp';
 
 
 function App() {
@@ -44,7 +45,7 @@ function App() {
           component={Dashboard} />
         <PrivateRoute
           path='/create'
-        component={CreateCharacter} />
+        component={LevelUp} />
         <Route
           exact
           path='/'
