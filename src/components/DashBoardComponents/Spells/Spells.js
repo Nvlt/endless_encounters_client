@@ -10,8 +10,8 @@ export default function Spells({spells=[]}) {
     })
   }
   return (
-    <div className="spells border bg-snow center min-w-4r flex flex-2 rounded-lightest
-    flex-col shrink-none mx-2 p-1">
+    <div className="spells border bg-snow center flex flex-2 rounded-lightest
+    flex-col shrink-none p-1">
       {/* {generateSpellList()} */}
 
 

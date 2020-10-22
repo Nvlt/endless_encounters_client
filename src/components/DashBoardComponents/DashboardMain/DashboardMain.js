@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Viewport from '../../Viewport/Viewport';
 import CharStatCard from '../CharacterStatCard/CharacterStatCard';
 import Inventory from '../Inventory/Inventory';
@@ -11,12 +11,12 @@ import SwitchTabSound from '../../SoundWidgets/SwitchTabSound';
 import { Transition, animated } from 'react-spring/renderprops';
 
 //Using indexes
-const pages = [
-  style => (<animated.div style={{...style}}><Inventory /></animated.div>),
-  style => (<animated.div style={{...style}}><Gear /></animated.div>),
-  style => (<animated.div style={{...style}}><Spells /></animated.div>),
-  style => (<animated.div style={{...style}}><Abilities /></animated.div>),
-]
+// const pages = [
+//   style => (<animated.div style={{...style}}><Inventory /></animated.div>),
+//   style => (<animated.div style={{...style}}><Gear /></animated.div>),
+//   style => (<animated.div style={{...style}}><Spells /></animated.div>),
+//   style => (<animated.div style={{...style}}><Abilities /></animated.div>),
+// ]
 
 //Using display state
 const tabs = {
@@ -75,7 +75,7 @@ export default class Dashboard extends React.Component {
 
   renderTabButttons() {
     const tabs=[
-      {name: 'Inventory', tabName: 'inventory', func: this.handleDisplayChange},
+      // {name: 'Inventory', tabName: 'inventory', func: this.handleDisplayChange},
       {name: 'Gear', tabName: 'gear', func: this.handleDisplayChange},
       {name: 'Spells', tabName: 'spells', func: this.handleDisplayChange},
       {name: 'Abilities', tabName: 'abilities', func: this.handleDisplayChange}
@@ -105,8 +105,8 @@ export default class Dashboard extends React.Component {
             unique
             items={this.state.display}
             from={{opacity: 0, transform: `perspective(1000px) translate3d(0%, 0, 0) rotateY(${0}deg)`}}
-            enter={{opacity: 1, transform: `perspective(1000px) translate3d(0%, 0, 0) rotateY(${0}deg)`}}
-            leave={{opacity: 0, transform: `perspective(1000px) translate3d(-50%, 0, 0) rotateY(${-90}deg)`}}
+            enter={{position: 'static', opacity: 1, transform: `perspective(1000px) translate3d(0%, 0, 0) rotateY(${0}deg)`}}
+            leave={{position: 'absolute', opacity: 0, transform: `perspective(1000px) translate3d(-50%, 0, 0) rotateY(${-90}deg)`}}
             >
               {display => tabs[display]}
             </Transition>

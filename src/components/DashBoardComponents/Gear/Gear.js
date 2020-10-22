@@ -15,8 +15,8 @@ export default function Gear({gear={}}) {
     }
   }
   return (
-    <div className="gear border bg-snow center min-w-4r flex flex-2 rounded-lightest
-    flex-col shrink-none mx-2
+    <div className="gear border bg-snow center flex flex-2 rounded-lightest
+    flex-col shrink-none
     overflow-scroll p-1">
       
       {displayGear('helm')}

@@ -116,10 +116,9 @@
                                                       /* transitions and animations */
 
 .gear {
-  margin: 15px;
-  width: 350px;
-  max-width: 80%;
-  max-height: 40%;
+  margin: 10px 40px;
+  width: auto;
+  min-width: 240px;
   overflow-y: scroll;
   height: 35vh;
 }
