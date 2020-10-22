@@ -25,7 +25,7 @@ import './Inventory.css';
 export default function Inventory() {
 
 
-  return (<div className="flex flex-2 flex-col width-full p-2">
+  return (<div className="inventory-list">
     <div className="inventory border bg-snow center min-w-4r flex flex-2 rounded-lightest
     flex-row-wrap max-width-80p mx-2 max-height-40p overflow-scroll p-2">
       <div className="flex-1 bg-timber rounded-light hover-inv width-4 height-4 m-1px shrink-none"></div>

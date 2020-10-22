@@ -2,6 +2,15 @@
                       /* fonts, borders, and colors */
                       /* fonts, borders, and colors */
                       /* fonts, borders, and colors */
+.abilities {
+  margin: 15px;
+  max-width: 80%;
+  width: 350px;
+  max-height: 40%;
+  height: 35vh;
+  overflow: scroll;
+}
+
 .border {
   border: .2em solid black;
 }

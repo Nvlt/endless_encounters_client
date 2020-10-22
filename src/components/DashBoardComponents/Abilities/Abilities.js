@@ -12,8 +12,8 @@ export default function Abilities({abilities=[]}) {
   }
 
   return (
-    <div className="absolute border bg-snow center min-w-4r flex flex-2 rounded-lightest
-    flex-col shrink-none max-width-80 mx-2 max-height-40 p-1">
+    <div className="abilities border bg-snow center min-w-4r flex flex-2 rounded-lightest
+    flex-col shrink-none mx-2 p-1">
       {/* {generateAbilityList()} */}
 
       <ReactTooltip id="fireball" place="top" effect="solid" getContent={(dataTip) => `${dataTip}`} />

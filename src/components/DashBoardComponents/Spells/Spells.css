@@ -42,3 +42,12 @@
                                                       /* transitions and animations */
                                                       /* transitions and animations */
                                                       /* transitions and animations */
+.spells {
+  margin: 15px;
+  max-width: 350px;
+  max-height: 40%;
+
+  overflow: scroll;
+  width: auto;
+  height: 35vh;
+}

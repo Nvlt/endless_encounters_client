@@ -104,9 +104,9 @@ export default class Dashboard extends React.Component {
             reset
             unique
             items={this.state.display}
-            from={{opacity: 0, transform: `perspective(600px) translate3d(0%, 0, 0) rotateY(${0}deg)`}}
-            enter={{opacity: 1, transform: `perspective(600px) translate3d(0%, 0, 0) rotateY(${0}deg)`}}
-            leave={{opacity: 0, transform: `perspective(600px) translate3d(-50%, 0, 0) rotateY(${-90}deg)`}}
+            from={{opacity: 0, transform: `perspective(1000px) translate3d(0%, 0, 0) rotateY(${0}deg)`}}
+            enter={{opacity: 1, transform: `perspective(1000px) translate3d(0%, 0, 0) rotateY(${0}deg)`}}
+            leave={{opacity: 0, transform: `perspective(1000px) translate3d(-50%, 0, 0) rotateY(${-90}deg)`}}
             >
               {display => tabs[display]}
             </Transition>

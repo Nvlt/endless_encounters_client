@@ -115,6 +115,15 @@
                                                       /* transitions and animations */
                                                       /* transitions and animations */
 
+.gear {
+  margin: 15px;
+  width: 350px;
+  max-width: 80%;
+  max-height: 40%;
+  overflow-y: scroll;
+  height: 35vh;
+}
+
 .hover-gear:hover{
   text-shadow: .3rem .2rem .4rem rgba(252, 212, 79, 0.699);
   transition: ease, 0.5s;
