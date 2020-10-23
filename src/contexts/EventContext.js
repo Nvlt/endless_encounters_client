@@ -17,7 +17,7 @@ export class EventContextProvider extends React.Component {
     const state={
       quest: {},
       mob: {},
-      error: null,
+      error: null
     }
 
     this.state=state;

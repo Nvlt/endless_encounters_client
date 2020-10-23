@@ -28,7 +28,7 @@ export default class Combat extends React.Component {
 
   render() {
     return (
-      <div className='combat-viewport'>
+      <div className='combat'>
         {this.renderOpponents()}
         {this.renderTextBox()}
       </div>
