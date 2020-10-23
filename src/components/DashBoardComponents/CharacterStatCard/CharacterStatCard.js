@@ -1,8 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import ReactTooltip from 'react-tooltip';
-import './Character.css'
 import ApBar from '../Bar/ApBar';
 import Bar from '../Bar/Bar';
+import {useSpring, animated} from 'react-spring';
+import './Character.css'
 
 
 
@@ -13,8 +14,14 @@ export default function CharStatCard({stats={}}) {
   // INT:10
   // WILL:10
   // `
+    const [flipped, set] = useState(false)
+    const { transform, opacity } = useSpring({
+      opacity: flipped ? 1 : 0,
+      transform: `perspective(600px) rotateY(${flipped ? 180 : 0}deg)`,
+      config: { mass: 5, tension: 500, friction: 80 }
+    })
 
-  const charData=stats?
+  const charData=stats ?
     `
       STR: ${stats.str}
       DEX: ${stats.dex}
@@ -24,10 +31,9 @@ export default function CharStatCard({stats={}}) {
 
   return (
 
-    <div className='statBody'>
+    <div onClick={() => set(state => !state)} className='outterCard'>
 
-      <div className='char-stat-cont flex-2 rounded-lighter center flex  flex-col flex-grow
-     align-self-left border height-fit width-fit text-left p-1-2 m-1 justify-stretch' >
+      <animated.div className='absolute innerCard' style={{ opacity: opacity.interpolate(o => 1 - o), transform}}>
         <ReactTooltip id="bar-cont" place="top" effect="solid" />
 
         <h3 className="name">Dr. Magenstein</h3>
@@ -36,70 +42,29 @@ export default function CharStatCard({stats={}}) {
           data-for="char-stats" data-tip={charData}
           src={require("../../../assets/images/wizard-hat.png")}
           alt="a floppy mage hat" />
-        {/*
-        <div id="hp-cont" name="hp-cont" data-event="click" clickable="true" data-tip="Hit Points: 6/8"
-          data-for="char-hp"
-          className="statBar">
-          <p className="statType">HP</p>
-          <div className="hStat" />
-          <div className="hStat" />
-          <div className="hStat" />
-          <div className="hStat" />
-          <div className="hStat" />
-          <div className="hStat" />
-          <div className="emptyStat" />
-          <div className="emptyStat" />
-        </div>
-        <div id="ap-cont" name="ap-cont" data-event="click" clickable="true"
-          data-tip="Action Points: 8/8" data-for="char-ap"
-          className="statBar">
-          <p className="statType">AP</p>
-          <div className="aStat" />
-          <div className="aStat" />
-          <div className="aStat" />
-          <div className="aStat" />
-          <div className="aStat" />
-          <div className="aStat" />
-          <div className="aStat" />
-          <div className="aStat" />
-        </div>
-        <div id="mana-cont" name="mana-cont" data-event="click" clickable="true"
-          data-tip="Mana Points: 8/8" data-for="char-mp"
-          className="statBar">
-          <p className="statType">MP</p>
-          <div className="mStat" />
-          <div className="mStat" />
-          <div className="mStat" />
-          <div className="mStat" />
-          <div className="mStat" />
-          <div className="mStat" />
-          <div className="mStat" />
-          <div className="mStat" />
-        </div> */}
 
 
         <Bar bar={'HP'} curr={stats.hp} max={stats.hpMax} text={'Health'} />
         <Bar bar={'MP'} curr={stats.mp} max={stats.mpMax} text={'Mana'} />
         <ApBar curr={2} max={5} />
-        {/* <div id="ap-cont" name="ap-cont" data-event="click" clickable="true"
-        data-tip="Action Points: 8/8" data-for="char-ap"
-        className="ap-cont mx-1 flex-shrink flex flex-1 flex-row center">
-        <p className="flex-1 flex-shrink1">AP</p>
-        <div className="flex border bg-timberwolf height-5px width-80">
 
-        </div>
-        <p className="flex-1 flex-shrink1">AP</p>
-        <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
-        <div className="border flex-1 bg-verd height-5px width-10px flex-shrink" />
-      </div> */}
+      </animated.div>
+      <animated.div className='innerCard' style={{ opacity, transform: transform.interpolate(t => `${t} rotateY(180deg)`)}}>
+        <ReactTooltip id="bar-cont" place="top" effect="solid" />
 
-      </div>
+        <h3 className="name">BACK </h3>
+        <img
+          className="charIcon dance" data-event="click" clickable="true"
+          data-for="char-stats" data-tip={charData}
+          src={require("../../../assets/images/wizard-hat.png")}
+          alt="a floppy mage hat" />
+
+
+        <Bar bar={'HP'} curr={stats.hp} max={stats.hpMax} text={'Health'} />
+        <Bar bar={'MP'} curr={stats.mp} max={stats.mpMax} text={'Mana'} />
+        <ApBar curr={2} max={5} />
+
+      </animated.div>
     </div>
   )
 }
