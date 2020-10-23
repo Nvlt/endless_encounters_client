@@ -66,11 +66,8 @@ export default class Dashboard extends React.Component {
 
   handleDisplayChange=(ev) => {
     ev.preventDefault();
-    let newIndex= ev.target.value === 'inventory' ? 0 :
-    ev.target.value === 'gear' ? 1 :
-    ev.target.value === 'spells' ? 2
-    : 3
-    this.setState({display: ev.target.value, index: newIndex})
+    
+    this.setState({display: ev.target.value});
   }
 
   renderTabButttons() {
@@ -84,7 +81,7 @@ export default class Dashboard extends React.Component {
   }
   render() {
     return (
-      <main className="p-2">
+      <main className="dashboard-main">
         <Viewport view={this.state.view}/>
 
         <div className="btnsNav">
@@ -104,9 +101,9 @@ export default class Dashboard extends React.Component {
             reset
             unique
             items={this.state.display}
-            from={{opacity: 0, transform: `perspective(1000px) translate3d(0%, 0, 0) rotateY(${0}deg)`}}
-            enter={{position: 'static', opacity: 1, transform: `perspective(1000px) translate3d(0%, 0, 0) rotateY(${0}deg)`}}
-            leave={{position: 'absolute', opacity: 0, transform: `perspective(1000px) translate3d(-50%, 0, 0) rotateY(${-90}deg)`}}
+            from={{position: 'absolute', opacity: 0, transform: `perspective(2000px) translate3d(0%, 0, 0) rotateY(${0}deg)`}}
+            enter={{position: 'initial', opacity: 1, transform: `perspective(2000px) translate3d(0%, 0, 0) rotateY(${0}deg)`}}
+            leave={{top: 0, left: 0, bottom: 0, right: 0, position: 'absolute', opacity: 0, transform: `perspective(800px) translate3d(-50%, 0, 0) rotateY(${-90}deg)`}}
             >
               {display => tabs[display]}
             </Transition>

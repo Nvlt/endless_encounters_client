@@ -50,12 +50,12 @@ export default class Viewport extends React.Component {
 
   render() {
     return (
-      <>
+      <div className='viewport'>
         {this.props.view === 'shop' && this.renderShop()}
         {this.props.view === 'tavern' && this.renderTavern()}
         {this.props.view === 'explore' && this.renderText()}
         {this.props.view === 'combat' && this.renderCombat()}
-      </>
+      </div>
     )
   }
 }

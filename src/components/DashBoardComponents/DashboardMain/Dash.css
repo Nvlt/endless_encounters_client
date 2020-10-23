@@ -32,21 +32,32 @@
     box-shadow: 0 0 10px 2px #595358;
 }
 
+.dashboard-main {
+    padding: 2rem;
+}
+
 .charAssets{
     display: flex;
     flex-direction: column;
-    
-    justify-content: space-around;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: auto;
+}
+
+.transition-container {
+    position: relative;
+    margin: 0;
+    width: auto;
+    max-width: 500px;
+    flex: 2;
 }
 
 .transition-container > div {
     will-change: transform, opacity;
-    padding: auto;
-    width: auto;
   }
 
 @media all and (min-width: 600px){
-    .scrollBox{
+    .scrollBox {
         margin: 1rem;
     }
 

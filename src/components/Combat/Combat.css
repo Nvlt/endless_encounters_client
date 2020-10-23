@@ -1,12 +1,7 @@
-.combat-viewport {
+.combat {
   display: flex;
   flex-direction: column;
-  border: .2em solid black;
   text-align: left;
-  padding: 1rem;
-  margin: 1rem;
-  height: 40vh;
-  overflow-y: auto;
   border-radius: 8px;
 }
 

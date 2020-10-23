@@ -4,8 +4,9 @@
   border: .2em solid black;
   text-align: left;
   padding: 1rem;
-  margin: 1rem;
+  margin: 1rem auto;
   height: 40vh;
   overflow-y: auto;
   border-radius: 8px;
+  max-width: 900px;
 }
