@@ -233,6 +233,10 @@
   letter-spacing: .75rem;
 }
 
+.p-0{
+  padding-left: 0;
+}
+
 .p-1-2 {
   padding: .5rem;
 }

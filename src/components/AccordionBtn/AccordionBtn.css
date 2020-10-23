@@ -1,0 +1,13 @@
+
+.acc-header{
+    font-weight: bold;
+    margin: 15px;
+    background-color: transparent;
+    border: none;
+}
+
+.acc-inner{
+    overflow: hidden;
+    transition: 1s ease;
+}
+

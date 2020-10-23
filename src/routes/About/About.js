@@ -1,8 +1,9 @@
 import React from 'react';
-import Accordion from '../../components/Accordion/Accordion';
+import Accordion from '../../components/AccordionBtn/AccordionBtn';
 import ReactTooltip from 'react-tooltip';
 import { Link } from 'react-router-dom'
-import "../../App.css" 
+// import "../../App.css" 
+import './About.css'
 
 export default function About() {
 
@@ -14,9 +15,8 @@ export default function About() {
       content: (  
         <div className="font-lg inline m-0 ">
         <ReactTooltip id="rpg" place="top" effect="solid" getContent={(dataTip) => `${dataTip}`} />
-          Simply put, Endless Encounters is a text based 
-        <div className="font-lg inline mx-1-2 text-blue font-bold cursor-pointer" data-event="click" clickable="true" data-tip="Role Playing Game"
-          data-for="rpg">RPG</div>with a fun and intuitive UI (we hope)</div>
+          Simply put, Endless Encounters is a text based {<div className="font-lg inline mx-1-2 text-blue font-bold cursor-pointer" data-event="click" clickable="true" data-tip="Role Playing Game"
+          data-for="rpg">RPG</div>} with a fun and intuitive UI (we hope)</div>
       )
     },
     {
@@ -25,12 +25,12 @@ export default function About() {
       <>
       <p className="font-lg inline m-0">Creating an account is simple.</p>
         <ol>
-          <li>Click the register link above or
-          <Link to="/register" className="cursor-pointer text-dec-none font-lg inline text-blue font-bold mx-1-2">here</Link>
+          <li>Click the register link above or {<Link to="/register" className="cursor-pointer text-dec-none font-lg inline text-blue font-bold mx-1-2">here</Link>}
+           
           </li>
           <li>Enter a fun and unique Username</li>
           <li>Enter a memorable password with at least one of each:
-        <ul className="list-style-none p-1 font-sm center">
+        <ul className="list-style-none p-1 font-sm center p-0">
               <li className="text-left ">An upper case Letter</li>
               <li className="text-left ">A lower case Letter</li>
               <li className="text-left ">A number</li>
@@ -54,10 +54,9 @@ export default function About() {
       content: (
         <div className="font-lg inline m-0">
           <ReactTooltip id="something" place="top" effect="solid" getContent={(dataTip) => `${dataTip}`} />
-          Some text to explain
-        <div className="cursor-pointer font-lg inline mx-1-2 text-blue font-bold" data-event="click" clickable="true"
+          Some text to explain {<div className="cursor-pointer font-lg inline mx-1-2 text-blue font-bold" data-event="click" clickable="true"
           data-tip="Brief explain"
-          data-for="something">something to highlight</div>more text here</div>
+          data-for="something">something to highlight</div>} more text here</div>
       )
     },
     {
@@ -65,21 +64,9 @@ export default function About() {
       content: (
         <div className="font-lg inline m-0">
           <ReactTooltip id="something" place="top" effect="solid" getContent={(dataTip) => `${dataTip}`} />
-          Some text to explain
-        <div className="cursor-pointer font-lg inline mx-1-2 text-blue font-bold" data-event="click" clickable="true"
+          Some text to explain {<div className="cursor-pointer font-lg inline mx-1-2 text-blue font-bold" data-event="click" clickable="true"
           data-tip="Brief explain"
-          data-for="something">something to highlight</div>more text here</div>
-      )
-    },
-    {
-      header: 'Buying/Selling',
-      content: (
-        <div className="font-lg inline m-0">
-          <ReactTooltip id="something" place="top" effect="solid" getContent={(dataTip) => `${dataTip}`} />
-          Some text to explain
-        <div className="cursor-pointer font-lg inline mx-1-2 text-blue font-bold" data-event="click" clickable="true"
-          data-tip="Brief explain"
-          data-for="something">something to highlight</div>more text here</div>
+          data-for="something">something to highlight</div>} more text here</div>
       )
     },
     {
@@ -87,10 +74,9 @@ export default function About() {
       content: (
         <div className="font-lg inline m-0">
           <ReactTooltip id="something" place="top" effect="solid" getContent={(dataTip) => `${dataTip}`} />
-          Some text to explain
-        <div className="cursor-pointer font-lg inline mx-1-2 text-blue font-bold" data-event="click" clickable="true"
+          Some text to explain {<div className="cursor-pointer font-lg inline mx-1-2 text-blue font-bold" data-event="click" clickable="true"
           data-tip="Brief explain"
-          data-for="something">something to highlight</div>more text here</div>
+          data-for="something">something to highlight</div>} more text here</div>
       )
     },
     {
@@ -98,43 +84,23 @@ export default function About() {
       content: (
         <div className="font-lg inline m-0">
           <ReactTooltip id="something" place="top" effect="solid" getContent={(dataTip) => `${dataTip}`} />
-          Some text to explain
-        <div className="cursor-pointer font-lg inline mx-1-2 text-blue font-bold" data-event="click" clickable="true"
+          Some text to explain {<div className="cursor-pointer font-lg inline mx-1-2 text-blue font-bold" data-event="click" clickable="true"
           data-tip="Brief explain"
-          data-for="something">something to highlight</div>more text here</div>
+          data-for="something">something to highlight</div>} more text here</div>
       )
-    },
-    {
-      header: 'Looting',
-      content: (
-        <div className="font-lg inline m-0">
-          <ReactTooltip id="something" place="top" effect="solid" getContent={(dataTip) => `${dataTip}`} />
-          Some text to explain
-        <div className="cursor-pointer font-lg inline mx-1-2 text-blue font-bold" data-event="click" clickable="true"
-          data-tip="Brief explain"
-          data-for="something">something to highlight</div>more text here</div>
-      )
-    },
-    {
-      header: 'Items',
-      content: (
-        <div className="font-lg inline m-0">
-          <ReactTooltip id="something" place="top" effect="solid" getContent={(dataTip) => `${dataTip}`} />
-          Some text to explain
-        <div className="cursor-pointer font-lg inline mx-1-2 text-blue font-bold" data-event="click" clickable="true"
-          data-tip="Brief explain"
-          data-for="something">something to highlight</div>more text here</div>
-      )
-    },
+    }
   ]
 
   function aboutLoop() {
     let html = [];
-    for (const element of aboutData) {
-      html.push(<Accordion
-        header={element.header}
-        content={element.content}
-      />);
+    for (const index in aboutData) {
+      html.push(
+      <Accordion 
+        key={index}
+        header={aboutData[index].header}
+        content={aboutData[index].content}
+      />
+      );
     }
     return html;
   }

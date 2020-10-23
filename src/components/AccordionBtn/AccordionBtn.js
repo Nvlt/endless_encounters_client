@@ -1,5 +1,5 @@
 import React, { useState, useRef } from 'react'
-import "../Accordion/accordion-tiff.css"
+import "./AccordionBtn.css"
 
 export default function Accordion(props) {
     const [ setActive, setActiveState ] = useState('')
