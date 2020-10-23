@@ -466,7 +466,6 @@ body {
   border: none;
   cursor:help;
 }
-
 @keyframes gentle-wiggle {
 	0% {
 		transform: rotate(0deg);
