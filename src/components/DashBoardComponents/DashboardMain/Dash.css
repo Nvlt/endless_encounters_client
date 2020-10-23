@@ -34,11 +34,23 @@
 
 .charAssets{
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    
+    justify-content: space-around;
 }
+
+.transition-container > div {
+    will-change: transform, opacity;
+    padding: auto;
+    width: auto;
+  }
 
 @media all and (min-width: 600px){
     .scrollBox{
         margin: 1rem;
+    }
+
+    .charAssets {
+        flex-direction: row;
     }
 }
