@@ -8,4 +8,8 @@ export const GlobalStyles = createGlobalStyle `
   .border {
     border: .2em solid ${({theme}) => theme.toggleBorder};
   }
+  .viewport {
+    background: ${({theme}) => theme.viewport};
+    transition: all 0.50s linear;
+  }
 `

@@ -5,7 +5,7 @@ import styled from 'styled-components';
 const Toggle = ({theme, toggleTheme }) => {
   return (
     <button onClick={toggleTheme} >
-        Theme
+        {theme.slice(0, 1).toUpperCase() + theme.slice(1)}
     </button>
   );
 };

@@ -3,6 +3,7 @@ import ReactTooltip from 'react-tooltip';
 import ApBar from '../Bar/ApBar';
 import Bar from '../Bar/Bar';
 import {useSpring, animated} from 'react-spring';
+import icon from '../../../assets/images/wizard-hat.png';
 
 export default function CardFront(props) {
   const charData=props.stats ?
@@ -14,19 +15,17 @@ export default function CardFront(props) {
     :'No stats to display';
   return (
     <>
-      <ReactTooltip id="bar-cont" place="top" effect="solid" />
-
       <h3 className="name">Dr. Magenstein</h3>
       <img
-        className="charIcon dance" data-event="click" clickable="true"
-        data-for="char-stats" data-tip={charData}
-        src={require("../../../assets/images/wizard-hat.png")}
+        className="charIcon dance"
+        src={icon}
         alt="a floppy mage hat" />
 
-
-      <Bar bar={'HP'} curr={props.stats.hp} max={props.stats.hpMax} text={'Health'} />
-      <Bar bar={'MP'} curr={props.stats.mp} max={props.stats.mpMax} text={'Mana'} />
-      <ApBar curr={2} max={5} />
+      <div className='bar-list flex flex-col'>
+        <Bar bar={'HP'} curr={props.stats.hp} max={props.stats.hpMax} text={'Health'} />
+        <Bar bar={'MP'} curr={props.stats.mp} max={props.stats.mpMax} text={'Mana'} />
+        <ApBar curr={2} max={5} />
+      </div>
     </>
   )
 }

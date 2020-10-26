@@ -1,6 +1,7 @@
 import React from 'react';
 import SpellItem from '../SpellItem/SpellItem';
 import './Spells.css';
+import '../../../Styles/fonts.css'
 import ReactTooltip from 'react-tooltip';
 export default function Spells({spells=[]}) {
 
