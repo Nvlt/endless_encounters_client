@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactTooltip from 'react-tooltip';
+
 import './Bar.css';
 
 export default function Bar({bar='hp', curr=0, max=0, text='Health'}) {

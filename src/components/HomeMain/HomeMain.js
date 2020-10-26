@@ -2,7 +2,7 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import './HomeMain.css';
 import '../../components/App/App.css'
-import UserContext from '../../contexts/UserContext';
+//import UserContext from '../../contexts/UserContext';
 
 
 

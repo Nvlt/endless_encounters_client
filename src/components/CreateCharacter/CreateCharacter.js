@@ -1,16 +1,17 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import React from 'react';
 import './CreateCharacter.css';
 
 export default class CreateCharacter extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
+    this.state={
       selectedJob: 0,
       selectedAbilities: 0,
       selectedChecks: []
     }
   }
-  static defaultProps = {
+  static defaultProps={
     jobs: [
       {
         name: 'Warrior',
@@ -35,7 +36,7 @@ export default class CreateCharacter extends React.Component {
     ]
   }
 
-  handleJobSwitch = (e) => {
+  handleJobSwitch=(e) => {
     e.preventDefault();
     this.setState({
       selectedJob: e.target.value,
@@ -43,30 +44,30 @@ export default class CreateCharacter extends React.Component {
       selectedChecks: []
     })
   }
-  handleSubmit = (e) => {
+  handleSubmit=(e) => {
     e.preventDefault();
 
     //Post new character to DB with user ID
   }
-  handleCheck = (e) => {
+  handleCheck=(e) => {
     e.target.checked
       ? this.setState({
         selectedAbilities: this.state.selectedAbilities+1,
         selectedChecks: [...this.state.selectedChecks, e.target.value]
       })
-      : this.setState({
+      :this.setState({
         selectedAbilities: this.state.selectedAbilities-1,
         selectedChecks: [...this.state.selectedChecks.splice(0, this.state.selectedChecks.indexOf(e.target.value))]
       })
   }
 
-  renderStatsCategory = () => {
+  renderStatsCategory=() => {
     return <div className='stat-category'>
       {this.renderPrimaryStats()}
       {this.renderSecondaryStats()}
     </div>
   }
-  renderPrimaryStats = () => {
+  renderPrimaryStats=() => {
     return <div className='stats primary-stats'>
       <p className='stat'>Strength:</p>
       <p className='stat'>Stamina:</p>
@@ -76,7 +77,7 @@ export default class CreateCharacter extends React.Component {
       <p className='stat'>Willsons:</p>
     </div>
   }
-  renderSecondaryStats = () => {
+  renderSecondaryStats=() => {
     return <div className='stats secondary-stats'>
       <p className='stat'>Vitality:</p>
       <p className='stat'>Mahn-uh:</p>
@@ -85,13 +86,13 @@ export default class CreateCharacter extends React.Component {
     </div>
   }
 
-  renderJobCategory = () => {
+  renderJobCategory=() => {
     return <div className='job-category'>
       {this.renderJobs()}
       {this.renderAbilities()}
     </div>
   }
-  renderJobs = () => {
+  renderJobs=() => {
     return <div className='job-list'>
       {this.props.jobs.map((job, index) => {
         return <button className='job' key={index} value={index} onClick={this.handleJobSwitch}>
@@ -100,33 +101,33 @@ export default class CreateCharacter extends React.Component {
       })}
     </div>
   }
-  renderAbilities = () => {
+  renderAbilities=() => {
     console.log(this.state.selectedChecks)
     return <div className='ability-list'>
       {this.props.jobs
-      ? this.props.jobs[this.state.selectedJob].abilities.map((ability, index) => {
-        return <>
-          { (this.state.selectedChecks.length < 2 || this.state.selectedChecks.includes(ability)) &&
-          <input
-          type='checkbox'
-          name={'ability-'+index}
-          key={index} value={ability.name}
-          onChange={this.handleCheck}
-          checked={this.state.selectedChecks.includes(ability)}
-          value={ability}
-          />}
-          <label htmlFor={'ability-'+index}>{ability}</label><br/>
-        </>
-      })
-      : 'Select a job'}
+        ? this.props.jobs[this.state.selectedJob].abilities.map((ability, index) => {
+          return <>
+            {(this.state.selectedChecks.length<2||this.state.selectedChecks.includes(ability))&&
+              <input
+                type='checkbox'
+                name={'ability-'+index}
+                key={index} value={ability.name}
+                onChange={this.handleCheck}
+                checked={this.state.selectedChecks.includes(ability)}
+                value={ability}
+              />}
+            <label htmlFor={'ability-'+index}>{ability}</label><br />
+          </>
+        })
+        :'Select a job'}
     </div>
   }
-  
+
   render() {
     return (
       <section>
         <form className='character-form' onSubmit={this.handleSubmit}>
-          <input htmlFor="char-name" placeholder="Name"/>
+          <input htmlFor="char-name" placeholder="Name" />
           <button type="submit">Submit</button>
           <div className='create-character-flex'>
             {this.renderJobCategory()}

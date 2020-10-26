@@ -1,7 +1,8 @@
 import React from 'react';
+// eslint-disable-next-line no-unused-vars
 import TokenService from '../services/token-service';
 
-const CharacterContext = React.createContext({
+const CharacterContext=React.createContext({
   character: {},
   error: null,
   setError: () => {},
@@ -15,21 +16,21 @@ export default CharacterContext;
 export class CharacterProvider extends React.Component {
   constructor(props) {
     super(props);
-    const state = {character: {}, error: null}
+    const state={character: {}, error: null}
 
-    this.state = state;
+    this.state=state;
   }
 
-  setError = error => {
+  setError=error => {
     console.error(error);
     this.setState({error});
   }
-  clearError = () => {
+  clearError=() => {
     this.setState({error: null});
   }
 
-  setCharacter = (character) => {
-    this.setState({ character });
+  setCharacter=(character) => {
+    this.setState({character});
   }
 
   //Character sheet example:
@@ -54,7 +55,7 @@ export class CharacterProvider extends React.Component {
     abilities: [],
     spells: [],
   }
-  
+
   */
 
   //Fetch Character with user ID
@@ -70,7 +71,7 @@ export class CharacterProvider extends React.Component {
   */
 
   render() {
-    const value = {
+    const value={
       character: this.state.character,
       error: this.state.error,
       setError: this.setError,

@@ -5,6 +5,7 @@ import '../../../Styles/fonts.css'
 import ReactTooltip from 'react-tooltip';
 export default function Spells({spells=[]}) {
 
+  // eslint-disable-next-line no-unused-vars
   function generateSpellList() {
     return spells.map((spell, index) => {
       return <SpellItem spell={spell} key={index} />

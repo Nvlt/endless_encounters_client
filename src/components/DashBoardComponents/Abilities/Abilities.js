@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import './Abilities.css'
 import SpellItem from '../SpellItem/SpellItem';
