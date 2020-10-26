@@ -7,6 +7,7 @@ export default function Abilities({abilities=[]}) {
 
   function generateAbilityList() {
     return abilities.map((ability, index) => {
+
       return <SpellItem spell={ability} key={index} />
     })
   }
