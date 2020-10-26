@@ -1,8 +1,72 @@
+
+.abtBody{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 1000px;
+    margin: auto;
+}
+
+.abtSect{
+    margin: 0 15px;
+}
+
+.title{
+    font-family: 'nerdland';
+    font-size: 3.5em;
+}
+
+.subTitle{
+    font-family: 'Nelship';
+    font-size: 1.2em;
+    margin: 0 15px;
+    margin-bottom: 10px
+}
+
+.question{
+    font-family: 'handy';
+    font-size: 1.4em;
+}
+
 ul, li{
     padding-left: 0px;
     margin: 0px;
 }
 
+ul{
+    list-style: none;
+}
+
+ol{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
 li{
     text-align: left;
+}
+
+.dataTip{
+    display: inline;
+    font-weight: 650;
+    color: #4357AC;
+    cursor: pointer;
+}
+
+@font-face {
+    font-family: 'handy';
+    src: url("../../assets/fonts/BabyDoll.ttf")
+}
+
+
+@font-face {
+    font-family: "nerdland";
+    src: url("../../assets/fonts/NederlandFantasy.ttf")
+}
+
+@font-face {
+    font-family: "Nelship";
+    src: url("../../assets/fonts/Nelship.ttf")
 }
