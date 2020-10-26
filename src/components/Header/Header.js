@@ -7,7 +7,9 @@ import SoundPlayCheck from '../SoundWidgets/SoundPlayCheck';
 
 export default class Header extends Component {
   static contextType=UserContext;
-
+  static defaultProps = {
+    themeToggler: {}
+  }
   renderLogout=() => {
     return <div >
       <Link
@@ -28,12 +30,14 @@ export default class Header extends Component {
   }
   render() {
     return (
-      <nav className='headerNav'>
+      <nav className='border' id='headerNav'>
         <div >{TokenService.hasAuthToken()
           ? this.context.user.username
           :null}
         </div>
-
+        <div>
+          {this.props.toggler}
+        </div>
         <div >
           <Link className='headerLink' to='/'>Home</Link>
         </div>

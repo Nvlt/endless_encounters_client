@@ -24,7 +24,7 @@ export default class Shop extends React.Component {
 
   render() {
     return (
-      <div className='viewport'>
+      <div className='shop'>
         {this.props.stock.length &&
           <div className='shop-stock'>
             {this.renderStock()}

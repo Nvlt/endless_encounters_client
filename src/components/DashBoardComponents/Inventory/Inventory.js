@@ -1,6 +1,6 @@
 import React from 'react';
-import CharacterContext from '../../../contexts/CharacterContext';
-import InventoryItem from '../InventoryItem/InventoryItem';
+//import CharacterContext from '../../../contexts/CharacterContext';
+//import InventoryItem from '../InventoryItem/InventoryItem';
 import './Inventory.css';
 
 // export default function Inventory({items=[]}) {

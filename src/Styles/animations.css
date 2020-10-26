@@ -26,6 +26,8 @@
 
 
                                           /* Animations for hovering over stuff */
+
+
 .rainbow-text:hover{
   animation-timing-function: ease;
   animation-name: text-rainbow;

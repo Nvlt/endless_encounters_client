@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Viewport from '../../Viewport/Viewport';
 import CharStatCard from '../CharacterStatCard/CharacterStatCard';
 import Inventory from '../Inventory/Inventory';
@@ -8,7 +8,7 @@ import Abilities from '../Abilities/Abilities';
 import './Dash.css'
 import EventContext from '../../../contexts/EventContext';
 import SwitchTabSound from '../../SoundWidgets/SwitchTabSound';
-import { Transition, animated } from 'react-spring/renderprops';
+import {Transition, animated} from 'react-spring/renderprops';
 
 //Using indexes
 // const pages = [
@@ -19,7 +19,7 @@ import { Transition, animated } from 'react-spring/renderprops';
 // ]
 
 //Using display state
-const tabs = {
+const tabs={
   inventory: style => (<animated.div style={{...style}}><Inventory /></animated.div>),
   gear: style => (<animated.div style={{...style}}><Gear /></animated.div>),
   spells: style => (<animated.div style={{...style}}><Spells /></animated.div>),
@@ -42,35 +42,32 @@ export default class Dashboard extends React.Component {
   }
   static contextType=EventContext;
 
-  handleShop = (e) => {
+  handleShop=(e) => {
     e.preventDefault();
 
     this.setState({view: 'shop'});
   }
 
-  handleTavern = (e) => {
+  handleTavern=(e) => {
     e.preventDefault();
 
     this.setState({view: 'tavern'});
   }
 
-  handleExplore = (e) => {
+  handleExplore=(e) => {
     e.preventDefault();
-    if (Math.random() > 0.2) {
+    if(Math.random()>0.2) {
       this.setState({view: 'explore'});
     }
     else {
       this.setState({view: 'combat'});
-    }    
+    }
   }
 
   handleDisplayChange=(ev) => {
     ev.preventDefault();
-    let newIndex= ev.target.value === 'inventory' ? 0 :
-    ev.target.value === 'gear' ? 1 :
-    ev.target.value === 'spells' ? 2
-    : 3
-    this.setState({display: ev.target.value, index: newIndex})
+
+    this.setState({display: ev.target.value});
   }
 
   renderTabButttons() {
@@ -80,12 +77,12 @@ export default class Dashboard extends React.Component {
       {name: 'Spells', tabName: 'spells', func: this.handleDisplayChange},
       {name: 'Abilities', tabName: 'abilities', func: this.handleDisplayChange}
     ]
-    return tabs.map((tab, index)=> <SwitchTabSound props={tab} key={index}/>)
+    return tabs.map((tab, index) => <SwitchTabSound props={tab} key={index} />)
   }
   render() {
     return (
-      <main className="p-2">
-        <Viewport view={this.state.view}/>
+      <main className="dashboard-main">
+        <Viewport view={this.state.view} />
 
         <div className="btnsNav">
           <button className='dashBtn' onClick={this.handleShop}>Shop</button>
@@ -101,12 +98,12 @@ export default class Dashboard extends React.Component {
           <CharStatCard />
           <div className='transition-container'>
             <Transition
-            reset
-            unique
-            items={this.state.display}
-            from={{opacity: 0, transform: `perspective(1000px) translate3d(0%, 0, 0) rotateY(${0}deg)`}}
-            enter={{position: 'static', opacity: 1, transform: `perspective(1000px) translate3d(0%, 0, 0) rotateY(${0}deg)`}}
-            leave={{position: 'absolute', opacity: 0, transform: `perspective(1000px) translate3d(-50%, 0, 0) rotateY(${-90}deg)`}}
+              reset
+              unique
+              items={this.state.display}
+              from={{position: 'absolute', opacity: 0, transform: `perspective(2000px) translate3d(0%, 0, 0) rotateY(${0}deg)`}}
+              enter={{position: 'initial', opacity: 1, transform: `perspective(2000px) translate3d(0%, 0, 0) rotateY(${0}deg)`}}
+              leave={{top: 0, left: 0, bottom: 0, right: 0, position: 'absolute', opacity: 0, transform: `perspective(800px) translate3d(-50%, 0, 0) rotateY(${-90}deg)`}}
             >
               {display => tabs[display]}
             </Transition>

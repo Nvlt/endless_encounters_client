@@ -1,9 +1,12 @@
-.headerNav{
+#headerNav{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    border: solid .1em black;
+    border-width: 1px;
     border-radius: 5px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
     font-weight: bold;
     padding: 5px;
 

@@ -4,13 +4,13 @@ import './LevelUp.css';
 export default class LevelUp extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
+    this.state={
       stats: this.props.stats,
       points: this.props.points
     }
   }
 
-  static defaultProps = {
+  static defaultProps={
     stats: {
       str: 15,
       dex: 7,
@@ -23,22 +23,22 @@ export default class LevelUp extends React.Component {
   }
 
   handleStatIncrease(key, value) {
-    const newStats = this.state.stats;
+    const newStats=this.state.stats;
     newStats[key]++;
     this.setState({
       stats: newStats,
-      points: --this.state.points
+      points: this.state.points-1
     });
   }
 
   renderStats() {
-    let stats = [];
-    for (const [key, value] of Object.entries(this.state.stats)) {
-      const htmlStat = <li className='stat'>
+    let stats=[];
+    for(const [key, value] of Object.entries(this.state.stats)) {
+      const htmlStat=<li className='stat'>
         <div className='stat-name'>{key}:</div>
         <div className='stat-value'>
           {value}
-          {this.state.points > 0 && <button onClick={() => this.handleStatIncrease(key, value)}>+</button>}
+          {this.state.points>0&&<button onClick={() => this.handleStatIncrease(key, value)}>+</button>}
         </div>
       </li>
       stats.push(htmlStat);
