@@ -2,12 +2,8 @@ import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import ApBar from '../Bar/ApBar';
 import Bar from '../Bar/Bar';
-<<<<<<< HEAD
-
-=======
 import {useSpring, animated} from 'react-spring';
 import icon from '../../../assets/images/wizard-hat.png';
->>>>>>> 5ecf227014d5a8ee935760f8b20f1e38f70b9498
 
 export default function CardFront(props) {
   const charData=props.stats?
