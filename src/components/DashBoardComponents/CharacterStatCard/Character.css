@@ -5,7 +5,8 @@
 .outterCard{
     display: flex;
     flex-direction: column;
-    border: 3px dashed black;
+    border-style: dashed;
+    border-width: 3px;
     border-radius: 8px;
     align-items: center;
     justify-content: center;
@@ -21,6 +22,8 @@
 .innerCard{
   /* display: flex; */
   border: black .2em solid;
+  background-color: snow;
+  color: #000;
   border-radius: 15px;
   /* min-width: 200px; */
   align-self: center;
