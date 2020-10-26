@@ -2,10 +2,10 @@ import React from 'react';
 import ReactTooltip from 'react-tooltip';
 import ApBar from '../Bar/ApBar';
 import Bar from '../Bar/Bar';
-import {useSpring, animated} from 'react-spring';
+
 
 export default function CardFront(props) {
-  const charData=props.stats ?
+  const charData=props.stats?
     `
       STR: ${props.stats.str}
       DEX: ${props.stats.dex}

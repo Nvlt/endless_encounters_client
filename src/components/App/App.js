@@ -10,32 +10,32 @@ import PublicRoute from '../../routes/routehelpers/PublicRoute/PublicRoute';
 import {useTransition, animated} from 'react-spring'
 import About from '../../routes/About/About';
 import './App.css';
-import CreateCharacter from '../CreateCharacter/CreateCharacter';
+
 import LevelUp from '../LevelUp/LevelUp';
-import { ThemeProvider } from "styled-components";
-import { GlobalStyles } from '../Styles/GlobalStyles';
-import { lightTheme, darkTheme } from '../Styles/Themes';
-import { useDarkMode } from '../Styles/useDarkMode';
+import {ThemeProvider} from "styled-components";
+import {GlobalStyles} from '../Styles/GlobalStyles';
+import {lightTheme, darkTheme} from '../Styles/Themes';
+import {useDarkMode} from '../Styles/useDarkMode';
 import Toggler from '../Styles/Toggler';
 
 
 function App() {
 
   const location=useLocation();
-  const [theme, themeToggler] = useDarkMode();
+  const [theme, themeToggler]=useDarkMode();
   const trans=useTransition(location, location => location.pathname, {
     from: {opacity: 0},
     enter: {position: 'flex', opacity: 1},
     leave: {position: 'absolute', top: 0, left: 0, bottom: 0, right: 0, opacity: 0},
   })
-  const themeMode = theme === 'light' ? lightTheme : darkTheme;
+  const themeMode=theme==='light'? lightTheme:darkTheme;
 
   return trans.map(({item: location, props, key}) => (
     <ThemeProvider theme={themeMode}>
-      <GlobalStyles/>
+      <GlobalStyles />
       <animated.div key={key} style={props}>
         <header>
-          <Header toggler={<Toggler theme={theme} toggleTheme={themeToggler}/>}/>
+          <Header toggler={<Toggler theme={theme} toggleTheme={themeToggler} />} />
         </header>
 
         <Switch location={location}>
@@ -54,7 +54,7 @@ function App() {
             component={Dashboard} />
           <PrivateRoute
             path='/create'
-          component={LevelUp} />
+            component={LevelUp} />
           <Route
             exact
             path='/'

@@ -4,7 +4,7 @@ import ApBar from '../Bar/ApBar';
 import Bar from '../Bar/Bar';
 
 export default function CardBack(props) {
-  const charData=props.stats ?
+  const charData=props.stats?
     `
       STR: ${props.stats.str}
       DEX: ${props.stats.dex}
@@ -23,8 +23,8 @@ export default function CardBack(props) {
         alt="a floppy mage hat" />
 
 
-      
-      
+
+
     </>
   )
 }
