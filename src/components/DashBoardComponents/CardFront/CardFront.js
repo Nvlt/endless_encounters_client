@@ -1,8 +1,7 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
-import ReactTooltip from 'react-tooltip';
 import ApBar from '../Bar/ApBar';
 import Bar from '../Bar/Bar';
-import {useSpring, animated} from 'react-spring';
 import icon from '../../../assets/images/wizard-hat.png';
 
 export default function CardFront(props) {

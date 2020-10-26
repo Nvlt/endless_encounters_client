@@ -1,7 +1,5 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
-import ApBar from '../Bar/ApBar';
-import Bar from '../Bar/Bar';
 
 export default function CardBack(props) {
   const charData=props.stats?
