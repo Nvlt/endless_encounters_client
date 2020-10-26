@@ -27,7 +27,7 @@ export default function CharStatCard({stats={}}) {
 
   return (
 
-    <div onClick={() => set(state => !state)} className='outterCard'>
+    <div onClick={() => set(state => !state)} id='outterCard' className='border'>
 
       <animated.div className='absolute innerCard' style={{ opacity: opacity.interpolate(o => 1 - o), transform}}>
         {/* <ReactTooltip id="bar-cont" place="top" effect="solid" />

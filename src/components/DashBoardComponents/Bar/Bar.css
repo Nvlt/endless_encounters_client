@@ -1,8 +1,30 @@
 .bar {
   border: 2px solid black;
-  width: 150px;
+  width: 70%;
   border-radius: 1em;
   overflow: hidden;
+  margin: auto;
+}
+
+.bar-outer {
+  margin-right: 10px;
+}
+
+.bar-segment{
+  border-left: 2px solid black;
+  border-right: 2px solid black;
+}
+
+.bar-text {
+  height: 5px;
+  margin: 10px 3px;
+  line-height: 5px;
+  text-align: center;
+}
+
+.bar-container {
+  display: flex;
+  align-items: center;
 }
 
 .HP {
@@ -15,9 +37,4 @@
 
 .ap {
   background-color: green;
-}
-
-.bar-segment{
-  border-left: 2px solid black;
-  border-right: 2px solid black;
 }

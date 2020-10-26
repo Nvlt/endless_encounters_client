@@ -1,7 +1,6 @@
 .viewport {
   display: flex;
   flex-direction: column;
-  border: .2em solid black;
   text-align: left;
   padding: 1rem;
   margin: 1rem auto;

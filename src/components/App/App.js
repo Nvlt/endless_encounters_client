@@ -32,7 +32,12 @@ function App() {
 
   return trans.map(({item: location, props, key}) => (
     <ThemeProvider theme={themeMode}>
+<<<<<<< HEAD
       <GlobalStyles />
+=======
+      <GlobalStyles/>
+      
+>>>>>>> 5ecf227014d5a8ee935760f8b20f1e38f70b9498
       <animated.div key={key} style={props}>
         <header>
           <Header toggler={<Toggler theme={theme} toggleTheme={themeToggler} />} />

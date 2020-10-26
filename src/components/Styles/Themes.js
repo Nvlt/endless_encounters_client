@@ -2,11 +2,14 @@ export const lightTheme = {
   body: 'snow',
   text: 'black',
   toggleBorder: '#000',
-  background: 'timber'
+  background: 'timber',
+  viewport: '#FFFCBE'
 }
 export const darkTheme = {
   body: '#111013',
   text: '#FFF',
   toggleBorder: '#CCC',
-  background: '#999'
+  background: '#999',
+  viewport: '#141233'
 }
+//Alternate theme colors can go here...

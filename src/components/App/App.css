@@ -341,3 +341,25 @@ body {
   transform: scale(1.1);
   transition-delay: 0.01s;
 }
+
+#sun {
+  background-color: gold;
+  width: 150px;
+  height: 150px;
+  border-radius: 5em;
+  position: absolute;
+  z-index: -99;
+  top: 3vh;
+  left: 1vh;
+}
+
+#moon {
+  background-color: silver;
+  width: 150px;
+  height: 150px;
+  border-radius: 5em;
+  position: absolute;
+  z-index: -99;
+  top: 3vh;
+  right: 1vh;
+}
