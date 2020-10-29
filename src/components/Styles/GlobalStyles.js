@@ -12,4 +12,8 @@ export const GlobalStyles = createGlobalStyle `
     background: ${({theme}) => theme.viewport};
     transition: all 0.50s linear;
   }
+  .question {
+    color: ${({theme}) => theme.text};
+    transition: all 0.50s linear;
+  }
 `

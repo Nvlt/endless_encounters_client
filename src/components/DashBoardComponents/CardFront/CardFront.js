@@ -4,13 +4,6 @@ import Bar from '../Bar/Bar';
 import icon from '../../../assets/images/hat.png';
 
 export default function CardFront(props) {
-  const charData=props.stats?
-    `
-      STR: ${props.stats.str}
-      DEX: ${props.stats.dex}
-      INT: ${props.stats.int}
-    `
-    :'No stats to display';
   return (
     <>
     <img

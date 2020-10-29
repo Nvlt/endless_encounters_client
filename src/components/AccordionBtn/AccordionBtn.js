@@ -14,7 +14,7 @@ export default function Accordion(props) {
     return (
         <div className='acc'>
              <div className='acc-outer'>
-                 <button className={`acc-header ${setActive}`} onClick={toggleAccordion}>
+                 <button className={`acc-btn acc-header ${setActive}`} onClick={toggleAccordion}>
                      <p>{props.header}</p>
                  </button>
              </div>

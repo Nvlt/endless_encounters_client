@@ -27,6 +27,10 @@ export default class Dashboard extends React.Component {
   }
   static contextType=EventContext;
 
+  tabs = {
+    abilities: style => (<animated.div style={{...style}}><Abilities abilities={this.props.character.abilities}/></animated.div>),
+  }
+
   handleTavern=(e) => {
     e.preventDefault();
 
@@ -72,17 +76,23 @@ export default class Dashboard extends React.Component {
       cha: 6
     }
     return (
-      <main className='dashboard-main'>
+      <main className='dash-main'>
         <Viewport view={this.state.view} />
-
-        <div className='btnsNav'>
+        <div className='nav-btns'>
           <button onClick={this.handleTavern}>Tavern</button>
           <button onClick={this.handleExplore}>Explore</button>
           {this.renderTabButtons()}
         </div>
-        <div className='charAssets'>
-          <CharStatCard stats={dummyStats}/>
-          <div className='transition-container'>
+        <div className='char-assets'>
+          <CharStatCard
+          stats={this.props.character['stats']}
+          pools={{
+            hp: this.props.character['hp'],
+            hpMax: this.props.character['max_hp'],
+            mp: this.props.character['mp'],
+            mpMax: this.props.character['max_mp']
+          }}/>
+          <div className='trans-container'>
             <Transition
               reset
               unique
@@ -91,7 +101,7 @@ export default class Dashboard extends React.Component {
               enter={{position: 'initial', opacity: 1, transform: `perspective(2000px) translate3d(0%, 0, 0) rotateY(${0}deg)`}}
               leave={{top: 0, left: 0, bottom: 0, right: 0, position: 'absolute', opacity: 0, transform: `perspective(800px) translate3d(-50%, 0, 0) rotateY(${-90}deg)`}}
             >
-              {display => tabs[display]}
+              {display => this.tabs[display]}
             </Transition>
           </div>
         </div>

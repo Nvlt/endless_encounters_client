@@ -24,6 +24,7 @@
     max-width: 240px;
     max-height: 300px;
     cursor: grab;
+    
 }
 
 .inner-card{
@@ -40,7 +41,7 @@
   flex-wrap: nowrap;
   margin: .5px;
   will-change: transform, opacity;
-  overflow: visible;
+  overflow: hidden;
 }
 
 .inner-card > img {

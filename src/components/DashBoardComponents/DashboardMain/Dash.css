@@ -1,4 +1,4 @@
-.scrollBox{
+.scroll-box{
     display: flex;
     flex-direction: column;
     border: .2em solid black;
@@ -10,34 +10,35 @@
     border-radius: 8px;
 }
 
-.btnsNav{
+.nav-btns{
     display: flex;
     flex-wrap: wrap;
     margin: 20px;
     justify-content: center;
 }
 
-.dashboard-main {
+.dash-main {
     padding: 0.5rem;
+    max-width: 800px;
+    margin: auto;
+    overflow-y: auto;
 }
 
-.charAssets{
+.char-assets{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    max-width: 800px;
-    margin: auto;
 }
 
-.transition-container {
+.trans-container {
     position: relative;
-    margin: 0;
+    margin: auto;
     width: auto;
-    max-width: 500px;
+    min-width: 400px;
     flex: 2;
 }
 
-.transition-container > div {
+.trans-container > div {
     will-change: transform, opacity;
   }
 
@@ -46,7 +47,21 @@
         margin: 1rem;
     }
 
-    .charAssets {
+    .char-assets {
+        display: flex;
         flex-direction: row;
+        margin: 10px 20px;
+    }
+
+    .trans-container {
+        width: auto;
+        margin: auto;
+        min-width: initial;
+        max-width: 500px;
+    }
+
+    .trans-container > div {
+        margin: 10px 40px;
+        margin-right: 0;
     }
 }

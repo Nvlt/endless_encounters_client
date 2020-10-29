@@ -6,6 +6,11 @@
     border: none;
 }
 
+.acc-btn:hover{
+    background-color: transparent;
+    box-shadow: none;
+}
+
 .acc-inner{
     overflow: hidden;
     transition: 1s ease;
