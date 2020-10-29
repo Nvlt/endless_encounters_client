@@ -108,22 +108,6 @@ export default function About() {
             {<div className='dataTip' data-event='click' clickable='true' data-tip='Critical misses happen if your character rolls 1, critical hits on a roll of 20.' data-for='Combat'> Critical </div>} misses or hits. </p>
         </div>
       )
-    },
-    {
-      header: (
-        <h3 className='question'>
-          Progression
-        </h3>
-      ),
-      content: (
-        <div>
-          <ReactTooltip id='something' place='top' effect='solid' getContent={(dataTip) => `${dataTip}`} />
-          Some text to explain {<div data-event='click' clickable='true'
-            data-tip='Brief explain'
-            className='dataTip'
-            data-for='something'>something to highlight</div>} more text here
-        </div>
-      )
     }
   ]
 
