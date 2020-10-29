@@ -67,7 +67,6 @@ export default class Dashboard extends React.Component {
         <Viewport view={this.state.view} />
 
         <div className='btnsNav'>
-          <button onClick={this.handleShop}>Shop</button>
           <button onClick={this.handleTavern}>Tavern</button>
           <button onClick={this.handleExplore}>Explore</button>
           {this.renderTabButttons()}
