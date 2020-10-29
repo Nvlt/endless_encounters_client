@@ -20,7 +20,7 @@ export default function About() {
         <div>
           <ReactTooltip id='rpg' place='top' effect='solid' getContent={(dataTip) => `${dataTip}`} />
         Endless Encounters is a text-based {<div className='dataTip' data-event='click' clickable='true' data-tip='Role Playing Game'
-            data-for='rpg'>RPG</div>} developed by Emotionally Exhausted. Once you're in, you can explore in search of ravenous enemies to duel swords with or visit the tavern to discuss rumors.
+            data-for='rpg'>RPG</div>} developed by EE; John Pendergast, Alexis Felts, Scott Whiteman, and Tiffany Summerford. Once you're in, you can explore in search of ravenous enemies to duel swords with or visit the tavern to discuss rumors.
         </div>
       )
     },
@@ -90,7 +90,7 @@ export default function About() {
             <li>On the dash, you'll be presented with some action choices in the middle-left portion of your dashboard (the 'explore' and 'tavern' buttons).</li>
             <li>Upon hovering over an option in the dashboard, you can see an explanation of what that choice/action will do.</li>
             <li>Clicking on actions could push you into duels or happen you upon a treasure, and whatever consequences occur from that are now tied to your character!</li>
-            <li>Be careful, make good choices, or don't, I'm merely a RPG, not a cop.</li>
+            <li>Be careful, make good choices, or don't, I'm merely an RPG, not a cop.</li>
           </ul>
         </div>
       )
