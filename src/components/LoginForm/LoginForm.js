@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import UserContext from '../../contexts/UserContext';
 import AuthApiService from '../../services/auth-api-service';
