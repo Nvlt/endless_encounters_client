@@ -4,13 +4,17 @@
     padding: 5px;
 }
 
+/* font-xxl flex-1 font-nerd center flex-grow text-pop-up-bottom my-2 hover' */
+.header{
+    text-align: center;
+    font-size: 2.8em;
+    font-family: 'nerdland';
+}
+
 .subHead{
     font-family: 'Nelship';
     text-align: center;
-    margin-top: 30px;
-    max-width: 280px;
     margin: 10px auto;
-    padding: 2rem;
 }
 
 .mainNav{

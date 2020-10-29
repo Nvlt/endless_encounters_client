@@ -27,12 +27,6 @@ export default class Dashboard extends React.Component {
   }
   static contextType=EventContext;
 
-  handleShop=(e) => {
-    e.preventDefault();
-
-    this.setState({view: 'shop'});
-  }
-
   handleTavern=(e) => {
     e.preventDefault();
 
@@ -55,7 +49,7 @@ export default class Dashboard extends React.Component {
     this.setState({display: ev.target.value});
   }
 
-  renderTabButttons() {
+  renderTabButtons() {
     const tabs=[
       {name: 'Abilities', tabName: 'abilities', func: this.handleDisplayChange}
     ]
@@ -69,7 +63,7 @@ export default class Dashboard extends React.Component {
         <div className='btnsNav'>
           <button onClick={this.handleTavern}>Tavern</button>
           <button onClick={this.handleExplore}>Explore</button>
-          {this.renderTabButttons()}
+          {this.renderTabButtons()}
         </div>
         <div className='charAssets'>
           <CharStatCard />

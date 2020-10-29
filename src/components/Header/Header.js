@@ -31,13 +31,19 @@ export default class Header extends Component {
   render() {
     return (
       <nav className='border' id='headerNav'>
-        <div >{TokenService.hasAuthToken()
+        <div >{ TokenService.hasAuthToken()
           ? this.context.user.username
-          :null}
+          : null }
         </div>
         <div>
           {this.props.toggler}
         </div>
+        
+        <div>  
+          <SoundPlayCheck />
+        </div>
+
+
         <div >
           <Link className='headerLink' to='/'>Home</Link>
         </div>
@@ -46,16 +52,14 @@ export default class Header extends Component {
           <Link className='headerLink' to='/main'>Dash</Link>
         </div>
 
-
         <div >
           <Link className='headerLink' to='/about'>About</Link>
         </div>
-        <div>  <SoundPlayCheck /></div>
-
+        
         {TokenService.hasAuthToken()
           ? this.renderLogout()
           :this.renderLogin()}
-
+        
       </nav>
     )
   }

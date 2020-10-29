@@ -23,29 +23,30 @@ button{
   background-color: #48A9A6;
   cursor: grab;
 }
+
 button:hover {
   background-color: #FEC369;
   box-shadow: 0 0 10px 2px #595358;
 }
 
 @font-face {
-  font-family: "nerdland";
-  src: url("./assets/fonts/NederlandFantasy.ttf")
+  font-family: 'nerdland';
+  src: url('./assets/fonts/NederlandFantasy.ttf')
 }
 .font-nerd {
-  font-family: "nerdland";
+  font-family: 'nerdland';
 }
 @font-face {
-  font-family: "handy";
-  src: url("./assets/fonts/BabyDoll.ttf")
+  font-family: 'handy';
+  src: url('./assets/fonts/BabyDoll.ttf')
 }
 .font-handy{
-  font-family: "handy";
+  font-family: 'handy';
 }
 @font-face {
-  font-family: "Nelship";
-  src: url("./assets/fonts/Nelship.ttf")
+  font-family: 'Nelship';
+  src: url('./assets/fonts/Nelship.ttf')
 }
 .font-nels{
-  font-family: "Nelship";
+  font-family: 'Nelship';
 }
