@@ -1,14 +1,14 @@
 import React from 'react';
 import Accordion from '../../components/AccordionBtn/AccordionBtn';
 import ReactTooltip from 'react-tooltip';
-import {Link} from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './About.css'
 
 export default function About() {
 
-  const specials=` ! ' # $ % & ' ( ) * + , - . / : ; < = > ? @ [  ] ^ _ { | } ~ `
-  const upperNum=`If you can do this PLEASE send us an email because we haven't seen one yet!`
-  let aboutData=[
+  const specials = ` ! ' # $ % & ' ( ) * + , - . / : ; < = > ? @ [  ] ^ _ { | } ~ `
+  const upperNum = `If you can do this PLEASE send us an email because we haven't seen one yet!`
+  let aboutData = [
     {
       header: (
         <h3 className='question'>
@@ -127,8 +127,8 @@ export default function About() {
   ]
 
   function aboutLoop() {
-    let html=[];
-    for(const index in aboutData) {
+    let html = [];
+    for (const index in aboutData) {
       html.push(
         <Accordion
           key={index}
@@ -141,12 +141,14 @@ export default function About() {
   }
 
   return (
-    <body className='abtBody'>
-      <h1 className='title'>Endless Encounters</h1>
-      <h3 className='subTitle'>A place for those seeking a way to leave their world behind...</h3>
-      <section className='abtSect'>
-        {aboutLoop()}
-      </section>
+    <body className='abt-outer'>
+      <h1 className='title text-pop-up-bottom'>Endless Encounters</h1>
+      <div className='abt-inner'>
+        <h3 className='sub-title'>A place for those seeking a way to leave their world behind...</h3>
+        <section className='abt-sect'>
+          {aboutLoop()}
+        </section>
+      </div>
     </body>
   )
 }

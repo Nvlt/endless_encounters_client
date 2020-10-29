@@ -1,5 +1,5 @@
 
-.abtBody{
+.abt-outer{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -8,16 +8,22 @@
     margin: auto;
 }
 
-.abtSect{
+.abt-inner{
+    margin-top: -50px;
+}
+
+.abt-sect{
     margin: 0 15px;
 }
 
 .title{
-    font-family: 'nerdland';
+    text-align: center;
     font-size: 3.5em;
+    font-family: 'nerdland';
+    margin-top: 75px;
 }
 
-.subTitle{
+.sub-title{
     font-family: 'Nelship';
     font-size: 1.2em;
     margin: 0 15px;
@@ -46,27 +52,4 @@ ol{
 
 li{
     text-align: left;
-}
-
-.dataTip{
-    display: inline;
-    font-weight: 650;
-    color: #4357AC;
-    cursor: pointer;
-}
-
-@font-face {
-    font-family: 'handy';
-    src: url('../../assets/fonts/BabyDoll.ttf')
-}
-
-
-@font-face {
-    font-family: 'nerdland';
-    src: url('../../assets/fonts/NederlandFantasy.ttf')
-}
-
-@font-face {
-    font-family: 'Nelship';
-    src: url('../../assets/fonts/Nelship.ttf')
 }

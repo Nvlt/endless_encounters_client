@@ -1,7 +1,7 @@
 body {
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
+	max-width: 1600px; 
+	margin: 0 auto !important; 
+	float: none !important; 
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -14,6 +14,13 @@ code {
     monospace;
 }
 
+.dataTip{
+  display: inline;
+  font-weight: 650;
+  color: #4357AC;
+  cursor: pointer;
+}
+
 button{
   min-width: 75px;
   height: 30px;
@@ -21,7 +28,7 @@ button{
   border-radius: 5px;
   font-weight: 700;
   background-color: #48A9A6;
-  cursor: grab;
+  cursor: pointer;
 }
 
 button:hover {
@@ -49,4 +56,25 @@ button:hover {
 }
 .font-nels{
   font-family: 'Nelship';
+}
+
+.text-pop-up-top {
+	-webkit-animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+	        animation: text-pop-up-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+@keyframes text-pop-up-top {
+  0% {
+    -webkit-transform: translateY(0);
+            transform: translateY(0);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: none;
+  }
+  100% {
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    -webkit-transform-origin: 50% 50%;
+            transform-origin: 50% 50%;
+    text-shadow: 0 1px 0 #cccccc, 0 2px 0 #cccccc, 0 3px 0 #cccccc, 0 4px 0 #cccccc, 0 5px 0 #cccccc, 0 6px 0 #cccccc, 0 7px 0 #cccccc, 0 8px 0 #cccccc, 0 9px 0 #cccccc, 0 50px 30px rgba(0, 0, 0, 0.3);
+  }
 }

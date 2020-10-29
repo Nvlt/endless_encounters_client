@@ -57,17 +57,16 @@ export default class Dashboard extends React.Component {
   }
   render() {
     return (
-      <main className='dashboard-main'>
+      <main className='dash-main'>
         <Viewport view={this.state.view} />
-
-        <div className='btnsNav'>
+        <div className='nav-btns'>
           <button onClick={this.handleTavern}>Tavern</button>
           <button onClick={this.handleExplore}>Explore</button>
           {this.renderTabButtons()}
         </div>
-        <div className='charAssets'>
+        <div className='char-assets'>
           <CharStatCard />
-          <div className='transition-container'>
+          <div className='trans-container'>
             <Transition
               reset
               unique

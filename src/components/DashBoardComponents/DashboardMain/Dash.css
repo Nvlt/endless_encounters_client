@@ -1,4 +1,4 @@
-.scrollBox{
+.scroll-box{
     display: flex;
     flex-direction: column;
     border: .2em solid black;
@@ -10,26 +10,26 @@
     border-radius: 8px;
 }
 
-.btnsNav{
+.nav-btns{
     display: flex;
     flex-wrap: wrap;
     margin: 20px;
     justify-content: center;
 }
 
-.dashboard-main {
+.dash-main {
     padding: 0.5rem;
-}
-
-.charAssets{
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     max-width: 800px;
     margin: auto;
 }
 
-.transition-container {
+.char-assets{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.trans-container {
     position: relative;
     margin: 0;
     width: auto;
@@ -37,7 +37,7 @@
     flex: 2;
 }
 
-.transition-container > div {
+.trans-container > div {
     will-change: transform, opacity;
   }
 
@@ -46,7 +46,8 @@
         margin: 1rem;
     }
 
-    .charAssets {
+    .char-assets {
+        display: flex;
         flex-direction: row;
     }
 }
