@@ -2,6 +2,7 @@ import React from 'react';
 import Accordion from '../../components/AccordionBtn/AccordionBtn';
 import ReactTooltip from 'react-tooltip';
 import { Link } from 'react-router-dom'
+import mntn from '../../assets/images/mountains.png';
 import './About.css'
 
 export default function About() {
@@ -145,6 +146,7 @@ export default function About() {
       <h1 className='title text-pop-up-bottom'>Endless Encounters</h1>
       <div className='abt-inner'>
         <h3 className='sub-title'>A place for those seeking a way to leave their world behind...</h3>
+        <img src={mntn} alt='digital drawing of a mountain range in a circle frame' className='mntn' />
         <section className='abt-sect'>
           {aboutLoop()}
         </section>

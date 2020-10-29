@@ -36,6 +36,18 @@ button:hover {
   box-shadow: 0 0 10px 2px #595358;
 }
 
+.mntn{
+  display: block;
+  max-width: 250px;
+  margin: auto;
+}
+
+@media only screen and (max-width: 600px) {
+  .mntn {
+    max-width: 150px;
+  }
+}
+
 @font-face {
   font-family: 'nerdland';
   src: url('./assets/fonts/NederlandFantasy.ttf')

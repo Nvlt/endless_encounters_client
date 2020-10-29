@@ -17,72 +17,73 @@ const character = {
         name: 'Sword of Justin',
         rarity: 'epic',
         desc: 'Does a thing',
-        img: require('./assets/images/loyalty.png')
+        // img: require('./assets/images/loyalty.png')
       },
       {
         name: 'Buckler',
         rarity: 'common',
         desc: 'Does a thing',
-        img: require('./assets/images/loyalty.png')
+        // img: require('./assets/images/loyalty.png')
       },
       {
         name: 'Slicer',
         rarity: 'uncommon',
         desc: 'Does a thing',
-        img: require('./assets/images/loyalty.png')
+        // img: require('./assets/images/loyalty.png')
       },
       {
         name: 'Worn Gloves',
         rarity: 'common',
         desc: 'Does a thing',
-        img: require('./assets/images/loyalty.png')
+        // img: require('./assets/images/loyalty.png')
       },
       {
         name: 'Pelt',
         rarity: 'common',
         desc: 'Does a thing',
-        img: require('./assets/images/loyalty.png')
+        // img: require('./assets/images/loyalty.png')
       },
       {
         name: 'Rotten Meat',
         rarity: 'rare',
         desc: 'Does a thing',
-        img: require('./assets/images/loyalty.png')
+        // img: require('./assets/images/loyalty.png')
       },
       {
         name: 'Swift Boots',
         rarity: 'uncommon',
         desc: 'Does a thing',
-        img: require('./assets/images/loyalty.png')},
+        // img: require('./assets/images/loyalty.png')},
+      },
       {
         name: 'Scroll of Healing',
         rarity: 'common',
         desc: 'Does a thing',
-        img: require('./assets/images/loyalty.png')
+        // img: require('./assets/images/loyalty.png')
       },
       {
         name: 'Rock',
         rarity: 'common',
         desc: 'Does a thing',
-        img: require('./assets/images/loyalty.png')
+        // img: require('./assets/images/loyalty.png')
       },
       {
         name: 'The Wipeout',
         rarity: 'legendary',
         desc: 'Does a thing',
-        img: require('./assets/images/loyalty.png')
+        // img: require('./assets/images/loyalty.png')
       },
       {
         name: 'Cheese',
         rarity: 'common',
         desc: 'Does a thing',
-        img: require('./assets/images/loyalty.png')
+        // img: require('./assets/images/loyalty.png')
       },
       {
         name: 'Speed Potion',
         rarity: 'uncommon',
         desc: 'Does a thing',
-        img: require('./assets/images/loyalty.png')
+        // img: require('./assets/images/loyalty.png')
       }
   ],
   gear: {
