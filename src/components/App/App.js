@@ -9,7 +9,6 @@ import PrivateRoute from '../../routes/routehelpers/PrivateRoute/PrivateRoute';
 import PublicRoute from '../../routes/routehelpers/PublicRoute/PublicRoute';
 import {useTransition, animated} from 'react-spring'
 import About from '../../routes/About/About';
-import './App.css';
 
 import LevelUp from '../LevelUp/LevelUp';
 import {ThemeProvider} from 'styled-components';
