@@ -3,8 +3,12 @@
 }
 
 .bar-list {
+    display: flex;
+    flex-direction: column;
     height: 40%;
     justify-content: space-around;
+    align-content: space-between;
+    margin-left: 5px;
 }
 
 #outer-card{
@@ -19,6 +23,7 @@
     margin: auto auto;
     max-width: 240px;
     max-height: 300px;
+    cursor: grab;
 }
 
 .inner-card{
@@ -49,6 +54,8 @@
     font-family: 'Nelship';
     font-size: 1.5em;
     border-bottom:  .1rem slategray solid;
+    margin-bottom: 0.75rem;
+    margin-top: 0.5rem;
 }
 
 .dance:hover{

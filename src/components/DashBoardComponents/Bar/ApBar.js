@@ -6,10 +6,10 @@ export default function ApBar({curr=0, max=1}) {
     let bars=[]
     for(let i=0;i<max;i++) {
       if(i<curr) {
-        bars.push(<div className='flex-1 bg-verd height-5px flex-shrink ap bar-segment' key={i} />)
+        bars.push(<div className='flex-1 bg-verd flex-shrink ap bar-segment' key={i} />)
       }
       else {
-        bars.push(<div className='flex-1 bg-timberwolf height-5px flex-shrink bar-segment' key={i} />)
+        bars.push(<div className='flex-1 bg-timberwolf flex-shrink bar-segment' key={i} />)
       }
     }
     return bars;
@@ -20,8 +20,11 @@ export default function ApBar({curr=0, max=1}) {
       data-for='char-ap'
       className={'ap-cont bar-container flex flex-1 flex-row'}>
       <p className='flex-1 flex-shrink1 bar-text'>AP</p>
-      <div className='bg-timberwolf height-5px flex bar bar-outer' >
-        {generateBars()}
+      <div style={{width: '70%', margin: 'auto'}}>
+        <div className='bg-timberwolf height-5px flex bar bar-outer ap-bar-segments' >
+          {generateBars()}
+        </div>
+        
       </div>
     </div>
   );

@@ -56,6 +56,21 @@ export default class Dashboard extends React.Component {
     return tabs.map((tab, index) => <SwitchTabSound props={tab} key={index} />)
   }
   render() {
+    const dummyStats = {
+      hp: 213,
+      hpMax: 364,
+      mp: 244,
+      mpMax: 399,
+      ap: 4,
+      apMax: 5,
+      str: 6,
+      dex: 7,
+      int: 15,
+      sta: 8,
+      agi: 4,
+      wil: 17,
+      cha: 6
+    }
     return (
       <main className='dashboard-main'>
         <Viewport view={this.state.view} />
@@ -66,7 +81,7 @@ export default class Dashboard extends React.Component {
           {this.renderTabButtons()}
         </div>
         <div className='charAssets'>
-          <CharStatCard />
+          <CharStatCard stats={dummyStats}/>
           <div className='transition-container'>
             <Transition
               reset
