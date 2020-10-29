@@ -15,14 +15,10 @@ export default function Home() {
           <Link className='main-link' to='/main'>Start</Link>
         </nav>
         <p className='intro'>
-          Lorem ipsum dolor sit amet,
-          consectetur adipiscing elit,
-          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident,
-      sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+        Embark on a brand new adventure in this text-based role-playing-game! 
+        Endless Encounters is chock-full of random enemies and witty quotes, and so you may find yourself in some 
+        quirky predicaments. 
+        Once you're signed up, you can explore the world, duel swords, and meet other characters. </p>
       </div>
     </main>
   )

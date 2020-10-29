@@ -20,7 +20,7 @@ export default function About() {
         <div>
           <ReactTooltip id='rpg' place='top' effect='solid' getContent={(dataTip) => `${dataTip}`} />
         Endless Encounters is a text-based {<div className='dataTip' data-event='click' clickable='true' data-tip='Role Playing Game'
-            data-for='rpg'>RPG</div>} developed by Emotionally Exhausted. Once you're in, you can explore in search of ravenous enemies to duel swords with or visit the tavern to discuss rumors.
+            data-for='rpg'>RPG</div>} developed by EE; John Pendergast, Alexis Felts, Scott Whiteman, and Tiffany Summerford. Once you're in, you can explore in search of ravenous enemies to duel swords with or visit the tavern to discuss rumors.
         </div>
       )
     },
@@ -90,7 +90,7 @@ export default function About() {
             <li>On the dash, you'll be presented with some action choices in the middle-left portion of your dashboard (the 'explore' and 'tavern' buttons).</li>
             <li>Upon hovering over an option in the dashboard, you can see an explanation of what that choice/action will do.</li>
             <li>Clicking on actions could push you into duels or happen you upon a treasure, and whatever consequences occur from that are now tied to your character!</li>
-            <li>Be careful, make good choices, or don't, I'm merely a RPG, not a cop.</li>
+            <li>Be careful, make good choices, or don't, I'm merely an RPG, not a cop.</li>
           </ul>
         </div>
       )
@@ -106,22 +106,6 @@ export default function About() {
           <ReactTooltip id='Combat' place='top' effect='solid' getContent={(dataTip) => `${dataTip}`} />
           <p>Combat is turn-based; on your turn, you may click on one of your character's abilities or spells' to perform against your target. Your character will then attempt the action, with the chance to miss, hit, or completely obliterate their enemy. Each hit to your opponent will result in damage to their health. Abilities and Spells have cost, so make sure you have enough (health, mana, and ability) to perform this action. Keep a heads up for
             {<div className='dataTip' data-event='click' clickable='true' data-tip='Critical misses happen if your character rolls 1, critical hits on a roll of 20.' data-for='Combat'> Critical </div>} misses or hits. </p>
-        </div>
-      )
-    },
-    {
-      header: (
-        <h3 className='question'>
-          Progression
-        </h3>
-      ),
-      content: (
-        <div>
-          <ReactTooltip id='something' place='top' effect='solid' getContent={(dataTip) => `${dataTip}`} />
-          Some text to explain {<div data-event='click' clickable='true'
-            data-tip='Brief explain'
-            className='dataTip'
-            data-for='something'>something to highlight</div>} more text here
         </div>
       )
     }
