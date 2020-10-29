@@ -8,8 +8,8 @@ export default function SpellItem(props) {
       <ReactTooltip id={props.spell.id} place="top" effect="solid">
         {props.spell.desc}
       </ReactTooltip>
-      <div className="flex-1 flex flex-col hover-spell mx-1">
-        <h2 className="text-red font-handy" data-tip={props.spell.id} data-for={props.spell.id}>
+      <div className='outer-spell'>
+        <h2 data-tip={props.spell.id} data-for={props.spell.id}>
           {props.spell.name}
         </h2>
       </div>

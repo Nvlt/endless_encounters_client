@@ -1,6 +1,6 @@
 import React from 'react';
 import CombatTextBox from '../CombatTextBox/CombatTextBox';
-import './Combat.css'
+import './Combat.css';
 
 export default class Combat extends React.Component {
   constructor(props) {
@@ -28,7 +28,7 @@ export default class Combat extends React.Component {
 
   render() {
     return (
-      <div className='combat-viewport'>
+      <div className='combat'>
         {this.renderOpponents()}
         {this.renderTextBox()}
       </div>

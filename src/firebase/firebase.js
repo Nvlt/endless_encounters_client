@@ -43,7 +43,7 @@
 //         // connection pulling updates to Todos
 //       })
 //       .catch((error) => {
-//         dispatch(todoActions.showError("Error adding Todo to database"));
+//         dispatch(todoActions.showError('Error adding Todo to database'));
 //         console.error(error);
 //       })
 //   }

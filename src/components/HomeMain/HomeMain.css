@@ -36,8 +36,8 @@
 }
 
 @font-face {
-    font-family: "Nelship";
-    src: url("../../assets/fonts/Nelship.ttf")
+    font-family: 'Nelship';
+    src: url('../../assets/fonts/Nelship.ttf')
 }
 .hover{
     animation: infinite 5s hover alternate;

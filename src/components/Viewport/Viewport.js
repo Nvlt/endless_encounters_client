@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-constructor */
 import React from 'react';
 import Shop from '../Shop/Shop';
 import Tavern from '../Tavern/Tavern';
@@ -9,9 +10,9 @@ export default class Viewport extends React.Component {
   constructor(props) {
     super(props);
   }
-  
+
   renderShop() {
-    const dummyItems = [
+    const dummyItems=[
       {
         name: 'Schward'
       },
@@ -22,7 +23,7 @@ export default class Viewport extends React.Component {
         name: 'A Stick'
       }
     ];
-    return <Shop stock={dummyItems}/>
+    return <Shop stock={dummyItems} />
   }
 
   renderTavern() {
@@ -33,8 +34,8 @@ export default class Viewport extends React.Component {
     return <Explore />
   }
 
-  renderCombat = () => {
-    const dummyOpp = [
+  renderCombat=() => {
+    const dummyOpp=[
       {
         name: 'Gobber'
       },
@@ -45,17 +46,17 @@ export default class Viewport extends React.Component {
         name: 'Drunk-erd'
       }
     ];
-    return <Combat opponents={dummyOpp}/>
+    return <Combat opponents={dummyOpp} />
   }
 
   render() {
     return (
-      <>
-        {this.props.view === 'shop' && this.renderShop()}
-        {this.props.view === 'tavern' && this.renderTavern()}
-        {this.props.view === 'explore' && this.renderText()}
-        {this.props.view === 'combat' && this.renderCombat()}
-      </>
+      <div className='viewport border'>
+        {this.props.view==='shop'&&this.renderShop()}
+        {this.props.view==='tavern'&&this.renderTavern()}
+        {this.props.view==='explore'&&this.renderText()}
+        {this.props.view==='combat'&&this.renderCombat()}
+      </div>
     )
   }
 }

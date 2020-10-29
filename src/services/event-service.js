@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import config from '../config';
 import TokenService from './token-service';
 
-const EventService = {
+const EventService={
   getEvent() {
     return fetch(`${config.API_ENDPOINT}/event`, {
       headers: {
@@ -11,7 +12,7 @@ const EventService = {
       .then(res => {
         return (!res.ok)
           ? res.json().then(e => Promise.reject(e))
-          : res.json();
+          :res.json();
       });
   },
   postEvent(ev) {
@@ -26,8 +27,8 @@ const EventService = {
       .then(res => {
         return (!res.ok)
           ? res.json().then(e => Promise.reject(e))
-          : res.json();
+          :res.json();
       });
   }
-  
+
 }

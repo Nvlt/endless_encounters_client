@@ -15,7 +15,7 @@ export default function SoundPlayCheck() {
     setPlay(!playing)
   }
 
-  return <form onChange={handlePlay} className="flex-1 height-10px borderwidth-20px font-xxs">
+  return <form onChange={handlePlay} className='flex-1 height-10px borderwidth-20px font-xxs'>
     {!playing&&<label htmlFor='sound'>Play Sound?</label>}
     {playing&&<label htmlFor='sound'> Playing</label>}
     <input name='sound' id='sound' type='checkbox' />

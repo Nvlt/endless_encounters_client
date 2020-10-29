@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function Explore(props) {
   return (
-    <div className="scrollBox">
+    <div className=''>
         <p>
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
           totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi

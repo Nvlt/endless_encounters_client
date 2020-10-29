@@ -1,7 +1,8 @@
+/* eslint-disable no-unused-vars */
 import config from '../config';
 import TokenService from './token-service';
 
-const CharacterService = {
+const CharacterService={
   getCharacter() {
     return fetch(`${config.API_ENDPOINT}/character`, {
       headers: {
@@ -11,7 +12,7 @@ const CharacterService = {
       .then(res => {
         return (!res.ok)
           ? res.json().then(e => Promise.reject(e))
-          : res.json();
+          :res.json();
       });
   },
   postCharacter(character) {
@@ -26,7 +27,7 @@ const CharacterService = {
       .then(res => {
         return (!res.ok)
           ? res.json().then(e => Promise.reject(e))
-          : res.json();
+          :res.json();
       });
   },
   getInventory() {
@@ -38,7 +39,7 @@ const CharacterService = {
       .then(res => {
         return (!res.ok)
           ? res.json().then(e => Promise.reject(e))
-          : res.json();
+          :res.json();
       });
   },
   getGear() {
@@ -50,7 +51,7 @@ const CharacterService = {
       .then(res => {
         return (!res.ok)
           ? res.json().then(e => Promise.reject(e))
-          : res.json();
+          :res.json();
       });
   },
   getAbilities() {
@@ -62,7 +63,7 @@ const CharacterService = {
       .then(res => {
         return (!res.ok)
           ? res.json().then(e => Promise.reject(e))
-          : res.json();
+          :res.json();
       });
   },
   getSpells() {
@@ -74,7 +75,7 @@ const CharacterService = {
       .then(res => {
         return (!res.ok)
           ? res.json().then(e => Promise.reject(e))
-          : res.json();
+          :res.json();
       });
   },
 }
