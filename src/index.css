@@ -1,4 +1,6 @@
 body {
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -10,4 +12,40 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+button{
+  min-width: 75px;
+  height: 30px;
+  margin: 0 15px;
+  border-radius: 5px;
+  font-weight: 700;
+  background-color: #48A9A6;
+  cursor: grab;
+}
+button:hover {
+  background-color: #FEC369;
+  box-shadow: 0 0 10px 2px #595358;
+}
+
+@font-face {
+  font-family: "nerdland";
+  src: url("./assets/fonts/NederlandFantasy.ttf")
+}
+.font-nerd {
+  font-family: "nerdland";
+}
+@font-face {
+  font-family: "handy";
+  src: url("./assets/fonts/BabyDoll.ttf")
+}
+.font-handy{
+  font-family: "handy";
+}
+@font-face {
+  font-family: "Nelship";
+  src: url("./assets/fonts/Nelship.ttf")
+}
+.font-nels{
+  font-family: "Nelship";
 }

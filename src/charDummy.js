@@ -17,146 +17,146 @@ const character = {
         name: 'Sword of Justin',
         rarity: 'epic',
         desc: 'Does a thing',
-        img: require("./assets/images/loyalty.png")
+        img: require('./assets/images/loyalty.png')
       },
       {
         name: 'Buckler',
         rarity: 'common',
         desc: 'Does a thing',
-        img: require("./assets/images/loyalty.png")
+        img: require('./assets/images/loyalty.png')
       },
       {
         name: 'Slicer',
         rarity: 'uncommon',
         desc: 'Does a thing',
-        img: require("./assets/images/loyalty.png")
+        img: require('./assets/images/loyalty.png')
       },
       {
         name: 'Worn Gloves',
         rarity: 'common',
         desc: 'Does a thing',
-        img: require("./assets/images/loyalty.png")
+        img: require('./assets/images/loyalty.png')
       },
       {
         name: 'Pelt',
         rarity: 'common',
         desc: 'Does a thing',
-        img: require("./assets/images/loyalty.png")
+        img: require('./assets/images/loyalty.png')
       },
       {
         name: 'Rotten Meat',
         rarity: 'rare',
         desc: 'Does a thing',
-        img: require("./assets/images/loyalty.png")
+        img: require('./assets/images/loyalty.png')
       },
       {
         name: 'Swift Boots',
         rarity: 'uncommon',
         desc: 'Does a thing',
-        img: require("./assets/images/loyalty.png")},
+        img: require('./assets/images/loyalty.png')},
       {
         name: 'Scroll of Healing',
         rarity: 'common',
         desc: 'Does a thing',
-        img: require("./assets/images/loyalty.png")
+        img: require('./assets/images/loyalty.png')
       },
       {
         name: 'Rock',
         rarity: 'common',
         desc: 'Does a thing',
-        img: require("./assets/images/loyalty.png")
+        img: require('./assets/images/loyalty.png')
       },
       {
         name: 'The Wipeout',
         rarity: 'legendary',
         desc: 'Does a thing',
-        img: require("./assets/images/loyalty.png")
+        img: require('./assets/images/loyalty.png')
       },
       {
         name: 'Cheese',
         rarity: 'common',
         desc: 'Does a thing',
-        img: require("./assets/images/loyalty.png")
+        img: require('./assets/images/loyalty.png')
       },
       {
         name: 'Speed Potion',
         rarity: 'uncommon',
         desc: 'Does a thing',
-        img: require("./assets/images/loyalty.png")
+        img: require('./assets/images/loyalty.png')
       }
   ],
   gear: {
     helm: {
-      name: "Merlin's Hat",
-      rarity: "rare",
-      desc: "+2 To Will"
+      name: 'Merlin\'s Hat',
+      rarity: 'rare',
+      desc: '+2 To Will'
     },
     shoulders: {
-      name: "Tom Brady's Shoulderpads",
-      rarity: "epic",
-      desc: "+2 to STAM"
+      name: 'Tom Brady\'s Shoulderpads',
+      rarity: 'epic',
+      desc: '+2 to STAM'
     },
     chest: {
-      name: "Robe of Winter Night",
-      rarity: "rare",
-      desc: "+5 to Frost And Shadow Damage"
+      name: 'Robe of Winter Night',
+      rarity: 'rare',
+      desc: '+5 to Frost And Shadow Damage'
     },
     gloves: {
-      name: "Hulk Hands",
-      rarity: "legendary",
-      desc: "-1 to CHA"
+      name: 'Hulk Hands',
+      rarity: 'legendary',
+      desc: '-1 to CHA'
     },
     legs: {
-      name: "Hot Pants",
-      rarity: "rare",
-      desc: "+5 Fire Damage Resistance"
+      name: 'Hot Pants',
+      rarity: 'rare',
+      desc: '+5 Fire Damage Resistance'
     },
     feet: {
-      name: "Boots of Haste",
-      rarity: "uncommon",
-      desc: "+5 to Initiative rolls"
+      name: 'Boots of Haste',
+      rarity: 'uncommon',
+      desc: '+5 to Initiative rolls'
     },
     main: {
-      name: "Elder Wand",
-      rarity: "uncommon",
-      desc: "All Spells will hit"
+      name: 'Elder Wand',
+      rarity: 'uncommon',
+      desc: 'All Spells will hit'
     },
     off: {
-      name: "Lantern",
-      rarity: "common",
-      desc: "Can see in the dark up to 10 yds"
+      name: 'Lantern',
+      rarity: 'common',
+      desc: 'Can see in the dark up to 10 yds'
     }
   },
   abilities: [
     {
       id: 'strike',
       name: 'Strike',
-      desc: "Hit target with your main hand weapon."
+      desc: 'Hit target with your main hand weapon.'
     },
     {
       id: 'punch',
       name: 'Punch',
-      desc: "Punch your target with a closed fist."
+      desc: 'Punch your target with a closed fist.'
     },
     {
       id: 'slap',
       name: 'Slap',
-      desc: "Slap your target with an open hand."
+      desc: 'Slap your target with an open hand.'
     },
     {
       id: 'tickle',
       name: 'Tickle',
-      desc: "Tickle your target."
+      desc: 'Tickle your target.'
     },
     {
       id: 'boast',
       name: 'Boast',
-      desc: "Loudly brag of your accomplishments to everyrone around you."
+      desc: 'Loudly brag of your accomplishments to everyrone around you.'
     },
     {
       id: 'flatter',
       name: 'Flatter',
-      desc: "Attempt to flatter your target."
+      desc: 'Attempt to flatter your target.'
     },
     {
       id: 'test-extreme',
@@ -176,27 +176,27 @@ const character = {
     {
       id: 'incinerate',
       name: 'Incinerate',
-      desc: "Set your target on fire.  1 D 4 for 4 Turns."
+      desc: 'Set your target on fire.  1 D 4 for 4 Turns.'
     },
     {
       id: 'conjure-water',
       name: 'Conjure Water',
-      desc: "Conjure 1 Fresh Water to drink.  Replenish 1 D 4 MP."
+      desc: 'Conjure 1 Fresh Water to drink.  Replenish 1 D 4 MP.'
     },
     {
       id: 'polymorph',
       name: 'Polymorph',
-      desc: "Turn 1 Enemy to a harmless sheep for 5 turns.  Only 1 target can be polymorphed at a time."
+      desc: 'Turn 1 Enemy to a harmless sheep for 5 turns.  Only 1 target can be polymorphed at a time.'
     },
     {
       id: 'magic-missile',
       name: 'Magic Missile',
-      desc: "Shoot a barrage of arcane missiles at your target.  1 D 4 DMG 1 D 6 Times."
+      desc: 'Shoot a barrage of arcane missiles at your target.  1 D 4 DMG 1 D 6 Times.'
     },
     {
       id: 'telekinesis',
       name: 'Telekinesis',
-      desc: "You can move an object weighing up to 5 lbs up to 3 yards."
+      desc: 'You can move an object weighing up to 5 lbs up to 3 yards.'
     }
   ]
 }

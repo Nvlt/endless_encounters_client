@@ -1,0 +1,18 @@
+.outer-spell{
+    display: flex;
+    margin: auto;
+}
+
+.outer-spell:hover{
+    text-shadow: .3rem .2rem .4rem lightyellow;
+    transition: ease-in, 0.5s;
+    transform: scale(1.25);
+    transition-delay: 0.01s;
+    border: none;
+    cursor: grab;
+}
+
+.outer-spell h2{
+    color: #C1666B;
+    font-family: 'handy';
+}

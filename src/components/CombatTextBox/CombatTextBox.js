@@ -1,5 +1,5 @@
 import React from 'react';
-import './CombatTextBox.css'
+import './CombatTextBox.css';
 
 export default class CombatTextBox extends React.Component {
   constructor(props) {

@@ -127,7 +127,7 @@
 }
 
 .font-nerd {
-  font-family: "nerdland";
+  font-family: 'nerdland';
 }
 
 .font-lg {
@@ -147,8 +147,8 @@
 }
 
 @font-face {
-  font-family: "nerdland";
-  src: url("../../assets/fonts/NederlandFantasy.ttf")
+  font-family: 'nerdland';
+  src: url('../../assets/fonts/NederlandFantasy.ttf')
 }
 
 .center {

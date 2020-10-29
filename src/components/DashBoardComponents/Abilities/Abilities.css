@@ -1,117 +1,32 @@
-                      /* fonts, borders, and colors */
-                      /* fonts, borders, and colors */
-                      /* fonts, borders, and colors */
-                      /* fonts, borders, and colors */
-.abilities {
-  margin: 10px 40px;
-  width: auto;
-  min-width: 240px;
-  overflow-y: scroll;
-  height: 35vh;
+.abl-outer{
+    margin: 10px 40px;
+    width: auto;
+    min-width: 240px;
+    max-height: 300px;
+    border: .2em solid black;
+    text-align: center;
+    overflow-y: scroll;
+    border-radius: 1.8%;
 }
 
-.border {
-  border: .2em solid black;
-}
-.bg-snow {
-  background-color: snow;
-}
-.rounded-lightest {
-  border-radius: 1.8%;
-}
-@font-face {
-  font-family: "handy";
-  src: url("../../../assets/fonts/BabyDoll.ttf")
-}
-.font-handy{
-  font-family: "handy";
+@media only screen and (max-width: 600px) {
+    .abl-outer {
+        margin: 17px;
+    }
 }
 
-
-                                                          /* alignment and positioning */
-                                                          /* alignment and positioning */
-                                                          /* alignment and positioning */
-                                                          /* alignment and positioning */
-.overflow-scroll {
-  overflow-y: auto;
-}
-.center {
-  align-content: center;
-  text-align: center;
-  align-self: center;
-  align-items: center;
+/* 'text-black flex-1 flex flex-col hover-abi width-full mx-1' */
+.abl-inner{
+    font-family: 'handy';
+    display: flex;
+    flex-direction: column;
 }
 
-
-
-                                      /* flex */
-                                      /* flex */
-                                      /* flex */
-                                      /* flex */
-.flex {
-  display: flex;
-}
-.flex-1 {
-  flex: 1;
-}
-.flex-2 {
-  flex: 2;
-}
-.flex-col {
-  flex-flow: column;
-  flex-wrap: nowrap;
-}
-.shrink-none {
-  flex-shrink: none;
-}
-
-
-                                                        /* width and height */
-                                                        /* width and height */
-                                                        /* width and height */
-                                                        /* width and height */
-.max-width-80 {
-  max-width: 80%;
-}
-.min-w-4r {
-  min-width: 4rem;
-}
-.width-full {
-  width: 100%;
-}
-.max-height-40 {
-  max-height: 40vh;
-}
-
-
-
-                              /* margin andd padding */
-                              /* margin andd padding */
-                              /* margin andd padding */
-                              /* margin andd padding */
-.mx-1 {
-  margin-left: 1rem;
-  margin-right: 1rem;
-}
-.mx-2 {
-  margin-left: 2rem;
-  margin-right: 2rem;
-}
-.p-1 {
-  padding: 1rem;
-}
-
-
-                                                      /* transitions and animations */
-                                                      /* transitions and animations */
-                                                      /* transitions and animations */
-                                                      /* transitions and animations */
-
-.hover-abi:hover{
-  text-shadow: .3rem .2rem .4rem lightyellow;
-  transition: ease-in, 0.5s;
-  transform: scale(1.1);
-  transition-delay: 0.01s;
-  border: none;
-  cursor: grabbing;
+.abl-inner h2:hover{
+    text-shadow: .3rem .2rem .4rem lightyellow;
+    transition: ease-in, 0.5s;
+    transform: scale(1.1);
+    transition-delay: 0.01s;
+    border: none;
+    cursor: grabbing;
 }

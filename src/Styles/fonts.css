@@ -90,20 +90,20 @@
 
 
 @font-face {
-  font-family: "nerdland";
-  src: url("../assets/fonts/NederlandFantasy.ttf")
+  font-family: 'nerdland';
+  src: url('../assets/fonts/NederlandFantasy.ttf')
 }
 @font-face {
-  font-family: "handy";
-  src: url("../assets/fonts/BabyDoll.ttf")
+  font-family: 'handy';
+  src: url('../assets/fonts/BabyDoll.ttf')
 }
 
                               /* main font names */
 .font-nerd {
-  font-family: "nerdland";
+  font-family: 'nerdland';
 }
 .font-handy{
-  font-family: "handy";
+  font-family: 'handy';
 }
 .font-mono {
   font-family: monospace;

@@ -7,31 +7,25 @@
     justify-content: space-around;
 }
 
-#outterCard{
+#outer-card{
     display: flex;
     flex-direction: column;
-    border-style: dashed;
+    border-style: solid;
     border-width: 3px;
     border-radius: 8px;
-    align-items: center;
-    justify-content: center;
     padding: 15px;
     text-align: center;
-    width: 230px;
+    width: 235px;
     margin: auto auto;
-    flex: 1;
     max-width: 240px;
     max-height: 300px;
-    overflow: hidden;
 }
 
-.innerCard{
-  /* display: flex; */
+.inner-card{
   border: black .2em solid;
   background-color: snow;
   color: #000;
   border-radius: 15px;
-  /* min-width: 200px; */
   align-self: center;
   justify-content: stretch;
   min-width: 200px;
@@ -44,7 +38,7 @@
   overflow: visible;
 }
 
-.innerCard > img {
+.inner-card > img {
     width: 50%;
     height: auto;
     margin: 0;
@@ -57,62 +51,46 @@
     border-bottom:  .1rem slategray solid;
 }
 
-.charIcon{
-    margin: auto;
-    width: 50%;
-    height: auto;
-    max-width: 250px;
-    padding-bottom: 15px;
-}
+.dance:hover{
+    animation: infinite 3s dance;
+    position: relative;
+  }
 
-.statBar{
-    display: flex;
-    flex: 1;
-}
-
-.mStat{
-    border: .2em solid black;
-    flex: 1;
-    background-color: #4357AC;
-    height: 5px;
-    width: 10px;
-    flex-shrink: 1;
-}
-
-.aStat{
-    border: .2em solid black;
-    flex: 1;
-    background-color: #49A9A6;
-    height: 5px;
-    width: 10px;
-    flex-shrink: 1;
-}
-
-.hStat{
-    border: .2em solid black;
-    flex: 1;
-    background-color: #C1666B;
-    height: 5px;
-    width: 10px;
-    flex-shrink: 1;
-}
-
-.emptyStat{
-    border: .2em solid black;
-    flex: 1;
-    background-color: #E4DFDB;
-    height: 5px;
-    width: 10px;
-    flex-shrink: 1;
-}
-
-@font-face {
-    font-family: "Straw";
-    src: url("../../../assets/fonts/Nelship.ttf")
-}
+  @keyframes dance {
+    0%{
+      transform:
+      translateX(2%)
+      translateY(2%)
+      rotate(5deg);
+    }
+  25%{
+    transform:
+    translateX(2%)
+    translateY(-2%)
+    rotate(-5deg);
+  }
+  50%{
+    transform:
+    translateX(-2%)
+    translateY(2%)
+    rotate(5deg);
+  }
+  75%{
+    transform:
+    translateX(-2%)
+    translateY(2%)
+    rotate(-5deg);
+  }
+  100% {
+  transform:
+  translateX(-2%)
+  translateY(-2%)
+  rotate(2deg);
+      }
+  }
 
 @media all and (min-width: 600px){
-    .statBody{
+    .stat-body{
         margin: 1rem;
     }
 }

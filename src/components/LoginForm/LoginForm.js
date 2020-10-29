@@ -35,23 +35,23 @@ export default class Login extends React.Component {
           <div className='error'>{this.state.error}</div>
         }
           
-          <form className="form" onSubmit={this.handleSubmit}>
+          <form className='form' onSubmit={this.handleSubmit}>
 
-            <div className="row">
-              <label htmlFor="username" className="flex-1">User Name</label>
-              <input type="text" name="username" id='username'
-                className="" />
+            <div className='row'>
+              <label htmlFor='username' className='flex-1'>User Name</label>
+              <input type='text' name='username' id='username'
+                className='' />
             </div>
 
-            <div className="row">
-              <label htmlFor="userpass" className="flex-1">Password</label>
-              <input type="password" name="userpass" id="userpass"
-                className="" />
+            <div className='row'>
+              <label htmlFor='userpass' className='flex-1'>Password</label>
+              <input type='password' name='userpass' id='userpass'
+                className='' />
             </div>
 
-            <div className="">
-              <button className="loginBtn" type="submit">Login</button>
-              <button className="loginBtn">Login With Facebook</button>
+            <div className=''>
+              <button className='loginBtn' type='submit'>Login</button>
+              <button className='loginBtn'>Login With Facebook</button>
             </div>
           </form>
       </main>

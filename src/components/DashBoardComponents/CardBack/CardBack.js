@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactTooltip from 'react-tooltip';
+import icon from '../../../assets/images/hat.png';
 
 export default function CardBack(props) {
   const charData=props.stats?
@@ -11,17 +12,14 @@ export default function CardBack(props) {
     :'No stats to display';
   return (
     <>
-      <ReactTooltip id="bar-cont" place="top" effect="solid" />
+      <ReactTooltip id='bar-cont' place='top' effect='solid' />
 
-      <h3 className="name">BACK </h3>
       <img
-        className="charIcon dance" data-event="click" clickable="true"
-        data-for="char-stats" data-tip={charData}
-        src={require("../../../assets/images/wizard-hat.png")}
-        alt="a floppy mage hat" />
-
-
-
+        className='dance' data-event='click' clickable='true'
+        data-for='char-stats' data-tip={charData}
+        src={icon}
+        alt='a floppy mage hat'/>
+        <h3 className='name'>BACK </h3>
 
     </>
   )

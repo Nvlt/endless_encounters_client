@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <main className='main flex flex-col'>
-      <h1 className="font-xxl flex-1 font-nerd center flex-grow text-pop-up-bottom my-2 hover">Endless Encounters</h1>
+      <h1 className='font-xxl flex-1 font-nerd center flex-grow text-pop-up-bottom my-2 hover'>Endless Encounters</h1>
       <h3 className='subHead'>A place for those who seek to find a way to leave their world behind... </h3>
       <nav className='mainNav'>
         <Link className='mainLink' to='/main'>Start</Link>

@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-no-duplicate-props */
 import React from 'react';
 import './CreateCharacter.css';
 
@@ -127,8 +126,8 @@ export default class CreateCharacter extends React.Component {
     return (
       <section>
         <form className='character-form' onSubmit={this.handleSubmit}>
-          <input htmlFor="char-name" placeholder="Name" />
-          <button type="submit">Submit</button>
+          <input htmlFor='char-name' placeholder='Name' />
+          <button type='submit'>Submit</button>
           <div className='create-character-flex'>
             {this.renderJobCategory()}
             {this.renderStatsCategory()}
