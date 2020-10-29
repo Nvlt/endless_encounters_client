@@ -1,34 +1,25 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import mntn from '../../assets/images/mountains.png'
 import './HomeMain.css';
-import '../../components/App/App.css'
 //import UserContext from '../../contexts/UserContext';
 
-
-
 export default function Home() {
-
-
-
   return (
-    <main className='main flex flex-col'>
-      <h1 className="font-xxl flex-1 font-nerd center flex-grow text-pop-up-bottom my-2 hover">Endless Encounters</h1>
-      <h3 className='subHead'>A place for those who seek to find a way to leave their world behind... </h3>
-      <nav className='mainNav'>
-        <Link className='mainLink' to='/main'>Start</Link>
-        {/* <Link className='mainLink' to='/register'>Register</Link> */}
-      </nav>
-
-      <p className='intro'>
-        Lorem ipsum dolor sit amet,
-        consectetur adipiscing elit,
-        sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-        Ut enim ad minim veniam,
-        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-        Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-        Excepteur sint occaecat cupidatat non proident,
-      sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+    <main>
+      <h1 className='header text-pop-up-bottom'>Endless Encounters</h1>
+      <div className='main-inner'>
+        <h3 className='sub-head'>A place for those seeking a way to leave their world behind...</h3>
+        <img src={mntn} alt='digital drawing of a mountain range in a circle frame' className='mntn' />
+        <nav className='main-nav'>
+          <Link className='main-link' to='/main'>Start</Link>
+        </nav>
+        <p className='intro'>
+        Embark on a brand new adventure in this text-based role-playing-game! 
+        Endless Encounters is chock-full of random enemies and witty quotes, and so you may find yourself in some 
+        quirky predicaments. 
+        Once you're signed up, you can explore the world, duel swords, and meet other characters. </p>
+      </div>
     </main>
   )
 }

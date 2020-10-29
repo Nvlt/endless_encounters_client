@@ -38,6 +38,7 @@ padding: .5em;
 
 .form  button {
   display: block;
+  height: fit-content;
   width: 50%;
   margin: 15px auto;
   padding: 10px;

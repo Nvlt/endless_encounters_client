@@ -1,19 +1,27 @@
 .intro{
     text-align: center;
-    margin: 15px;
+    margin: 15px 200px;
     padding: 5px;
 }
 
-.subHead{
-    font-family: 'Nelship';
+.header{
     text-align: center;
-    margin-top: 30px;
-    max-width: 280px;
-    margin: 10px auto;
-    padding: 2rem;
+    font-size: 3.5em;
+    font-family: 'nerdland';
+    margin-top: 75px;
 }
 
-.mainNav{
+.sub-head{
+    font-family: 'Nelship';
+    text-align: center;
+    margin: 10px auto;
+}
+
+.main-inner{
+    margin-top: -50px;
+}
+
+.main-nav{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
@@ -23,22 +31,30 @@
     color: #48A9A6;
 }
 
-.mainLink{
+.main-link{
     text-decoration: none;
 }
 
-.mainLink:visited {
+.main-link:visited {
     color: #48A9A6;
 }
 
-.mainLink:hover {
+.main-link:hover {
     color: #FEC369;
 }
 
-@font-face {
-    font-family: "Nelship";
-    src: url("../../assets/fonts/Nelship.ttf")
+@media only screen and (max-width: 600px) {
+    .intro {
+      margin: 10px;
+    }
+    .header {
+      margin-top: 100px;
+      font-size: 2.8em;
+    }
+    .sub-head {
+      margin: 10px 15px;
+    }
+    .main-inner{
+        margin-top: -45px;
+    }
 }
-.hover{
-    animation: infinite 5s hover alternate;
-  }

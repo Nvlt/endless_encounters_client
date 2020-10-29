@@ -1,31 +1,16 @@
 import React from 'react';
 import Viewport from '../../Viewport/Viewport';
 import CharStatCard from '../CharacterStatCard/CharacterStatCard';
-import Inventory from '../Inventory/Inventory';
-import Gear from '../Gear/Gear';
-import Spells from '../Spells/Spells';
 import Abilities from '../Abilities/Abilities';
-import './Dash.css'
 import EventContext from '../../../contexts/EventContext';
 import SwitchTabSound from '../../SoundWidgets/SwitchTabSound';
 import {Transition, animated} from 'react-spring/renderprops';
-
-//Using indexes
-// const pages = [
-//   style => (<animated.div style={{...style}}><Inventory /></animated.div>),
-//   style => (<animated.div style={{...style}}><Gear /></animated.div>),
-//   style => (<animated.div style={{...style}}><Spells /></animated.div>),
-//   style => (<animated.div style={{...style}}><Abilities /></animated.div>),
-// ]
+import './Dash.css';
 
 //Using display state
 const tabs={
-  inventory: style => (<animated.div style={{...style}}><Inventory /></animated.div>),
-  gear: style => (<animated.div style={{...style}}><Gear /></animated.div>),
-  spells: style => (<animated.div style={{...style}}><Spells /></animated.div>),
   abilities: style => (<animated.div style={{...style}}><Abilities /></animated.div>),
 }
-
 
 export default class Dashboard extends React.Component {
   static defaultProps={
@@ -35,17 +20,15 @@ export default class Dashboard extends React.Component {
   constructor(props) {
     super(props)
     const state={
-      display: 'gear',
+      display: 'abilities',
       view: 'explore',
     }
     this.state=state;
   }
   static contextType=EventContext;
 
-  handleShop=(e) => {
-    e.preventDefault();
-
-    this.setState({view: 'shop'});
+  tabs = {
+    abilities: style => (<animated.div style={{...style}}><Abilities abilities={this.props.character.abilities}/></animated.div>),
   }
 
   handleTavern=(e) => {
@@ -70,33 +53,46 @@ export default class Dashboard extends React.Component {
     this.setState({display: ev.target.value});
   }
 
-  renderTabButttons() {
+  renderTabButtons() {
     const tabs=[
-      // {name: 'Inventory', tabName: 'inventory', func: this.handleDisplayChange},
-      {name: 'Gear', tabName: 'gear', func: this.handleDisplayChange},
-      {name: 'Spells', tabName: 'spells', func: this.handleDisplayChange},
       {name: 'Abilities', tabName: 'abilities', func: this.handleDisplayChange}
     ]
     return tabs.map((tab, index) => <SwitchTabSound props={tab} key={index} />)
   }
   render() {
+    const dummyStats = {
+      hp: 213,
+      hpMax: 364,
+      mp: 244,
+      mpMax: 399,
+      ap: 4,
+      apMax: 5,
+      str: 6,
+      dex: 7,
+      int: 15,
+      sta: 8,
+      agi: 4,
+      wil: 17,
+      cha: 6
+    }
     return (
-      <main className="dashboard-main">
+      <main className='dash-main'>
         <Viewport view={this.state.view} />
-
-        <div className="btnsNav">
-          <button className='dashBtn' onClick={this.handleShop}>Shop</button>
-          <button className='dashBtn' onClick={this.handleTavern}>Tavern</button>
-          <button className='dashBtn' onClick={this.handleExplore}>Explore</button>
-          {/* <button className='dashBtn' value='inventory' onClick={(ev) => this.handleDisplayChange(ev)}>Inventory</button>
-          <button className='dashBtn' value='gear' onClick={(ev) => this.handleDisplayChange(ev)}>Gear</button>
-          <button className='dashBtn' value='spells' onClick={(ev) => this.handleDisplayChange(ev)}>Spells</button>
-          <button className='dashBtn' value='abilities' onClick={(ev) => this.handleDisplayChange(ev)}>Abilities</button> */}
-          {this.renderTabButttons()}
+        <div className='nav-btns'>
+          <button onClick={this.handleTavern}>Tavern</button>
+          <button onClick={this.handleExplore}>Explore</button>
+          {this.renderTabButtons()}
         </div>
-        <div className="charAssets">
-          <CharStatCard />
-          <div className='transition-container'>
+        <div className='char-assets'>
+          <CharStatCard
+          stats={this.props.character['stats']}
+          pools={{
+            hp: this.props.character['hp'],
+            hpMax: this.props.character['max_hp'],
+            mp: this.props.character['mp'],
+            mpMax: this.props.character['max_mp']
+          }}/>
+          <div className='trans-container'>
             <Transition
               reset
               unique
@@ -105,7 +101,7 @@ export default class Dashboard extends React.Component {
               enter={{position: 'initial', opacity: 1, transform: `perspective(2000px) translate3d(0%, 0, 0) rotateY(${0}deg)`}}
               leave={{top: 0, left: 0, bottom: 0, right: 0, position: 'absolute', opacity: 0, transform: `perspective(800px) translate3d(-50%, 0, 0) rotateY(${-90}deg)`}}
             >
-              {display => tabs[display]}
+              {display => this.tabs[display]}
             </Transition>
           </div>
         </div>

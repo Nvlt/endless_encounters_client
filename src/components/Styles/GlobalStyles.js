@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 export const GlobalStyles = createGlobalStyle `
   body {
     background: ${({theme}) => theme.body};
@@ -10,6 +10,10 @@ export const GlobalStyles = createGlobalStyle `
   }
   .viewport {
     background: ${({theme}) => theme.viewport};
+    transition: all 0.50s linear;
+  }
+  .question {
+    color: ${({theme}) => theme.text};
     transition: all 0.50s linear;
   }
 `

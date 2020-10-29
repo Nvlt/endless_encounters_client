@@ -51,38 +51,36 @@ export default class Registration extends React.Component {
 
   render() {
     return (
-
-      <main className="mainBody">
+      <main className='mainBody'>
 
         {
           this.state.error&&
           <div className='error'>{this.state.error}</div>
         }
 
-        <form className="form" onSubmit={this.handleRegister}>
+        <form className='form' onSubmit={this.handleRegister}>
 
-          <div className="row">
-            <label htmlFor="useremail">Email Address</label>
-            <input type="email" name="useremail" id="useremail" />
+          <div className='row'>
+            <label htmlFor='useremail'>Email Address</label>
+            <input type='email' name='useremail' id='useremail' />
           </div>
 
-          <div className="row">
-            <label htmlFor="username">User Name</label>
-            <input type="text" name="username" id='username' />
+          <div className='row'>
+            <label htmlFor='username'>User Name</label>
+            <input type='text' name='username' id='username' />
           </div>
 
-          <div className="row">
-            <label htmlFor="userpass">Password</label>
-            <input type="password" name="userpass" id="userpass" />
+          <div className='row'>
+            <label htmlFor='userpass'>Password</label>
+            <input type='password' name='userpass' id='userpass' />
           </div>
 
           <div>
             <button>Register</button>
-
+            <button>Login With Facebook</button>
           </div>
-          <Link className="accountRte" to='/login'>Already have an account?</Link>
+          <Link className='accountRte' to='/login'>Already have an account?</Link>
         </form>
-        <button className="googlebutton" onClick={this.handleGoogleReg}>Register With Google</button>
       </main>
 
     )
