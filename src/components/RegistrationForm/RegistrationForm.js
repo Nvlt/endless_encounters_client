@@ -81,8 +81,9 @@ export default class Registration extends React.Component {
 
           </div>
           <Link className="accountRte" to='/login'>Already have an account?</Link>
-        </form>
+        
         <button className="googlebutton" onClick={this.handleGoogleReg}>Register With Google</button>
+        </form>
       </main>
 
     )

@@ -47,18 +47,6 @@ input[type=text], input[type=password], input[type=email] {
     cursor: grab;
   }
 
-
-  .googlebutton {
-    display: block;
-    width: 50%;
-    margin: 15px auto;
-    padding: 10px;
-    font-weight: 700;
-    background-color: #48A9A6;
-    border-radius: 8px;
-    cursor: grab;
-  }
-
   .accountRte{
       text-align: center;
       margin-top: 2rem;

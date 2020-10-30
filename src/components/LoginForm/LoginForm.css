@@ -48,18 +48,6 @@ padding: .5em;
   cursor: grab;
 }
 
-.googlebutton {
-  display: block;
-  width: 50%;
-  margin: 15px auto;
-  padding: 10px;
-  font-weight: 700;
-  background-color: #48A9A6;
-  border-radius: 8px;
-  cursor: grab;
-}
-
-
 .form button:hover {
   background-color: #FEC369;
   box-shadow: 0 0 10px 2px #595358;

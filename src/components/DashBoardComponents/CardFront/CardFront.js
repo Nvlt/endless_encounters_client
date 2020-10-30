@@ -3,6 +3,8 @@ import ApBar from '../Bar/ApBar';
 import Bar from '../Bar/Bar';
 import icon from '../../../assets/images/hat.png';
 
+
+
 export default function CardFront(props) {
   return (
     <>

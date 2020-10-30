@@ -76,8 +76,9 @@ export default class Login extends React.Component {
             <button className="loginBtn" type="submit">Login</button>
 
           </div>
+          <button className="googlebutton" onClick={this.handleGoogleSignIn}>Login With Google</button>
         </form>
-        <button className="googlebutton" onClick={this.handleGoogleSignIn}>Login With Google</button>
+       
       </main>
     )
   }
