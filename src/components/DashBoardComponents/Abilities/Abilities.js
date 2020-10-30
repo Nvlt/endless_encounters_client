@@ -1,9 +1,11 @@
+/* eslint-disable array-callback-return */
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import SpellItem from '../SpellItem/SpellItem';
 import ReactTooltip from 'react-tooltip';
 import './Abilities.css';
 
-export default function Abilities({ abilities = [] }) {
+export default function Abilities({abilities=[]}) {
   return (
     <div className='abl-outer'>
       <div className='abl-inner'>
@@ -15,7 +17,7 @@ export default function Abilities({ abilities = [] }) {
 
 function generateAbilityList(abilities) {
   return abilities.map((ability, index) => {
-    if (ability.type) {
+    if(ability.type) {
       return (
         <>
           {/* On click, should send name/id of clicked item to backend here */}

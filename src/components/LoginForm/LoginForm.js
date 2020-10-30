@@ -42,7 +42,9 @@ export default class Login extends React.Component {
         username: res.additionalUserInfo.profile.given_name,
         password: res.additionalUserInfo.profile.id
       })
-    )
+    ).then(res => {
+      this.context.processLogin(res.authToken);
+    })
       .catch(res => {
         this.setState({error: res.error});
       })

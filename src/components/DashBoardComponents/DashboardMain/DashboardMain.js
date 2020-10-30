@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import Viewport from '../../Viewport/Viewport';
 import CharStatCard from '../CharacterStatCard/CharacterStatCard';
@@ -31,17 +32,17 @@ export default class Dashboard extends React.Component {
   }
   static contextType=EventContext;
 
-  tabs = {
-    abilities: style => (<animated.div style={{...style}}><Abilities abilities={this.props.character.abilities}/></animated.div>),
+  tabs={
+    abilities: style => (<animated.div style={{...style}}><Abilities abilities={this.props.character.abilities} /></animated.div>),
   }
 
-  handleExploreOption = (e) => {
+  handleExploreOption=(e) => {
     e.preventDefault();
     //Should send 'choice' to backend here and receive story
 
     //Response from backend
     this.context.setStory(storyDummy);
-    if (e.target.value !== this.state.view) {
+    if(e.target.value!==this.state.view) {
       this.setState({
         view: e.target.value,
         displayText: [<p>{this.context.story.displayText}</p>],
@@ -57,12 +58,11 @@ export default class Dashboard extends React.Component {
 
   handleDisplayChange=(ev) => {
     ev.preventDefault();
-
     this.setState({display: ev.target.value});
   }
 
   renderExploreOptions() {
-    if (this.context.story.choices) {
+    if(this.context.story.choices) {
       return this.context.story.choices.map((choice, index) => {
         return (
           <button key={index} value={choice.name} onClick={(e) => this.handleExploreOption(e)}>{choice.displayName}</button>
@@ -78,9 +78,9 @@ export default class Dashboard extends React.Component {
     return tabs.map((tab, index) => <SwitchTabSound props={tab} key={index} />)
   }
 
-  componentDidMount = () => {
-    this.context.setStory(storyDummy) 
-    this.setState({ displayText: [...this.state.displayText, <p>{this.context.story.displayText}</p>] })
+  componentDidMount=() => {
+    this.context.setStory(storyDummy)
+    this.setState({displayText: [...this.state.displayText, <p>{this.context.story.displayText}</p>]})
   }
 
   render() {
@@ -89,28 +89,30 @@ export default class Dashboard extends React.Component {
       <main className='dash-main'>
         <Viewport
           // Combat view
-        view={this.state.combat ? this.state.combat
-          // Level Up view
-          : this.props.character.statPoints ? 'levelUp'
-          // Non combat view
-          : this.state.view}
-        displayText={this.state.displayText}
-        character={this.props.character}/>
+          view={this.state.combat? this.state.combat
+            // Level Up view
+            :this.props.character.statPoints? 'levelUp'
+              // Non combat view
+              :this.state.view}
+          displayText={this.state.displayText}
+          character={this.props.character} />
         <div className='nav-btns'>
-          {!this.state.combat && this.renderExploreOptions()}
+          {!this.state.combat&&this.renderExploreOptions()}
           {this.renderTabButtons()}
         </div>
         <div className='char-assets'>
           <CharStatCard
-          stats={this.props.character['stats']}
-          pools={{
-            hp: this.props.character['hp'],
-            hpMax: this.props.character['max_hp'],
-            mp: this.props.character['mp'],
-            mpMax: this.props.character['max_mp'],
-            ap: this.context.story['ap'],
-            apMax: 10
-          }}/>
+
+            stats={this.props.character['stats']}
+            pools={{
+              name: this.props.character.name,
+              hp: this.props.character['hp'],
+              hpMax: this.props.character['max_hp'],
+              mp: this.props.character['mp'],
+              mpMax: this.props.character['max_mp'],
+              ap: this.context.story['ap'],
+              apMax: 10
+            }} />
           <div className='trans-container'>
             <Transition
               reset

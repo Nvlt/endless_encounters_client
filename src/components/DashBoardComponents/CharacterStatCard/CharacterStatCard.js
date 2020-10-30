@@ -11,7 +11,7 @@ export default function CharStatCard({stats={}, pools={}}) {
     transform: `perspective(600px) rotateY(${flipped? 180:0}deg)`,
     config: {mass: 5, tension: 500, friction: 80}
   })
-  
+
   return (
 
     <div onClick={() => set(state => !state)} id='outer-card' className='border'>

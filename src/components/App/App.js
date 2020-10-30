@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
 import Home from '../../routes/Home/Home';
 import Header from '../Header/Header';

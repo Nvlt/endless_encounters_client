@@ -1,6 +1,7 @@
 import React from 'react';
 // eslint-disable-next-line no-unused-vars
 import TokenService from '../services/token-service';
+// eslint-disable-next-line no-unused-vars
 import CharacterService from '../services/character-service';
 
 const CharacterContext=React.createContext({

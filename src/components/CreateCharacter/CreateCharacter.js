@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-duplicate-props */
 import React from 'react';
 import './CreateCharacter.css';
 
@@ -79,7 +80,7 @@ export default class CreateCharacter extends React.Component {
   renderSecondaryStats=() => {
     return <div className='stats secondary-stats'>
       <p className='stat'>Vitality:</p>
-      <p className='stat'>Mahn-uh:</p>
+      <p className='stat'>Mana:</p>
       <p className='stat'>Actions:</p>
       <p className='stat'>Speed:</p>
     </div>
