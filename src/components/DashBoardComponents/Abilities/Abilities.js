@@ -20,7 +20,7 @@ function generateAbilityList(abilities) {
         <>
           {/* On click, should send name/id of clicked item to backend here */}
           <ReactTooltip id='fireball' place='top' effect='solid' getContent={(dataTip) => `${dataTip}`} />
-          <h2 data-tip='Hit target with your main hand weapon.' data-for='fireball'>{ability.displayName}</h2>
+          <h2 data-tip={`${ability.desc} Cost: ${ability.cost} AP`} data-for='fireball'>{ability.displayName}</h2>
         </>
       )
     }
