@@ -50,8 +50,10 @@ export class UserProvider extends Component {
     const jwtPayload=TokenService.parseAuthToken();
     this.setUser({
       id: jwtPayload.user_id,
+      access_token: jwtPayload.access_token,
       username: jwtPayload.sub
     });
+    TokenService.saveAccessToken(jwtPayload.access_token);
   }
 
   processLogout=() => {

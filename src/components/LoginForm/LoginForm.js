@@ -12,6 +12,7 @@ import {
   IfFirebaseAuthed,
   IfFirebaseAuthedAnd
 } from "@react-firebase/auth";
+import TokenService from '../../services/token-service';
 export default class Login extends React.Component {
   static contextType=UserContext;
   state={error: null};

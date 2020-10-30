@@ -5,8 +5,14 @@ const TokenService = {
   saveAuthToken(token) {
     window.localStorage.setItem(config.TOKEN_KEY, token);
   },
+  saveAccessToken(token) {
+    window.localStorage.setItem('access', token)
+  },
   getAuthToken() {
     return window.localStorage.getItem(config.TOKEN_KEY);
+  },
+  getAccessToken() {
+    return window.localStorage.getItem('access');
   },
   clearAuthToken() {
     window.localStorage.removeItem(config.TOKEN_KEY);

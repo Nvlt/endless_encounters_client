@@ -3,17 +3,27 @@ import config from '../config';
 import TokenService from './token-service';
 
 const CharacterService={
-  getCharacter() {
-    return fetch(`${config.API_ENDPOINT}/character`, {
+  getUserCharacter() {
+    return fetch(`${config.API_ENDPOINT}/user/entity/${TokenService.getAccessToken()}`, {
       headers: {
         'authorization': `bearer ${TokenService.getAuthToken()}`
       }
     })
       .then(res => {
-        return (!res.ok)
-          ? res.json().then(e => Promise.reject(e))
-          :res.json();
-      });
+        if (!res.ok) {
+          return res.json().then(e => Promise.reject(e))
+        }
+          return res.json();
+      })
+  },
+  getEntity(id) {
+    return fetch(`${config.API_ENDPOINT}/entity/${id}`)
+      .then(res => {
+        if (!res.ok) {
+          return res.json().then(e => Promise.reject(e));
+        }
+          return res.json();
+      })
   },
   postCharacter(character) {
     return fetch(`${config.API_ENDPOINT}/character`, {
@@ -79,3 +89,5 @@ const CharacterService={
       });
   },
 }
+
+export default CharacterService;

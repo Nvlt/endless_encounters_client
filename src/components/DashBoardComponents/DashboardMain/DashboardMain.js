@@ -5,6 +5,8 @@ import Abilities from '../Abilities/Abilities';
 import EventContext from '../../../contexts/EventContext';
 import SwitchTabSound from '../../SoundWidgets/SwitchTabSound';
 import {Transition, animated} from 'react-spring/renderprops';
+
+import storyDummy from '../../../storyDummy';
 import './Dash.css';
 
 //Using display state
@@ -22,6 +24,8 @@ export default class Dashboard extends React.Component {
     const state={
       display: 'abilities',
       view: 'explore',
+      displayText: [],
+      combat: false
     }
     this.state=state;
   }
@@ -31,19 +35,23 @@ export default class Dashboard extends React.Component {
     abilities: style => (<animated.div style={{...style}}><Abilities abilities={this.props.character.abilities}/></animated.div>),
   }
 
-  handleTavern=(e) => {
+  handleExploreOption = (e) => {
     e.preventDefault();
+    //Should send 'choice' to backend here and receive story
 
-    this.setState({view: 'tavern'});
-  }
-
-  handleExplore=(e) => {
-    e.preventDefault();
-    if(Math.random()>0.2) {
-      this.setState({view: 'explore'});
-    }
-    else {
-      this.setState({view: 'combat'});
+    //Response from backend
+    this.context.setStory(storyDummy);
+    if (e.target.value !== this.state.view) {
+      this.setState({
+        view: e.target.value,
+        displayText: [<p>{this.context.story.displayText}</p>],
+        combat: this.context.story.combat
+      });
+    } else {
+      this.setState({
+        displayText: [...this.state.displayText, <p>{this.context.story.displayText}</p>],
+        combat: this.context.story.combat
+      })
     }
   }
 
@@ -53,34 +61,40 @@ export default class Dashboard extends React.Component {
     this.setState({display: ev.target.value});
   }
 
+  renderExploreOptions() {
+    if (this.context.story.choices) {
+      return this.context.story.choices.map((choice, index) => {
+        return (
+          <button key={index} value={choice.name} onClick={(e) => this.handleExploreOption(e)}>{choice.displayName}</button>
+        )
+      })
+    }
+  }
+
   renderTabButtons() {
     const tabs=[
       {name: 'Abilities', tabName: 'abilities', func: this.handleDisplayChange}
     ]
     return tabs.map((tab, index) => <SwitchTabSound props={tab} key={index} />)
   }
+
+  componentDidMount = () => {
+    this.context.setStory(storyDummy) 
+    this.setState({ displayText: [...this.state.displayText, <p>{this.context.story.displayText}</p>] })
+  }
+
   render() {
-    const dummyStats = {
-      hp: 213,
-      hpMax: 364,
-      mp: 244,
-      mpMax: 399,
-      ap: 4,
-      apMax: 5,
-      str: 6,
-      dex: 7,
-      int: 15,
-      sta: 8,
-      agi: 4,
-      wil: 17,
-      cha: 6
-    }
+    console.log(this.props.character)
     return (
       <main className='dash-main'>
-        <Viewport view={this.state.view} />
+        <Viewport
+        view={this.state.combat ? this.state.combat
+          : this.props.character.statPoints ? 'levelUp'
+          : this.state.view}
+        displayText={this.state.displayText}
+        character={this.props.character}/>
         <div className='nav-btns'>
-          <button onClick={this.handleTavern}>Tavern</button>
-          <button onClick={this.handleExplore}>Explore</button>
+          {!this.state.combat && this.renderExploreOptions()}
           {this.renderTabButtons()}
         </div>
         <div className='char-assets'>
@@ -90,7 +104,9 @@ export default class Dashboard extends React.Component {
             hp: this.props.character['hp'],
             hpMax: this.props.character['max_hp'],
             mp: this.props.character['mp'],
-            mpMax: this.props.character['max_mp']
+            mpMax: this.props.character['max_mp'],
+            ap: this.context.story['ap'],
+            apMax: 10
           }}/>
           <div className='trans-container'>
             <Transition

@@ -2,10 +2,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import {BrowserRouter} from 'react-router-dom';
 import App from './components/App/App';
 import {UserProvider} from './contexts/UserContext';
-import {BrowserRouter} from 'react-router-dom';
 import {CharacterProvider} from './contexts/CharacterContext';
+import {EventProvider} from './contexts/EventContext';
 import firebase from "firebase/app";
 import "firebase/auth"
 import firebaseConfig from './firebaseConfig';
@@ -21,7 +22,9 @@ ReactDOM.render(
     <BrowserRouter>
       <UserProvider>
         <CharacterProvider>
-          <App />
+          <EventProvider>
+            <App />
+          </EventProvider>
         </CharacterProvider>
       </UserProvider>
     </BrowserRouter>

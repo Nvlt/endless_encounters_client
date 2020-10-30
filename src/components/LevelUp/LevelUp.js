@@ -12,17 +12,20 @@ export default class LevelUp extends React.Component {
 
   static defaultProps={
     stats: {
-      str: 15,
-      dex: 7,
-      int: 5,
-      sta: 17,
-      agi: 9,
-      will: 13
+      str: 1,
+      dex: 1,
+      int: 1,
+      sta: 1,
+      agi: 1,
+      will: 1
     },
     points: 1
   }
 
   handleStatIncrease(key, value) {
+    //Send stat post to back end here
+
+    
     const newStats=this.state.stats;
     newStats[key]++;
     this.setState({
@@ -38,7 +41,7 @@ export default class LevelUp extends React.Component {
         <div className='stat-name'>{key}:</div>
         <div className='stat-value'>
           {value}
-          {this.state.points>0&&<button onClick={() => this.handleStatIncrease(key, value)}>+</button>}
+          {this.state.points>0&&<button className='stat-button' onClick={() => this.handleStatIncrease(key, value)}>+</button>}
         </div>
       </li>
       stats.push(htmlStat);
@@ -59,6 +62,11 @@ export default class LevelUp extends React.Component {
         <p className='level-text'>Choose a stat to increase</p>
         <p className='level-text'>You have: {this.state.points} points left</p>
         {this.renderStats()}
+        <p style={{margin: 'auto', textAlign: 'center', width: 'auto'}}>
+          {/* <button disabled={this.state.points}>
+            Continue
+          </button> */}
+        </p>
       </section>
     )
   }

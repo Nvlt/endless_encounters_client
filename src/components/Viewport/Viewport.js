@@ -4,18 +4,30 @@ import Tavern from '../Tavern/Tavern';
 import Explore from '../Explore/Explore';
 import Combat from '../Combat/Combat';
 import './Viewport.css';
+import EventContext from '../../contexts/EventContext';
+import LevelUp from '../LevelUp/LevelUp';
 
 export default class Viewport extends React.Component {
   constructor(props) {
     super(props);
   }
 
+  static contextType = EventContext;
+
   renderTavern() {
-    return <Tavern />
+    return <Tavern/>
   }
 
-  renderText() {
-    return <Explore />
+  //Place holder for Level up event
+  //Render this to viewport on level ups if there is no time
+  renderLevelUp() {
+    return <LevelUp
+      points={this.props.character.statPoints}
+      stats={this.props.character.stats}/>
+  }
+
+  renderExplore() {
+    return <Explore displayText={this.props.displayText}/>
   }
 
   renderCombat=() => {
@@ -33,12 +45,18 @@ export default class Viewport extends React.Component {
     return <Combat opponents={dummyOpp} />
   }
 
+  componentDidMount = () => {
+
+  }
+
   render() {
+    
     return (
       <div className='viewport border'>
         {this.props.view==='tavern'&&this.renderTavern()}
-        {this.props.view==='explore'&&this.renderText()}
-        {this.props.view==='combat'&&this.renderCombat()}
+        {this.props.view==='town'&&this.renderExplore()}
+        {this.props.view==='levelUp'&&this.renderLevelUp()}
+        {this.props.view===true&&this.renderCombat()}
       </div>
     )
   }

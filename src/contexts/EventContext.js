@@ -1,22 +1,23 @@
 import React from 'react';
 
 const EventContext=React.createContext({
-  quest: {},
-  mob: {},
+  story: {},
+  entity: {},
   error: null,
   setError: () => {},
   clearError: () => {},
-  setEvent: () => {},
+  setStory: () => {},
+  setEntity: () => {}
 });
 
 export default EventContext;
 
-export class EventContextProvider extends React.Component {
+export class EventProvider extends React.Component {
   constructor(props) {
     super(props)
     const state={
-      quest: {},
-      mob: {},
+      story: {},
+      entity: {},
       error: null
     }
 
@@ -31,25 +32,20 @@ export class EventContextProvider extends React.Component {
     this.setState({error: null});
   }
 
-  setEvent=(quest) => {
-    this.setState({quest});
+  setStory=(story) => {
+    this.setState({story});
   }
 
-  setMob=(mob) => {
-    this.setState({mob});
+  setEntity=(entity) => {
+    this.setState({entity});
   }
-
-  //Fetch event if none
-  //Fetch mob related to event
-  //Event may come with special action eg. damage player, free loot, lose money, etc
-  //Inventory/Loot should come with mob
-  //Use mob for combat/stat manipulation
-
+  
   render() {
     const value={
-      quest: this.state.quest,
+      story: this.state.story,
       error: this.state.error,
       setError: this.setError,
+      setStory: this.setStory,
       clearError: this.clearError,
       setEvent: this.setEvent,
     }

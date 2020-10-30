@@ -15,7 +15,7 @@ export default function CardFront(props) {
       <div className='bar-list'>
         <Bar bar={'HP'} curr={props.stats.hp} max={props.stats.hpMax} text={'Health'} />
         <Bar bar={'MP'} curr={props.stats.mp} max={props.stats.mpMax} text={'Mana'} />
-        <ApBar curr={2} max={5} />
+        <ApBar curr={props.stats.ap} max={props.stats.apMax} />
       </div>
     </>
   )

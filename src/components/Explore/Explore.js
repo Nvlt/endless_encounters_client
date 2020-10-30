@@ -2,8 +2,9 @@ import React from 'react';
 
 export default function Explore(props) {
   return (
-    <div className=''>
-        <p>
+    <div className='explore-viewport'>
+      {props.displayText}
+        {/* <p>
           Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
           totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
         architecto beatae vitae dicta sunt explicabo.</p>
@@ -56,7 +57,7 @@ export default function Explore(props) {
         <p>
           Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae
           consequatur,
-          vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+          vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p> */}
       </div>
   )
 }
