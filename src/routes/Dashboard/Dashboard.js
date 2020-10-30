@@ -17,6 +17,7 @@ export default class Dashboard extends React.Component {
       })
   }
 
+  //Either place "this.character.context" for server data or 'character' for dummyData
   render() {
     return (
       <DashboardMain character={character}/>

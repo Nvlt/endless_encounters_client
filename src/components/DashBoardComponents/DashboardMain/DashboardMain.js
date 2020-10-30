@@ -88,8 +88,11 @@ export default class Dashboard extends React.Component {
     return (
       <main className='dash-main'>
         <Viewport
+          // Combat view
         view={this.state.combat ? this.state.combat
+          // Level Up view
           : this.props.character.statPoints ? 'levelUp'
+          // Non combat view
           : this.state.view}
         displayText={this.state.displayText}
         character={this.props.character}/>
