@@ -1,5 +1,5 @@
 # Endless Encounters Client  
-[Endless Encounters](https://endless-encounters.vercel.app/ "Endless Encounters") ||
+[Endless Encounters](https://endless-encounters-chi.vercel.app/ "Endless Encounters") ||
 [Client GitHub](https://github.com/EndlessEncounters/client "Client GitHub") ||
 [API GitHub](https://github.com/EndlessEncounters/server "API Github")  
 By: [John Pendergast](https://github.com/Jpending "John Pendergast"),
