@@ -1,8 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
 import Viewport from '../../Viewport/Viewport';
+import SimplifiedViewPort from '../../Viewport/SimplifiedViewport.js';
 import CharStatCard from '../CharacterStatCard/CharacterStatCard';
 import Abilities from '../Abilities/Abilities';
+import eventService from '../../../services/event-service';
 import EventContext from '../../../contexts/EventContext';
 import SwitchTabSound from '../../SoundWidgets/SwitchTabSound';
 import {Transition, animated} from 'react-spring/renderprops';
@@ -78,16 +80,32 @@ export default class Dashboard extends React.Component {
     return tabs.map((tab, index) => <SwitchTabSound props={tab} key={index} />)
   }
 
-  componentDidMount=() => {
-    this.context.setStory(storyDummy)
+  componentDidMount=async() => {
+
+    this.context.setStory(await eventService.getUserStory())
+    console.log(this.context.story.displayText)
     this.setState({displayText: [...this.state.displayText, <p>{this.context.story.displayText}</p>]})
   }
 
-  render() {
+  render()
+  {
+    
     console.log(this.props.character)
     return (
       <main className='dash-main'>
-        <Viewport
+        <SimplifiedViewPort displayText={this.context.story.displayText}/>
+        <form id='choice_form' onSubmit={async(e)=>{
+          e.preventDefault();
+          const input = e.target.choice;
+          const inputText = input.value;
+          input.value = '';
+          this.context.setStory(await eventService.makeChoice(inputText));
+        }}>
+          <input name='choice' type='text'/>
+          <button type='submit'>Make Choice</button>
+        </form>
+
+        {/* <Viewport
           // Combat view
           view={this.state.combat? this.state.combat
             // Level Up view
@@ -95,13 +113,16 @@ export default class Dashboard extends React.Component {
               // Non combat view
               :this.state.view}
           displayText={this.state.displayText}
-          character={this.props.character} />
-        <div className='nav-btns'>
+          character={this.props.character} /> */}
+        {/* <div className='nav-btns'>
           {!this.state.combat&&this.renderExploreOptions()}
           {this.renderTabButtons()}
-        </div>
+        </div> */}
         <div className='char-assets'>
-          <CharStatCard
+          <div>
+
+          </div>
+          {/* <CharStatCard
 
             stats={this.props.character['stats']}
             pools={{
@@ -112,8 +133,8 @@ export default class Dashboard extends React.Component {
               mpMax: this.props.character['max_mp'],
               ap: this.context.story['ap'],
               apMax: 10
-            }} />
-          <div className='trans-container'>
+            }} /> */}
+            {/* <div className='trans-container'>
             <Transition
               reset
               unique
@@ -124,7 +145,8 @@ export default class Dashboard extends React.Component {
             >
               {display => this.tabs[display]}
             </Transition>
-          </div>
+          </div> */}
+          
         </div>
 
       </main>

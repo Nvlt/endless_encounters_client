@@ -19,8 +19,8 @@ export default function About() {
       content: (
         <div>
           <ReactTooltip id='rpg' place='top' effect='solid' getContent={(dataTip) => `${dataTip}`} />
-        Endless Encounters is a text-based {<div className='dataTip' data-event='click' clickable='true' data-tip='Role Playing Game'
-            data-for='rpg'>RPG</div>} developed by EE; John Pendergast, Alexis Felts, Scott Whiteman, and Tiffany Summerford. Once you're in, you can explore in search of ravenous enemies to duel swords with or visit the tavern to discuss rumors.
+          <p>Endless Encounters is a text-based {<div className='dataTip' data-event='click' clickable='true' data-tip='Role Playing Game'
+            data-for='rpg'>RPG</div>} developed by EE;</p><br/> <p>John Pendergast, Alexis Felts, Scott Whiteman, and Tiffany Summerford.</p><br/> <p>Once you're in, you can explore in search of ravenous enemies to duel swords with or visit the tavern to discuss rumors.</p>
         </div>
       )
     },
@@ -126,7 +126,7 @@ export default function About() {
   }
 
   return (
-    <body className='abt-outer'>
+    <main className = 'abt-outer'>
       <h1 className='title text-pop-up-bottom'>Endless Encounters</h1>
       <div className='abt-inner'>
         <h3 className='sub-title'>A place for those seeking a way to leave their world behind...</h3>
@@ -135,6 +135,6 @@ export default function About() {
           {aboutLoop()}
         </section>
       </div>
-    </body>
+    </main>
   )
 }

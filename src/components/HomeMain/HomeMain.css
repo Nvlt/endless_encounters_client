@@ -1,3 +1,12 @@
+main
+{
+    position: fixed;
+    
+    bottom: 65px;
+    top:40px;
+    overflow-y: scroll;
+}
+
 .intro{
     text-align: center;
     margin: 15px 200px;
@@ -19,6 +28,7 @@
 
 .main-inner{
     margin-top: -50px;
+    
 }
 
 .main-nav{
