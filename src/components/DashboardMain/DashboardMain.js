@@ -1,21 +1,14 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import Viewport from '../../Viewport/Viewport';
-import SimplifiedViewPort from '../../Viewport/SimplifiedViewport.js';
-import CharStatCard from '../CharacterStatCard/CharacterStatCard';
-import Abilities from '../Abilities/Abilities';
-import eventService from '../../../services/event-service';
-import EventContext from '../../../contexts/EventContext';
-import SwitchTabSound from '../../SoundWidgets/SwitchTabSound';
-import {Transition, animated} from 'react-spring/renderprops';
+import SimplifiedViewPort from '../Viewport/SimplifiedViewport.js';
+import eventService from '../../services/event-service';
+import EventContext from '../../contexts/EventContext';
+import SwitchTabSound from '../SoundWidgets/SwitchTabSound';
+// import {Transition, animated} from 'react-spring/renderprops';
 
-import storyDummy from '../../../storyDummy';
 import './Dash.css';
 
 //Using display state
-const tabs={
-  abilities: style => (<animated.div style={{...style}}><Abilities /></animated.div>),
-}
 
 export default class Dashboard extends React.Component {
   static defaultProps={
@@ -34,29 +27,25 @@ export default class Dashboard extends React.Component {
   }
   static contextType=EventContext;
 
-  tabs={
-    abilities: style => (<animated.div style={{...style}}><Abilities abilities={this.props.character.abilities} /></animated.div>),
-  }
+  // handleExploreOption=(e) => {
+  //   e.preventDefault();
+  //   //Should send 'choice' to backend here and receive story
 
-  handleExploreOption=(e) => {
-    e.preventDefault();
-    //Should send 'choice' to backend here and receive story
-
-    //Response from backend
-    this.context.setStory(storyDummy);
-    if(e.target.value!==this.state.view) {
-      this.setState({
-        view: e.target.value,
-        displayText: [<p>{this.context.story.displayText}</p>],
-        combat: this.context.story.combat
-      });
-    } else {
-      this.setState({
-        displayText: [...this.state.displayText, <p>{this.context.story.displayText}</p>],
-        combat: this.context.story.combat
-      })
-    }
-  }
+  //   //Response from backend
+  //   this.context.setStory(storyDummy);
+  //   if(e.target.value!==this.state.view) {
+  //     this.setState({
+  //       view: e.target.value,
+  //       displayText: [<p>{this.context.story.displayText}</p>],
+  //       combat: this.context.story.combat
+  //     });
+  //   } else {
+  //     this.setState({
+  //       displayText: [...this.state.displayText, <p>{this.context.story.displayText}</p>],
+  //       combat: this.context.story.combat
+  //     })
+  //   }
+  // }
 
   handleDisplayChange=(ev) => {
     ev.preventDefault();
@@ -105,15 +94,6 @@ export default class Dashboard extends React.Component {
           <button type='submit'>Make Choice</button>
         </form>
 
-        {/* <Viewport
-          // Combat view
-          view={this.state.combat? this.state.combat
-            // Level Up view
-            :this.props.character.statPoints? 'levelUp'
-              // Non combat view
-              :this.state.view}
-          displayText={this.state.displayText}
-          character={this.props.character} /> */}
         {/* <div className='nav-btns'>
           {!this.state.combat&&this.renderExploreOptions()}
           {this.renderTabButtons()}
