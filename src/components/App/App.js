@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
 import React from 'react';
-import Home from '../../routes/Home/Home';
+import HomeMain from '../HomeMain/HomeMain';
 import Header from '../Header/Header';
 import Register from '../../routes/Register/Register';
 import Login from '../../routes/Login/Login';
-import Dashboard from '../../routes/Dashboard/Dashboard';
+import DashboardMain from '../DashboardMain/DashboardMain';
 import {Route, Switch, useLocation} from 'react-router-dom';
 import PrivateRoute from '../../routes/routehelpers/PrivateRoute/PrivateRoute';
 import PublicRoute from '../../routes/routehelpers/PublicRoute/PublicRoute';
@@ -51,11 +51,11 @@ function App() {
             component={About} />
           <PrivateRoute
             path='/main'
-            component={Dashboard} />
+            component={DashboardMain} />
           <Route
             exact
             path='/'
-            component={Home} />
+            component={HomeMain} />
         </Switch>
       </animated.div>
     </ThemeProvider>
