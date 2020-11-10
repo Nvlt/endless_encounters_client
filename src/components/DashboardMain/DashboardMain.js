@@ -70,16 +70,11 @@ export default class Dashboard extends React.Component {
   }
 
   componentDidMount=async() => {
-
     this.context.setStory(await eventService.getUserStory())
-    console.log(this.context.story.displayText)
     this.setState({displayText: [...this.state.displayText, <p>{this.context.story.displayText}</p>]})
   }
 
-  render()
-  {
-    
-    console.log(this.props.character)
+  render(){
     return (
       <main className='dash-main'>
         <SimplifiedViewPort displayText={this.context.story.displayText}/>
