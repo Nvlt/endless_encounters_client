@@ -5,17 +5,11 @@ export const lightTheme = {
   headerText: '#275D5D',
   toggleBorder: '#000',
   background: 'timber',
-<<<<<<< HEAD
-  viewport: '#FFFCBE',
-  glow: 'none',
-  buttonBackground: ''
-=======
->>>>>>> 42da669fafa453e6849311edb7bb2cdeca936888
 }
 export const darkTheme = {
   body: '#111013',
   text: '#FFF',
-  startLink: '#97FFb5',
+  startLink: '#97FFff',
   headerText: '#97FFff',
   toggleBorder: '#CCC',
   background: '#999',
