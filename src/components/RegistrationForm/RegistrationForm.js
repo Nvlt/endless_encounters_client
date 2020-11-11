@@ -36,7 +36,8 @@ export default class Registration extends React.Component {
         this.setState({error: res.error});
       });
   }
-  handleGoogleReg=() => {
+  handleGoogleReg=(e) => {
+    e.preventDefault()
     const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
     firebase.auth().signInWithPopup(googleAuthProvider).then(res =>
       AuthApiService.postUser({

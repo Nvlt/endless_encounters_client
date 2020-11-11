@@ -1,5 +1,5 @@
 # Endless Encounters API  
-[Endless Encounters](https://endless-encounters-8ubx7ynoq.vercel.app/about "Endless Encounters") ||
+[Endless Encounters](https://endless-encounters.vercel.app/ "Endless Encounters") ||
 [Client GitHub](https://github.com/EndlessEncounters/client "Client GitHub") ||
 [API GitHub](https://github.com/Nvlt/endless_encounters_server) "API Github")  
 By: [Alexis Felts](https://github.com/Nvlt "Alexis Felts"), 
@@ -27,7 +27,7 @@ Endless Encounters is a text-based RPG ("Role-Playing Game") developed by EE. On
   Password: password8!
   Email: Jane@gmail.com
  ```
- ![register](/screenshots/reg.JPG)
+ ![register](/screenshots/register.JPG)
 
 #### Log In
   A Demo Account has been set up for ease of access.

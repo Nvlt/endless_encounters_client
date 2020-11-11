@@ -14,6 +14,14 @@ code {
     monospace;
 }
 
+.error{
+  margin-top: 15px;
+  color: #E5625E;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 600;
+}
+
 .dataTip{
   display: inline;
   font-weight: 650;
