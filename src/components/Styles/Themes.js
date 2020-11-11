@@ -3,7 +3,6 @@ export const lightTheme = {
   text: 'black',
   toggleBorder: '#000',
   background: 'timber',
-  viewport: '#FFFCBE'
 }
 export const darkTheme = {
   body: '#111013',
