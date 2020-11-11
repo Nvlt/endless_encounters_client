@@ -14,3 +14,12 @@
 {
   margin-top: 2px;
 }
+@media all and (min-width: 600px){
+  .viewport {
+    
+    position: unset;
+    width: 400px;
+    height: 400px;
+    margin: auto;
+  }
+}
