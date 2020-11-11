@@ -12,7 +12,7 @@ export default function Home() {
         <h2 className='sub-head'>A place for those seeking a way to leave their world behind...</h2>
         <img src={mntn} alt='digital drawing of a mountain range in a circle frame' className='mntn' />
         <nav className='main-nav'>
-          <Link className='main-link' to='/main' aria-label="Start link">Start</Link>
+          <Link className='main-link link' to='/main' aria-label="Start link">Start</Link>
         </nav>
         <div className='intro'>
         <span>

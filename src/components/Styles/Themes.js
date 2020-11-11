@@ -1,6 +1,7 @@
 export const lightTheme = {
   body: 'snow',
   text: 'black',
+  link: '#97FFff',
   startLink: '#275D5D',
   headerText: '#275D5D',
   toggleBorder: '#000',
@@ -9,6 +10,7 @@ export const lightTheme = {
 export const darkTheme = {
   body: '#111013',
   text: '#FFF',
+  link: '#97FFff',
   startLink: '#97FFff',
   headerText: '#97FFff',
   toggleBorder: '#CCC',
