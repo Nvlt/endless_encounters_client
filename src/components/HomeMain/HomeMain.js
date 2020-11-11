@@ -14,11 +14,12 @@ export default function Home() {
         <nav className='main-nav'>
           <Link className='main-link' to='/main'>Start</Link>
         </nav>
-        <p className='intro'>
-        Embark on a brand new adventure in this text-based role-playing-game! 
-        Endless Encounters is chock-full of random enemies and witty quotes, and so you may find yourself in some 
-        quirky predicaments. 
-        Once you're signed up, you can explore the world, duel swords, and meet other characters. </p>
+        <div className='intro'>
+        <span>
+        <h4>Embark on a brand new adventure in this text-based role-playing-game!</h4> 
+        <p>Endless Encounters is chock-full of random enemies and witty quotes, and so you may find yourself in some 
+        quirky predicaments. </p>
+        <p>Once you're signed up, you can explore the world, duel swords, and meet other characters.</p></span></div>
       </div>
     </main>
   )

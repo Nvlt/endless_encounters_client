@@ -36,27 +36,3 @@
     font-size: 1.4em;
 }
 
-ul, li{
-    padding-left: 0px;
-    margin: 0px;
-   
-}
-p
-{
-    max-width: 275px;
-    margin:auto;
-    text-align: left;
-}
-ul{
-    list-style: none;
-}
-
-ol{
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-li{
-    text-align: left;
-}

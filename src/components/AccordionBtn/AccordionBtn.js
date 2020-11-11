@@ -12,14 +12,12 @@ export default function Accordion(props) {
         setHeightState(setActive === 'active' ? '0px' : `${content.current.scrollHeight}px`)
     }
     return (
-        <div className='acc'>
-             <div className='acc-outer'>
-                 <button className={`acc-btn acc-header ${setActive}`} onClick={toggleAccordion}>
-                    {props.header}
-                 </button>
-             </div>
-             <div ref={content} style={{ maxHeight: `${setHeight}` }} className='acc-inner'>
-                {props.content}
+        <div className='expandable_btn'>
+            <button className={`acc-btn acc-header ${setActive}`} onClick={toggleAccordion}>
+                {props.header}
+            </button>
+             <div ref={content} style={{ maxHeight: `${setHeight}` }} className='expandable_btn_content'>
+                <span>{props.content}</span>
              </div>
         </div>
     )

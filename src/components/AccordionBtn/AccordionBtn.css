@@ -10,8 +10,20 @@
     background-color: transparent;
     box-shadow: none;
 }
-
-.acc-inner{
+.expandable_btn_content{
     overflow: hidden;
     transition: 1s ease;
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30PX;
+    margin:auto;
 }
+
+@media all and (min-width: 600px){
+    .expandable_btn_content{
+        width: 500px;
+        margin:auto;
+        
+        background-color: turquoise;
+    }
+  }

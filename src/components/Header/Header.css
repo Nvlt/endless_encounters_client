@@ -1,5 +1,9 @@
 #headerNav{
     display: flex;
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    top:0px;
     flex-wrap: wrap;
     justify-content: space-around;
     border-width: 1px;
@@ -9,6 +13,8 @@
     border-right: none;
     font-weight: bold;
     padding: 5px;
+    
+    
 }
 
 .headerLink {
@@ -27,14 +33,12 @@
     position: fixed;
     bottom: 20px;
     right: 10px;
-    opacity: 50%;
+    
     
 }
 #soundToggle
 {
     position: fixed;
     bottom: 20px;
-    left: 20px;
-    opacity: 50%;
-    
+    left: 20px;   
 }
