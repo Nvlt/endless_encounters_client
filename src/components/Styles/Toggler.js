@@ -4,7 +4,7 @@ import {func, string} from 'prop-types';
 
 const Toggle=({theme, toggleTheme}) => {
   return (
-    <button onClick={toggleTheme} >
+    <button onClick={toggleTheme} aria-label="Toggle page theme button">
       {theme.slice(0, 1).toUpperCase()+theme.slice(1)}
     </button>
   );

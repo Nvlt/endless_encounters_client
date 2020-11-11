@@ -77,12 +77,11 @@ export default class Registration extends React.Component {
           </div>
 
           <div>
-            <button>Register</button>
+            <button aria-label="Register button">Register</button>
 
           </div>
+          <button className="googlebutton" onClick={this.handleGoogleReg} aria-label="Register with Google button">Register With Google</button>
           <Link className="accountRte" to='/login'>Already have an account?</Link>
-        
-        <button className="googlebutton" onClick={this.handleGoogleReg}>Register With Google</button>
         </form>
       </main>
 

@@ -12,32 +12,28 @@
     border-left: none;
     border-right: none;
     font-weight: bold;
-    padding: 5px;
-    
-    
+    padding: 5px;    
 }
 
 .headerLink {
     text-decoration: none;
 }
 
-.headerLink:visited {
+.headerLink:visited, a:visited {
     color: #48A9A6;
 }
 
-.headerLink:hover {
+.headerLink:hover{
     color: #FEC369;
 }
-#themeToggle
-{
+
+#themeToggle{
     position: fixed;
     bottom: 20px;
     right: 10px;
-    
-    
 }
-#soundToggle
-{
+
+#soundToggle{
     position: fixed;
     bottom: 20px;
     left: 20px;   

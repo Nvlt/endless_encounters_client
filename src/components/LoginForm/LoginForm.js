@@ -1,18 +1,9 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import UserContext from '../../contexts/UserContext';
 import AuthApiService from '../../services/auth-api-service';
 import './LoginForm.css'
 import firebase from "firebase/app";
 import "firebase/auth"
-// import firebaseConfig from '../../firebaseConfig';
-// import {
-//   FirebaseAuthProvider,
-//   FirebaseAuthConsumer,
-//   IfFirebaseAuthed,
-//   IfFirebaseAuthedAnd
-// } from "@react-firebase/auth";
-// import TokenService from '../../services/token-service';
 export default class Login extends React.Component {
   static contextType=UserContext;
   state={error: null};
@@ -74,10 +65,10 @@ export default class Login extends React.Component {
           </div>
 
           <div className="">
-            <button className="loginBtn" type="submit">Login</button>
+            <button className="loginBtn" type="submit" aria-label="Login button">Login</button>
 
           </div>
-          <button className="googlebutton" onClick={this.handleGoogleSignIn}>Login With Google</button>
+          <button className="googlebutton" onClick={this.handleGoogleSignIn} aria-label="Login with Google button">Login With Google</button>
         </form>
        
       </main>

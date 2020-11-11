@@ -51,10 +51,10 @@ export default function About() {
                   Bonus points for upper/lower case numbers</li>
               </ul>
             </li>
-            <li>Enter an email that you actually use</li>
-            <li>Wait for a verification Email to arrive in your inbox</li>
-            <li>Click verification link in the Email</li>
-            <li>Navigate back to Endless Encounters, log in, and have fun!</li>
+            <li>Enter an email that you use</li>
+            <li>Wait for a verification email to arrive in your inbox</li>
+            <li>Click the verification link in the email</li>
+            <li>Navigate back to Endless Encounters, login, and have fun!</li>
           </ol>
         </div>
       )

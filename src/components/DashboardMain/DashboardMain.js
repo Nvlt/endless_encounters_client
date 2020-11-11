@@ -1,12 +1,8 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import SimplifiedViewPort from '../Viewport/SimplifiedViewport.js';
 import eventService from '../../services/event-service';
 import EventContext from '../../contexts/EventContext';
 import SwitchTabSound from '../SoundWidgets/SwitchTabSound';
-// import {Transition, animated} from 'react-spring/renderprops';
-
-//import './Dash.css';
 
 //Using display state
 
@@ -66,8 +62,8 @@ export default class Dashboard extends React.Component {
           input.value = '';
           this.context.setStory(await eventService.makeChoice(inputText));
         }}>
-          <input name='choice' type='text'/>
-          <button type='submit'>Make Choice</button>
+          <input name='choice' type='text' aria-label="input choice textbox"/>
+          <button type='submit' aria-label="submit choice button">Make Choice</button>
         </form>
 
       </main>

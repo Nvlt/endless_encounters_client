@@ -14,17 +14,17 @@ export default class Header extends Component {
     return <div >
       <Link
         onClick={this.context.processLogout}
-        to='/login'>Logout</Link>
+        to='/login' aria-label="Logout link">Logout</Link>
     </div>
   }
 
   renderLogin=() => {
     return <>
       <div >
-        <Link className='headerLink' to='/login'>Login</Link>
+        <Link className='headerLink' to='/login' aria-label="Login page link">Login</Link>
       </div>
       <div >
-        <Link className='headerLink' to='/register'>Register</Link>
+        <Link className='headerLink' to='/register' aria-label="Register page link">Register</Link>
       </div>
     </>
   }
@@ -45,15 +45,15 @@ export default class Header extends Component {
 
 
         <div >
-          <Link className='headerLink' to='/'>Home</Link>
+          <Link className='headerLink' to='/' aria-label="Home page link">Home</Link>
         </div>
 
         <div >
-          <Link className='headerLink' to='/main'>Dash</Link>
+          <Link className='headerLink' to='/main' aria-label="Dashboard page link">Dash</Link>
         </div>
 
         <div >
-          <Link className='headerLink' to='/about'>About</Link>
+          <Link className='headerLink' to='/about' aria-label="About page link">About</Link>
         </div>
         
         {TokenService.hasAuthToken()

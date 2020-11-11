@@ -13,7 +13,7 @@ export default function Accordion(props) {
     }
     return (
         <div className='expandable_btn'>
-            <button className={`acc-btn acc-header ${setActive}`} onClick={toggleAccordion}>
+            <button className={`acc-btn acc-header ${setActive}`} onClick={toggleAccordion} aria-label="About page button">
                 {props.header}
             </button>
              <div ref={content} style={{ maxHeight: `${setHeight}` }} className='expandable_btn_content'>

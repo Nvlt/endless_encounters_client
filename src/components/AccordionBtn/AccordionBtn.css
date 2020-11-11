@@ -10,6 +10,7 @@
     background-color: transparent;
     box-shadow: none;
 }
+
 .expandable_btn_content{
     overflow: hidden;
     transition: 1s ease;
@@ -17,13 +18,12 @@
     padding-left: 30px;
     padding-right: 30PX;
     margin:auto;
+    line-height: 1.5em;
 }
 
 @media all and (min-width: 600px){
     .expandable_btn_content{
         width: 500px;
         margin:auto;
-        
-        background-color: turquoise;
     }
   }
