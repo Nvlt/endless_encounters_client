@@ -59,10 +59,6 @@ main
     text-decoration: none;
 }
 
-.main-link:visited {
-    color: #48A9A6;
-}
-
 .main-link:hover {
     color: #FEC369;
 }

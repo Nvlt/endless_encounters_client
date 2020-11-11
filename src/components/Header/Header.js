@@ -14,6 +14,7 @@ export default class Header extends Component {
     return <div >
       <Link
         onClick={this.context.processLogout}
+        className='headerLink'
         to='/login' aria-label="Logout link">Logout</Link>
     </div>
   }
