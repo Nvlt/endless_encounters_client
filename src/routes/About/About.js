@@ -16,7 +16,7 @@ export default function About() {
       ),
       content: (
         <div>
-          <span>Endless Encounters is a text-base RPG developed by EE; John Pendergast, Alexis Felts, Scott Whiteman, and Tiffany Summerford. Once you're in, you can explore in search of ravenous enemies to duel swords with or visit the tavern to discuss rumors.</span>
+          <span>Endless Encounters is a text-base RPG developed by EE; John Pendergast, Alexis Felts, Scott Whiteman, and Tiffany Summerford. Once you're in, you can explore in search of ravenous enemies to fight, and quirky moments with npcs you encounter.</span>
         </div>
       )
     },
@@ -42,8 +42,6 @@ export default function About() {
               </ul>
             </li>
             <li>Enter an email that you use</li>
-            <li>Wait for a verification email to arrive in your inbox</li>
-            <li>Click the verification link in the email</li>
             <li>Navigate back to Endless Encounters, login, and have fun!</li>
           </ol>
         </div>
@@ -57,12 +55,11 @@ export default function About() {
       ),
       content: (
         <div>
-          <p>Upon completing your registration, and logging in you'll be pushed to the user dashboard where you'll be prompted to create your first character. </p>
+          <p>Upon completing your registration, and logging in you can go to the dash where you'll be prompted to create your character.</p>
           <ol>
-            <li>Give your character a name (all Alpha-Numeric Characters are valid).</li>
-            <li> Assign your character's stat-points (be sure to add some points to each attribute). </li>
-            <li>You may choose from several abilities when you first begin your journey. </li>
-            <li>Clicking on the 'Finalize Character Button' will create your character and you may only have one active character (per-account) at a time.</li>
+            <li>Give your character a name.</li>
+            <li>Give your character a description</li>
+            <li>Choose an existing class</li>
           </ol>
         </div>
       )
@@ -75,13 +72,10 @@ export default function About() {
       ),
       content: (
         <div>
-          <p>After creating your character, you'll immediately be enveloped with Endless Encounters.</p>
-          <ul>
-            <li>On the dash, you'll be presented with some action choices in the middle-left portion of your dashboard (the 'explore' and 'tavern' buttons).</li>
-            <li>Upon hovering over an option in the dashboard, you can see an explanation of what that choice/action will do.</li>
-            <li>Clicking on actions could push you into duels or happen you upon a treasure, and whatever consequences occur from that are now tied to your character!</li>
-            <li>Be careful, make good choices, or don't.</li>
-          </ul>
+          <p>After creating your character, your game begins immediately.</p>
+          <p>You will be presented with a scene, your status, and some choices you can make.</p>
+          <p>You can make choices by typing them into the text input and pressing enter or the 'make choice' button.</p>
+          <p>Your goal is simply to explore the world and find funny encounters.</p>
         </div>
       )
     },
@@ -93,11 +87,12 @@ export default function About() {
       ),
       content: (
         <div>
-          <span>Combat is turn-based; on your turn, you may click on one of your character's abilities or spells' to perform against your target.
-             Your character will then attempt the action, with the chance to miss, hit, or completely obliterate their enemy. 
-             Each hit to your opponent will result in damage to their health. Abilities and spells have cost, so make sure you have enough 
-             (health, mana, and ability) to perform this action. Keep a heads up for
-            critical misses or hits.</span>
+          <span>
+            Combat is turn based using what we call "Action Points" or AP, which you will see on display throughout the game.
+            In every combat scene you will start with 10 of these and when you run out, you wont be able to attack anymore, and will have to end your turn.
+            There is also magic points or 'mp' which are similarly used to cast spells.
+            Similarly as well you'll have health points or 'hp', if you run out of these, unfortunately you've died.
+          </span>
         </div>
       )
     }

@@ -19,7 +19,7 @@ export default function Home() {
             <h3>Embark on a brand new adventure in this text-based role-playing-game!</h3> 
             <p>Endless Encounters is chock-full of random enemies and witty quotes, and so you may find yourself in some 
             quirky predicaments. </p>
-            <p>Once you're signed up, you can explore the world, duel swords, and meet other characters.</p>
+            <p>Once you're signed up, you can explore the world, and meet other characters.</p>
             <h4>There is a demo account for graders:</h4>
             <div id='demo_holder'>
               <p className='demo_data'><b>username:</b> demo</p>
