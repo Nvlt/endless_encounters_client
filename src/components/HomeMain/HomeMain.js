@@ -15,11 +15,19 @@ export default function Home() {
           <Link className='main-link link' to='/main' aria-label="Start link">Start</Link>
         </nav>
         <div className='intro'>
-        <span>
-        <h3>Embark on a brand new adventure in this text-based role-playing-game!</h3> 
-        <p>Endless Encounters is chock-full of random enemies and witty quotes, and so you may find yourself in some 
-        quirky predicaments. </p>
-        <p>Once you're signed up, you can explore the world, duel swords, and meet other characters.</p></span></div>
+          <span>
+            <h3>Embark on a brand new adventure in this text-based role-playing-game!</h3> 
+            <p>Endless Encounters is chock-full of random enemies and witty quotes, and so you may find yourself in some 
+            quirky predicaments. </p>
+            <p>Once you're signed up, you can explore the world, duel swords, and meet other characters.</p>
+            <h5>There is a demo account for graders:</h5>
+            <div id='demo_holder'>
+              <p className='demo_data'><b>username:</b> demo</p>
+              <p className='demo_data'><b>password:</b> password</p>
+            </div>
+          </span>
+          
+        </div>
       </div>
     </main>
   )

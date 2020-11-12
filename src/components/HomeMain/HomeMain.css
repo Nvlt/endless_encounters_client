@@ -67,9 +67,11 @@ main
    
     .intro
     {
-        width: 600px;
+        width: 650px;
         margin: auto;
         padding: 20px;
+        
+        
     }
     .intro p
     {
@@ -81,6 +83,22 @@ main
     .intro h4
     {
         text-align: center;
+    }
+    .intro h5
+    {
+        text-align: center;
+    }
+    #demo_holder
+    {
+        width:200px;
+        background-color:rgb(223, 223, 223);
+        border: 1px solid rgb(189, 189, 189);
+        margin: auto;
+        padding: 10px 10px 10px 30px;
+    }
+    .demo_data
+    {  
+        margin: auto;   
     }
     .header {
       margin-top: 100px;
