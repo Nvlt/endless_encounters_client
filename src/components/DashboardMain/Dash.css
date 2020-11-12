@@ -1,4 +1,7 @@
 
+.choice-input{
+    display: flex;
+}
 
 #choice_form
 {

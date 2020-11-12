@@ -2,7 +2,7 @@ import React from 'react';
 import SimplifiedViewPort from '../Viewport/SimplifiedViewport.js';
 import eventService from '../../services/event-service';
 import EventContext from '../../contexts/EventContext';
-
+import './Dash.css';
 //Using display state
 
 export default class Dashboard extends React.Component {
@@ -31,6 +31,7 @@ export default class Dashboard extends React.Component {
     this.context.setStory(await eventService.getUserStory())
     this.setState({displayText: [...this.state.displayText, <p>{this.context.story.displayText}</p>]})
   }
+  
 
   render(){
     return (
