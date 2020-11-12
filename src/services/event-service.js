@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import config from '../config';
 import TokenService from './token-service';
 

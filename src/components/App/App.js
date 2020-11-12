@@ -1,14 +1,12 @@
-/* eslint-disable no-unused-vars */
 import React from 'react';
 import HomeMain from '../HomeMain/HomeMain';
 import Header from '../Header/Header';
 import Register from '../RegistrationForm/RegistrationForm';
 import LoginForm from '../LoginForm/LoginForm';
 import DashboardMain from '../DashboardMain/DashboardMain';
-import {Route, Switch, useLocation} from 'react-router-dom';
+import {Route, Switch} from 'react-router-dom';
 import PrivateRoute from '../../routes/routehelpers/PrivateRoute/PrivateRoute';
 import PublicRoute from '../../routes/routehelpers/PublicRoute/PublicRoute';
-import {useTransition, animated} from 'react-spring'
 import About from '../../routes/About/About';
 
 import {ThemeProvider} from 'styled-components';

@@ -18,4 +18,5 @@ export const darkTheme = {
   viewport: '#141233',
   glow: '0 0 10px #afc, 0 0 20px #afc, 0 0 50px #e6cc73, 0 0 80px #e6cc73'
 }
+
 //Alternate theme colors can go here...

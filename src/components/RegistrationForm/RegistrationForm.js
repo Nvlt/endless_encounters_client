@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from 'react'
 import {Link} from 'react-router-dom'
 import UserContext from '../../contexts/UserContext'
@@ -6,7 +5,6 @@ import AuthApiService from '../../services/auth-api-service';
 import './RegistrationForm.css'
 import firebase from "firebase/app";
 import "firebase/auth"
-import { useHistory } from "react-router-dom";
 
 export default class Registration extends React.Component {
   static contextType=UserContext;
