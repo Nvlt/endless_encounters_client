@@ -20,13 +20,7 @@ import Toggler from '../Styles/Toggler';
 
 function App() {
 
-  const location=useLocation();
   const [theme, themeToggler]=useDarkMode();
-  const trans=useTransition(location, location => location.pathname, {
-    from: {opacity: 0},
-    enter: {position: 'flex', opacity: 1},
-    leave: {position: 'absolute', top: 0, left: 0, bottom: 0, right: 0, opacity: 0},
-  })
   const themeMode=theme==='light'? lightTheme:darkTheme;
 
     return (
