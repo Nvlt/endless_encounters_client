@@ -24,17 +24,17 @@ Endless Encounters is a text-based RPG ("Role-Playing Game") developed by EE. On
 #### Register
  Set up an account.
  ```json
-  Username: Jane
-  Password: password8!
-  Email: Jane@gmail.com
+  Username: Sokka
+  Password: topSecret!
+  Email: Sokka@southpole.com
  ```
  ![register](/screenshots/register.JPG)
 
 #### Log In
   A Demo Account has been set up for ease of access.
   ```json
-    Username: admin
-    Password:password
+    Username: demo
+    Password: password
   ```
   ![login](/screenshots/login.JPG)
 
@@ -43,6 +43,6 @@ Endless Encounters is a text-based RPG ("Role-Playing Game") developed by EE. On
   ![dash](/screenshots/dash.JPG)
 
 ## Technologies Used:  
-FrontEnd: JavaScript, React, CSS 3, HTML 5, and Jest.  
+FrontEnd: JavaScript, React, CSS 3, HTML 5, Firebase and Jest.  
 
 BackEnd: Node.js, Express.js, PostgreSQL, Mocha & Chai, ReactSpring, and FireBase.
