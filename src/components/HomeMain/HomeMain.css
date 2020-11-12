@@ -80,18 +80,18 @@ main
         margin-right: auto;
         width: 500px;
     }
-    .intro h4
+    .intro h3
     {
         text-align: center;
     }
-    .intro h5
+    .intro h4
     {
         text-align: center;
     }
     #demo_holder
     {
         width:200px;
-        background-color:rgb(223, 223, 223);
+        
         border: 1px solid rgb(189, 189, 189);
         margin: auto;
         padding: 10px 10px 10px 30px;

@@ -20,7 +20,7 @@ export default function Home() {
             <p>Endless Encounters is chock-full of random enemies and witty quotes, and so you may find yourself in some 
             quirky predicaments. </p>
             <p>Once you're signed up, you can explore the world, duel swords, and meet other characters.</p>
-            <h5>There is a demo account for graders:</h5>
+            <h4>There is a demo account for graders:</h4>
             <div id='demo_holder'>
               <p className='demo_data'><b>username:</b> demo</p>
               <p className='demo_data'><b>password:</b> password</p>
