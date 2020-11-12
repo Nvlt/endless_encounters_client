@@ -6,14 +6,7 @@ import AuthApiService from '../../services/auth-api-service';
 import './RegistrationForm.css'
 import firebase from "firebase/app";
 import "firebase/auth"
-import firebaseConfig from '../../firebaseConfig';
-import {
-  FirebaseAuthProvider,
-  FirebaseAuthConsumer,
-  IfFirebaseAuthed,
-  IfFirebaseAuthedAnd
-} from "@react-firebase/auth";
-
+import { useHistory } from "react-router-dom";
 
 export default class Registration extends React.Component {
   static contextType=UserContext;
