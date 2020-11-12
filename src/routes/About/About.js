@@ -16,7 +16,7 @@ export default function About() {
       ),
       content: (
         <div>
-          <span>Endless Encounters is a text-base RPG developed by EE; John Pendergast, Alexis Felts, Scott Whiteman, and Tiffany Summerford. Once you're in, you can explore in search of ravenous enemies to fight, and quirky moments with npcs you encounter.</span>
+          <span>Endless Encounters is a text-based RPG developed by EE; John Pendergast, Alexis Felts, Scott Whiteman, and Tiffany Summerford. Once you're in, you can explore in search of ravenous enemies to fight, and quirky moments with NPCs you encounter.</span>
         </div>
       )
     },
@@ -55,11 +55,12 @@ export default function About() {
       ),
       content: (
         <div>
-          <p>Upon completing your registration, and logging in you can go to the dash where you'll be prompted to create your character.</p>
+          <p>Upon completing your registration you'll be directed to the start page where you'll click start and then visit the dash. On the dash, you'll be prompted to create your character:</p>
           <ol>
+            <li>Keep in mind Endless Encounters is case-sensitive!</li>
             <li>Give your character a name.</li>
-            <li>Give your character a description</li>
-            <li>Choose an existing class</li>
+            <li>Give your character a description.</li>
+            <li>Choose an existing class.</li>
           </ol>
         </div>
       )
@@ -73,9 +74,9 @@ export default function About() {
       content: (
         <div>
           <p>After creating your character, your game begins immediately.</p>
-          <p>You will be presented with a scene, your status, and some choices you can make.</p>
-          <p>You can make choices by typing them into the text input and pressing enter or the 'make choice' button.</p>
-          <p>Your goal is simply to explore the world and find funny encounters.</p>
+          <p>You'll be presented with a scene, your status, and some choices you can make.</p>
+          <p>You can make choices by typing them into the text input and pressing enter or the "Make-Choice" button.</p>
+          <p>Your goal is to explore the world and find funny encounters.</p>
         </div>
       )
     },
@@ -88,10 +89,7 @@ export default function About() {
       content: (
         <div>
           <span>
-            Combat is turn based using what we call "Action Points" or AP, which you will see on display throughout the game.
-            In every combat scene you will start with 10 of these and when you run out, you wont be able to attack anymore, and will have to end your turn.
-            There is also magic points or 'mp' which are similarly used to cast spells.
-            Similarly as well you'll have health points or 'hp', if you run out of these, unfortunately you've died.
+          Combat is turn-based using what we call "Action Points" or AP, which you will see on display throughout the game. In every combat scene, you will start with 10 of these, and when you run out, you won't be able to attack anymore and will have to end your turn. There are also "Magic Points" or MP in which are similarly used to cast spells. You'll also have "Health Points" or HP: if you run out of these, unfortunately, you've died.
           </span>
         </div>
       )
