@@ -16,12 +16,12 @@ export const GlobalStyles = createGlobalStyle `
     color: ${({theme}) => theme.text};
     transition: all 0.50s linear;
   }
-  .main-link {
-    color: ${({theme}) => theme.startLink}
+  .link {
+    color: ${({theme}) => theme.startLink};
     transition: all 0.50s linear;
   }
-  .main-link:visited {
-    color: ${({theme}) => theme.startLink}
+  .link:visitead {
+    color: ${({theme}) => theme.startLink};
   }
   .headerLink {
     color: ${({theme}) => theme.headerText};

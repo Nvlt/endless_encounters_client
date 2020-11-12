@@ -20,10 +20,16 @@ export default class Registration extends React.Component {
       password: userpass.value
     })
       .then(newUser => {
-        useremail.value='';
-        username.value='';
-        userpass.value='';
-        console.log('User created')
+        AuthApiService.postLogin({
+          username: newUser.username,
+          password: userpass.value
+        })
+        .then(res => {
+          useremail.value='';
+          username.value='';
+          userpass.value='';
+          this.context.processLogin(res.authToken);
+        })
       })
       .catch(res => {
         this.setState({error: res.error});
@@ -31,13 +37,23 @@ export default class Registration extends React.Component {
   }
   handleGoogleReg=(e) => {
     e.preventDefault()
+    let password = '';
     const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
-    firebase.auth().signInWithPopup(googleAuthProvider).then(res =>
+    firebase.auth().signInWithPopup(googleAuthProvider).then(res => {
+      password = res.additionalUserInfo.profile.id;
       AuthApiService.postUser({
         email: res.additionalUserInfo.profile.email,
         username: res.additionalUserInfo.profile.given_name,
         password: res.additionalUserInfo.profile.id
-      })
+      }).then(newUser => {
+        AuthApiService.postLogin({
+          username: newUser.username,
+          password: password
+        })
+        .then(res => {
+          this.context.processLogin(res.authToken);
+        })
+      })}
     ).catch(res => {
       this.setState({error: res.error});
     });
@@ -75,7 +91,7 @@ export default class Registration extends React.Component {
 
           </div>
           <button className="googlebutton" onClick={this.handleGoogleReg} aria-label="Register with Google button">Register With Google</button>
-          <Link className="accountRte" to='/login'>Already have an account?</Link>
+          <Link className="accountRte link" to='/login'>Already have an account?</Link>
         </form>
       </main>
 
